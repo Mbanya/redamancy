@@ -7,72 +7,7 @@
 
         <header class="site-header default">
 
-            <nav class="navbar navbar-default navbar-expand-lg">
-                <div class="container navbar-header-wrapper">
-
-                    <div class="navbar-grid" id="main-navbar">
-
-                        <!-- primary-mobile-menu -->
-                        <div class="menu-button-container">
-                            <button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
-                    <span class="dropdown-icon open">Menu
-                        <svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 6H19.5V7.5H4.5V6ZM4.5 12H19.5V13.5H4.5V12ZM19.5 18H4.5V19.5H19.5V18Z" fill="currentColor"></path></svg>
-                    </span>
-                                <span class="dropdown-icon close">Close
-                        <svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.9394L5.53033 4.46973L4.46967 5.53039L10.9393 12.0001L4.46967 18.4697L5.53033 19.5304L12 13.0607L18.4697 19.5304L19.5303 18.4697L13.0607 12.0001L19.5303 5.53039L18.4697 4.46973L12 10.9394Z" fill="currentColor"></path></svg>
-                    </span>
-                            </button>
-                        </div>
-
-                        <div class="logo-wrapper">
-                            <a class="brand" href="index.html" title="Redamancy" rel="home">
-                                <img style=" max-width: 160px;" class="brand" src="wp-content/uploads/2021/04/logo.png" width="336" height="82" alt="Redamancy" />
-                            </a>
-                            <a class="sticky-brand" href="index.html" title="Redamancy" rel="home">
-                                <img style=" max-width: 50px;" src="wp-content/uploads/2021/04/logo-sticky.png" width="212" height="160" alt="Redamancy" />
-                            </a>
-                            <a class="mobile-brand" href="index.html" title="Redamancy" rel="home">
-                                <img style=" max-width: 50px;" src="wp-content/uploads/2021/04/logo-sticky.png" width="212" height="160" alt="Redamancy" />
-                            </a>
-                        </div><!-- .logo-wrapper -->
-
-                        <!-- Begin Main Navigation -->
-                        <ul id="main-menu" class="nav navbar-nav navbar-middle"><li id="menu-item-2397" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-193 current_page_item menu-item-2397"><a href="index.html" aria-current="page">Home</a></li>
-                            <li id="menu-item-2374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2374"><a href="our-story/index.html">Our story</a></li>
-                            <li id="menu-item-2373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2373"><a href="wines/index.html">Shop</a><button class="sub-menu-toggle depth-0" aria-expanded="false" onClick="villenoirExpandSubMenu(this)"><span class="icon-plus"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z" fill="currentColor"/></svg></span><span class="icon-minus"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 11h12v2H6z" fill="currentColor"/></svg></span><span class="screen-reader-text">Open menu</span></button>
-                                <ul class="sub-menu">
-                                    <li id="menu-item-2360" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2360"><a href="product-category/red-wines/index.html">Red wines</a></li>
-                                    <li id="menu-item-2361" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2361"><a href="product-category/white-wines/index.html">White wines</a></li>
-                                </ul>
-                            </li>
-                            <li id="menu-item-2386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2386"><a href="club/index.html">Wine Club</a></li>
-                            <li id="menu-item-2372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2372"><a href="contact/index.html">Contact</a></li>
-                        </ul>
-                        <!-- End Main Navigation -->
-
-                        <!-- Begin Second Navigation -->
-                        <ul class="nav navbar-nav secondary-nav">
-
-                            <li class="gg-woo-mini-cart dropdown">    <a id="quick_cart" data-target="open-cart" href="cart-2/index.html" title="View your shopping cart">
-        <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-        </span>
-                                </a>
-
-                            </li><li class="quick-my-account"><a href="my-account-2/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a></li><li class="gg-header-search">    <a href="#fullscreen-searchform" title="Search products">
-        <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        </span>
-                                </a>
-
-                            </li>
-                        </ul>
-                        <!-- End Second Navigation -->
-
-                    </div><!-- #main-navbar -->
-
-                </div><!-- .container -->
-            </nav><!-- nav -->
+          @include('partials.nav')
 
 
             <!-- Page header image -->
@@ -264,25 +199,12 @@
 
                                                     </div>
                                                 </div>
-                                            </div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-has-fill"><div class="vc_column-inner vc_custom_1617357592041"><div class="wpb_wrapper">
-                                                <div  class="wpb_single_image wpb_content_element vc_align_center">
+                                            </div></div></div></div>
+                                <div class="vc_row-full-width vc_clearfix">
 
-                                                    <figure class="wpb_wrapper vc_figure">
-                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="32" height="44" src="wp-content/uploads/2021/04/grape-icn-171.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" /></div>
-                                                    </figure>
-                                                </div>
+                                </div>
 
-                                                <div class="title-subtitle-box  " style=" margin-bottom:90px; text-align: center;">
-                                                    <p  style=" color:#cebc9e; ">Current release</p>
-                                                    <h1 style=" color:#ffffff;  font-style: normal;">We thrive in making fine wines that enrich the taste&amp;soul.</h1>
-                                                </div> </div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460369664258"><div class="wpb_wrapper">
-                                                <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617353581048">
-
-                                                    <figure class="wpb_wrapper vc_figure">
-                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1170" height="1400" src="wp-content/uploads/2021/04/estate-tasting-11-17.jpg" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/estate-tasting-11-17.jpg 1170w, wp-content/uploads/2021/04/estate-tasting-11-17-251x300.jpg 251w, wp-content/uploads/2021/04/estate-tasting-11-17-856x1024.jpg 856w, wp-content/uploads/2021/04/estate-tasting-11-17-768x919.jpg 768w" sizes="(max-width: 1170px) 100vw, 1170px" /></div>
-                                                    </figure>
-                                                </div>
-                                            </div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1617302641081 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-7 vc_col-lg-8 vc_col-md-8"><div class="vc_column-inner vc_custom_1460370683208"><div class="wpb_wrapper">
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1617302641081 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-7 vc_col-lg-8 vc_col-md-8"><div class="vc_column-inner vc_custom_1460370683208"><div class="wpb_wrapper">
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left   force-90-width-large-screen">
 
                                                     <figure class="wpb_wrapper vc_figure">
@@ -364,8 +286,11 @@
                                                         </div>
                                                     </figure>
                                                 </div>
-                                            </div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-has-fill"><div class="vc_column-inner vc_custom_1466409537918"><div class="wpb_wrapper">
-                                                <div class="title-subtitle-box  " style=" margin-bottom:90px; text-align: center;">
+                                            </div></div></div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-has-fill">
+                                        <div class="vc_column-inner vc_custom_1466409537918">
+                                            <div class="wpb_wrapper">
+                                                <div class="title-subtitle-box" style=" margin-bottom:90px; text-align: center;">
                                                     <p  style="">The estate</p>
                                                     <h1 style=" font-style: normal;">Tasting &amp; Tours</h1>
                                                 </div>
@@ -379,7 +304,10 @@
                                                     <a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="The estate">Read more</a>
                                                 </div>
                                             </div>
-                                        </div></div></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1617302663690 reverse_columns_mobile vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="order-1 wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1566978619501"><div class="wpb_wrapper"></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1457626757165 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_widget vc_widget_instagram"><div class="widget gg-instagram-feed"><br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row wpb_row vc_row-fluid vc_custom_1617302663690 reverse_columns_mobile vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="order-1 wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1566978619501"><div class="wpb_wrapper"></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1457626757165 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_widget vc_widget_instagram"><div class="widget gg-instagram-feed"><br />
 
                                                         <div class="media">
                                                             <div class="media-left">
