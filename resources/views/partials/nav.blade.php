@@ -43,7 +43,7 @@
                     </ul>
                 </li>
                 <li id="menu-item-2386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2386"><a href="{{route('wine-club')}}">Wine Club</a></li>
-                <li id="menu-item-2372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2372"><a href="{{route('contact')}}">Contact</a></li>
+{{--                <li id="menu-item-2372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2372"><a href="{{route('contact')}}">Contact</a></li>--}}
             </ul>
             <!-- End Main Navigation -->
 
