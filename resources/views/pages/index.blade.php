@@ -34,7 +34,7 @@
                                         data-frame_1="st:1250;sp:1000;sR:1250;"
                                         data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:6750;"
                                         style="z-index:8;"
-                                    ><img src="wp-content/uploads/2016/03/slider-bottle.png" class="tp-rs-img" width="794" height="754" data-no-retina>
+                                    ><img src="{{asset('images/wine-bottles/slider-bottle.png')}}" class="tp-rs-img" width="794" height="754" data-no-retina>
                                     </rs-layer><!--
 
 							--><rs-layer
@@ -148,7 +148,7 @@
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617353560917">
 
                                                     <figure class="wpb_wrapper vc_figure">
-                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="633" height="949" src="wp-content/uploads/2021/04/man-17.jpg" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/man-17.jpg 633w, wp-content/uploads/2021/04/man-17-200x300.jpg 200w" sizes="(max-width: 633px) 100vw, 633px" /></div>
+                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="633" height="980" src="{{asset('images/our-story/man-woman-dogs.jpg')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="images/our-story/man-woman-dogs.jpg 633w, images/our-story/man-woman-dogs.jpg 200w" sizes="(max-width: 633px) 100vw, 633px" /></div>
                                                     </figure>
                                                 </div>
                                             </div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460549807462"><div class="wpb_wrapper">
@@ -158,8 +158,16 @@
                                                 </div>
                                                 <div class="wpb_text_column wpb_content_element " >
                                                     <div class="wpb_wrapper">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet elit leo.</p>
-                                                        <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. .</p>
+                                                        <p>
+                                                            The journey began in 2010 frequenting the same distinctive spot in Devon Valley, this ritual inspired an imagined life of making wine,
+                                                            sharing it with family and friends, taking long walks with our Golden Retrievers, and ending the day with our own glass of wine.
+                                                            We are Marc and Antoinette the founders of Redamancy Vineyards.
+                                                        </p>
+                                                       <p>
+                                                           Redamancy means a love returned in full; an act of loving the one who loves you. Our wines are the ultimate expression of our relationship -
+                                                           this reciprocal love for each other extends to our land, and the grapes.  Reared from the spirit of companionship, poetry,
+                                                           commitment and our ideal wine making philosophy, Redamancy wines seeks to fill your experience with love
+                                                       </p>
 
                                                     </div>
                                                 </div>
@@ -174,7 +182,7 @@
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617357504438">
 
                                                     <figure class="wpb_wrapper vc_figure">
-                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1500" height="2299" src="wp-content/uploads/2021/04/current-release-181.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/current-release-181.png 1500w, wp-content/uploads/2021/04/current-release-181-196x300.png 196w, wp-content/uploads/2021/04/current-release-181-668x1024.png 668w, wp-content/uploads/2021/04/current-release-181-768x1177.png 768w, wp-content/uploads/2021/04/current-release-181-1002x1536.png 1002w, wp-content/uploads/2021/04/current-release-181-1336x2048.png 1336w" sizes="(max-width: 1500px) 100vw, 1500px" /></div>
+                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1500" height="2299" src="{{asset('images/wine-bottles/Chardonnay Redamancy_Bottles_Branding_Front_2021.jpg')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/current-release-181.png 1500w, wp-content/uploads/2021/04/current-release-181-196x300.png 196w, wp-content/uploads/2021/04/current-release-181-668x1024.png 668w, wp-content/uploads/2021/04/current-release-181-768x1177.png 768w, wp-content/uploads/2021/04/current-release-181-1002x1536.png 1002w, wp-content/uploads/2021/04/current-release-181-1336x2048.png 1336w" sizes="(max-width: 1500px) 100vw, 1500px" /></div>
                                                     </figure>
                                                 </div>
                                             </div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460628348165"><div class="wpb_wrapper">
