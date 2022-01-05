@@ -175,18 +175,34 @@
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617357445182">
 
                                                     <figure class="wpb_wrapper vc_figure">
-                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="302" height="99" src="wp-content/uploads/2021/04/signature-black-171.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/signature-black-171.png 302w, wp-content/uploads/2021/04/signature-black-171-300x98.png 300w" sizes="(max-width: 302px) 100vw, 302px" /></div>
+                                                        <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                                            <img width="302" height="99" src="wp-content/uploads/2021/04/signature-black-171.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/signature-black-171.png 302w, wp-content/uploads/2021/04/signature-black-171-300x98.png 300w" sizes="(max-width: 302px) 100vw, 302px" /></div>
                                                     </figure>
                                                 </div>
-                                            </div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1458035087061 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460628359633"><div class="wpb_wrapper">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row-full-width vc_clearfix"></div>
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1458035087061 vc_row-has-fill">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460628359633">
+                                            <div class="wpb_wrapper">
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617357504438">
 
                                                     <figure class="wpb_wrapper vc_figure">
-                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1500" height="2299" src="{{asset('images/wine-bottles/Chardonnay Redamancy_Bottles_Branding_Front_2021.jpg')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/current-release-181.png 1500w, wp-content/uploads/2021/04/current-release-181-196x300.png 196w, wp-content/uploads/2021/04/current-release-181-668x1024.png 668w, wp-content/uploads/2021/04/current-release-181-768x1177.png 768w, wp-content/uploads/2021/04/current-release-181-1002x1536.png 1002w, wp-content/uploads/2021/04/current-release-181-1336x2048.png 1336w" sizes="(max-width: 1500px) 100vw, 1500px" /></div>
+                                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+                                                            <img width="1500" height="2299" src="{{asset('images/wine-bottles/current-release.png')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy"
+                                                            srcset="images/wine-bottles/current-release.png 1500w, images/wine-bottles/current-release.png 196w, images/wine-bottles/current-release.png 668w, images/wine-bottles/current-release.png 768w, images/wine-bottles/current-release.png 1002w, images/wine-bottles/current-release.png 1336w" sizes="(max-width: 1500px) 100vw, 1500px" />
+                                                        </div>
                                                     </figure>
                                                 </div>
-                                            </div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460628348165"><div class="wpb_wrapper">
-                                                <div class="title-subtitle-box  " style=" margin-bottom:5px; text-align: left;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1460628348165">
+                                            <div class="wpb_wrapper">
+                                                <div class="title-subtitle-box" style=" margin-bottom:5px; text-align: left;">
                                                     <h2 style=" font-style: normal;">2015</h2>
                                                 </div>
                                                 <div class="title-subtitle-box  vc_custom_1639980038304" style=" margin-bottom:90px; text-align: left;">
@@ -199,45 +215,76 @@
 
                                                     </div>
                                                 </div>
-                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350478559" ><a style="background-color:#b0976d; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="Redamancy Cabernet Sauvignon">Discover</a></div><div class="vc_btn3-container vc_btn3-inline vc_custom_1617350497245" ><a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="http://okthemes.com/villenoirdemonew/wines/" title="Wines">View all</a></div>
-                                                <div class="wpb_text_column wpb_content_element  vc_custom_1458032377294" >
-                                                    <div class="wpb_wrapper">
-                                                        <p>Speak to a customer care specialist at:<br />
-                                                            <a href="#"></a>.</p>
-
-                                                    </div>
+                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350478559" >
+                                                    <a style="background-color:#b0976d; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="Redamancy Cabernet Sauvignon">Discover</a>
                                                 </div>
-                                            </div></div></div></div>
+                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350497245">
+                                                    <a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="Wines">View all</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="vc_row-full-width vc_clearfix">
 
                                 </div>
 
-                                <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1617302641081 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-7 vc_col-lg-8 vc_col-md-8"><div class="vc_column-inner vc_custom_1460370683208"><div class="wpb_wrapper">
-                                                <div  class="wpb_single_image wpb_content_element vc_align_left   force-90-width-large-screen">
-
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1617302641081 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
+                                    <div class="wpb_column vc_column_container vc_col-sm-7 vc_col-lg-8 vc_col-md-8">
+                                        <div class="vc_column-inner vc_custom_1460370683208">
+                                            <div class="wpb_wrapper">
+                                                <div  class="wpb_single_image wpb_content_element vc_align_left force-90-width-large-screen">
                                                     <figure class="wpb_wrapper vc_figure">
-                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="807" height="253" src="wp-content/uploads/2021/04/red-bottle-171.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/red-bottle-171.png 807w, wp-content/uploads/2021/04/red-bottle-171-300x94.png 300w, wp-content/uploads/2021/04/red-bottle-171-768x241.png 768w" sizes="(max-width: 807px) 100vw, 807px" /></div>
+                                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+                                                            <img width="807" height="253" src="{{asset('images/wine-bottles/main-mockup.png')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy"
+                                                                 srcset="images/wine-bottles/main-mockup.png 807w, images/wine-bottles/vertical-red-wine-300x94.png 300w, mages/wine-bottles/vertical-red-wine-768x241.png 768w" sizes="(max-width: 807px) 100vw, 807px" />
+                                                        </div>
                                                     </figure>
                                                 </div>
-                                                <div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-                                                                <div class="counter-holder media  " style="text-align:center;   ">
+                                                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="counter-holder media" style="text-align:center;   ">
                                                                     <div class="counter-content media-body">
                                                                         <span style=" font-size:60px;" class="counter" data-number="5" data-interval="100" data-speed="1500">5</span>
                                                                         <p >Varietals</p>
                                                                     </div>
-                                                                </div> </div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-                                                                <div class="counter-holder media  " style="text-align:center;   ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="counter-holder media" style="text-align:center;   ">
                                                                     <div class="counter-content media-body">
                                                                         <span style=" font-size:60px;" class="counter" data-number="162" data-interval="100" data-speed="1500">162</span>
                                                                         <p >Wine produced</p>
                                                                     </div>
-                                                                </div> </div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-                                                                <div class="counter-holder media  " style="text-align:center;   ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="counter-holder media" style="text-align:center;   ">
                                                                     <div class="counter-content media-body">
                                                                         <span style=" font-size:60px;" class="counter" data-number="48" data-interval="100" data-speed="1500">48</span>
                                                                         <p >Awards won</p>
                                                                     </div>
-                                                                </div> </div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-5 vc_col-lg-4 vc_col-md-4 vc_col-has-fill"><div class="vc_column-inner vc_custom_1617358182464"><div class="wpb_wrapper">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-5 vc_col-lg-4 vc_col-md-4 vc_col-has-fill">
+                                        <div class="vc_column-inner vc_custom_1617358182464">
+                                            <div class="wpb_wrapper">
                                                 <div class="title-subtitle-box  " style=" text-align: left;">
                                                     <p  style="">Varieties</p>
                                                     <h2 style=" font-style: normal;">The Reds</h2>
@@ -248,8 +295,20 @@
                                                         <li>Merlot</li>
                                                         <li>Pinot Noir</li>
                                                     </ul>
-                                                </div><div class="vc_btn3-container vc_btn3-inline vc_custom_1617350580088" ><a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="http://okthemes.com/villenoirdemonew/product-category/red-wines/" title="">Shop now</a></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1617302742710 reverse_columns_mobile vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-5 vc_col-lg-4 vc_col-md-4 vc_col-has-fill"><div class="vc_column-inner vc_custom_1617358237740"><div class="wpb_wrapper">
-                                                <div class="title-subtitle-box  " style=" text-align: left;">
+                                                </div>
+                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350580088" >
+                                                    <a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="">Shop now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row-full-width vc_clearfix"></div>
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1617302742710 reverse_columns_mobile vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
+                                    <div class="wpb_column vc_column_container vc_col-sm-5 vc_col-lg-4 vc_col-md-4 vc_col-has-fill">
+                                        <div class="vc_column-inner vc_custom_1617358237740">
+                                            <div class="wpb_wrapper">
+                                                <div class="title-subtitle-box" style=" text-align: left;">
                                                     <p  style="">Varieties</p>
                                                     <h2 style=" font-style: normal;">The Whites</h2>
                                                 </div>
@@ -259,42 +318,82 @@
                                                         <li>Sauvignon Blanc</li>
                                                         <li>Riesling</li>
                                                     </ul>
-                                                </div><div class="vc_btn3-container vc_btn3-inline vc_custom_1617350592249" ><a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href=" title="">Shop now</a></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-7 vc_col-lg-8 vc_col-md-8"><div class="vc_column-inner vc_custom_1460370664276"><div class="wpb_wrapper">
-                                                <div  class="wpb_single_image wpb_content_element vc_align_right   force-90-width-large-screen">
+                                                </div>
+                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350592249" >
+                                                    <a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="">Shop now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-7 vc_col-lg-8 vc_col-md-8">
+                                        <div class="vc_column-inner vc_custom_1460370664276">
+                                            <div class="wpb_wrapper">
+                                                <div  class="wpb_single_image wpb_content_element vc_align_right force-90-width-large-screen">
 
                                                     <figure class="wpb_wrapper vc_figure">
-                                                        <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                                            <img width="807" height="291" src="wp-content/uploads/2021/04/white-bottle-171.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/white-bottle-171.png 807w, wp-content/uploads/2021/04/white-bottle-171-300x108.png 300w, wp-content/uploads/2021/04/white-bottle-171-768x277.png 768w" sizes="(max-width: 807px) 100vw, 807px" /></div>
+                                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+                                                            <img width="807" height="291" src="images/wine-bottles/main-mockup-flip.png" class="vc_single_image-img attachment-full" alt="" loading="lazy"
+                                                                 srcset="images/wine-bottles/main-mockup-flip.png 807w, wp-content/uploads/2021/04/white-bottle-171-300x108.png 300w, wp-content/uploads/2021/04/white-bottle-171-768x277.png 768w" sizes="(max-width: 807px) 100vw, 807px" />
+                                                        </div>
                                                     </figure>
                                                 </div>
-                                                <div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-                                                                <div class="counter-holder media  " style="text-align:center;   ">
+                                                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="counter-holder media" style="text-align:center;   ">
                                                                     <div class="counter-content media-body">
                                                                         <span style=" font-size:60px;" class="counter" data-number="5" data-interval="100" data-speed="1500">5</span>
                                                                         <p >Varietals</p>
                                                                     </div>
-                                                                </div> </div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-                                                                <div class="counter-holder media  " style="text-align:center;   ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="counter-holder media" style="text-align:center;   ">
                                                                     <div class="counter-content media-body">
                                                                         <span style=" font-size:60px;" class="counter" data-number="162" data-interval="100" data-speed="1500">162</span>
                                                                         <p >Wine produced</p>
                                                                     </div>
-                                                                </div> </div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-                                                                <div class="counter-holder media  " style="text-align:center;   ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="counter-holder media" style="text-align:center;   ">
                                                                     <div class="counter-content media-body">
                                                                         <span style=" font-size:60px;" class="counter" data-number="48" data-interval="100" data-speed="1500">48</span>
                                                                         <p >Awards won</p>
                                                                     </div>
-                                                                </div> </div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1617302734517 vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460370846525"><div class="wpb_wrapper">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row-full-width vc_clearfix"></div>
+                                <div class="vc_row wpb_row vc_row-fluid vc_custom_1617302734517 vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1460370846525">
+                                            <div class="wpb_wrapper">
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617353596057">
-
                                                     <figure class="wpb_wrapper vc_figure">
                                                         <div class="vc_single_image-wrapper   vc_box_border_grey">
                                                             <img width="1170" height="1400" src="wp-content/uploads/2021/04/estate-tasting-11-17.jpg" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/estate-tasting-11-17.jpg 1170w, wp-content/uploads/2021/04/estate-tasting-11-17-251x300.jpg 251w, wp-content/uploads/2021/04/estate-tasting-11-17-856x1024.jpg 856w, wp-content/uploads/2021/04/estate-tasting-11-17-768x919.jpg 768w" sizes="(max-width: 1170px) 100vw, 1170px" />
                                                         </div>
                                                     </figure>
                                                 </div>
-                                            </div></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-has-fill">
                                         <div class="vc_column-inner vc_custom_1466409537918">
                                             <div class="wpb_wrapper">
@@ -315,7 +414,20 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="vc_row wpb_row vc_row-fluid vc_custom_1617302663690 reverse_columns_mobile vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="order-1 wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1566978619501"><div class="wpb_wrapper"></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1457626757165 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_widget vc_widget_instagram"><div class="widget gg-instagram-feed"><br />
+                                <div class="vc_row wpb_row vc_row-fluid vc_custom_1617302663690 reverse_columns_mobile vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
+                                    <div class="order-1 wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1566978619501">
+                                            <div class="wpb_wrapper"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1457626757165 vc_row-has-fill">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="vc_widget vc_widget_instagram">
+                                                    <div class="widget gg-instagram-feed">
+                                                        <br />
 
                                                         <div class="media">
                                                             <div class="media-left">
@@ -345,11 +457,29 @@
                                                             </div><!-- .media-body -->
                                                         </div><!-- .media -->
 
-                                                    </div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid center-text vc_custom_1458048524081 vc_row-has-fill vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1458045278797"><div class="wpb_wrapper">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row-full-width vc_clearfix"></div>
+                                <div class="vc_row wpb_row vc_row-fluid center-text vc_custom_1458048524081 vc_row-has-fill vc_row-o-content-middle vc_row-flex">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner vc_custom_1458045278797">
+                                            <div class="wpb_wrapper">
                                                 <div class="title-subtitle-box  " style=" text-align: center;">
                                                     <p  style="">Be connected</p>
                                                     <h1 style=" font-style: normal;">Join Our Newsletter</h1>
-                                                </div> <div class="vc_widget vc_widget_mailchimp "><div class="widget widget_mc4wp_form_widget"><h2 class="widgettitle">Newsletter</h2></div></div></div></div></div></div>
+                                                </div> <div class="vc_widget vc_widget_mailchimp ">
+                                                    <div class="widget widget_mc4wp_form_widget">
+                                                        <h2 class="widgettitle">Newsletter</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div><!-- .entry-content -->
 
 
@@ -370,13 +500,18 @@
                 <a href="#" class="thb-close" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve"><path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path></svg></a>
             </header>
             <div class="side-panel-content">
-                <div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content"></div></div>            </div>
+                <div class="widget woocommerce widget_shopping_cart">
+                    <div class="widget_shopping_cart_content"></div>
+                </div>
+            </div>
         </nav>
         <div class="click-capture"></div>
 
         <div id="fullscreen-searchform">
             <button type="button" class="close">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve"><path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve">
+                    <path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path>
+                </svg>
             </button>
             <form method="get" id="searchform" class="" action="">
                 <input type="search" value="" placeholder="Search for products" name="s" id="s" />
