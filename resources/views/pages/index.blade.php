@@ -21,9 +21,9 @@
                         <rs-module id="rev_slider_1_1" style="" data-version="6.4.6">
                             <rs-slides>
                                 <rs-slide data-key="rs-1" data-title="Intro">
-                                    <img src="wp-content/uploads/2016/03/slide-1-background.jpg" title="slide-1-background" width="1440" height="763" class="rev-slidebg tp-rs-img" data-no-retina>
-                                    <!--
-                                                                --><rs-layer
+                                    <img src="{{asset('images/landing/slide-1-background.jpg')}}" title="slide-1-background" width="1440" height="763" class="rev-slidebg tp-rs-img" data-no-retina>
+                                    <!---->
+                                    <rs-layer
                                         id="slider-1-slide-1-layer-1"
                                         data-type="image"
                                         data-rsp_ch="on"
@@ -34,7 +34,7 @@
                                         data-frame_1="st:1250;sp:1000;sR:1250;"
                                         data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:6750;"
                                         style="z-index:8;"
-                                    ><img src="{{asset('images/wine-bottles/slider-bottle.png')}}" class="tp-rs-img" width="794" height="754" data-no-retina>
+                                    ><img src="{{asset('images/wine-bottles/slider-bottle-main.png')}}" class="tp-rs-img" width="794" height="754" data-no-retina>
                                     </rs-layer><!--
 
 							--><rs-layer
@@ -122,7 +122,8 @@
                                 });
                             } // End of RevInitScript
                             var once_revslider11 = false;
-                            if (document.readyState === "loading") {document.addEventListener('readystatechange',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider11 ) { once_revslider11 = true; revinit_revslider11();}});} else {once_revslider11 = true; revinit_revslider11();}
+                            if (document.readyState === "loading")
+                            {document.addEventListener('readystatechange',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider11 ) { once_revslider11 = true; revinit_revslider11();}});} else {once_revslider11 = true; revinit_revslider11();}
                         </script>
                     </rs-module-wrap>
                     <!-- END REVOLUTION SLIDER -->
@@ -144,16 +145,28 @@
 
 
                             <div class="entry-content">
-                                <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid gg-force-background-left vc_custom_1617302572453 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+                                <div data-vc-full-width="true" data-vc-full-width-init="false"
+                                     data-vc-stretch-content="true"
+                                     class="vc_row wpb_row vc_row-fluid gg-force-background-left vc_custom_1617302572453 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617353560917">
-
                                                     <figure class="wpb_wrapper vc_figure">
-                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="633" height="980" src="{{asset('images/our-story/man-woman-dogs.jpg')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="images/our-story/man-woman-dogs.jpg 633w, images/our-story/man-woman-dogs.jpg 200w" sizes="(max-width: 633px) 100vw, 633px" /></div>
+                                                        <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                                            <img width="633" height="980" src="{{asset('images/our-story/man-woman-dogs.jpg')}}" class="vc_single_image-img attachment-full" alt=""
+                                                                 loading="lazy" srcset="images/our-story/man-woman-dogs.jpg 633w, images/our-story/man-woman-dogs.jpg 200w" sizes="(max-width: 633px) 100vw, 633px" />
+                                                        </div>
                                                     </figure>
                                                 </div>
-                                            </div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460549807462"><div class="wpb_wrapper">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1460549807462">
+                                            <div class="wpb_wrapper">
                                                 <div class="title-subtitle-box  vc_custom_1639980014165" style=" margin-bottom:90px; text-align: left;">
-                                                    <p  style="">Message from Redamancy</p>
+                                                    <p style="">Message from Redamancy</p>
                                                     <h1 style=" font-style: normal;">A New Generation of Winemakers</h1>
                                                 </div>
                                                 <div class="wpb_text_column wpb_content_element " >
@@ -173,10 +186,10 @@
                                                 </div>
 
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617357445182">
-
                                                     <figure class="wpb_wrapper vc_figure">
                                                         <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                                            <img width="302" height="99" src="wp-content/uploads/2021/04/signature-black-171.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="wp-content/uploads/2021/04/signature-black-171.png 302w, wp-content/uploads/2021/04/signature-black-171-300x98.png 300w" sizes="(max-width: 302px) 100vw, 302px" /></div>
+                                                            <img width="302" height="99" src="wp-content/uploads/2021/04/signature-black-171.png" class="vc_single_image-img attachment-full" alt=""
+                                                            loading="lazy" srcset="wp-content/uploads/2021/04/signature-black-171.png 302w, wp-content/uploads/2021/04/signature-black-171-300x98.png 300w" sizes="(max-width: 302px) 100vw, 302px" /></div>
                                                     </figure>
                                                 </div>
                                             </div>
@@ -185,7 +198,8 @@
                                 </div>
                                 <div class="vc_row-full-width vc_clearfix"></div>
                                 <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1458035087061 vc_row-has-fill">
-                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460628359633">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1460628359633">
                                             <div class="wpb_wrapper">
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617357504438">
 
@@ -236,8 +250,8 @@
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left force-90-width-large-screen">
                                                     <figure class="wpb_wrapper vc_figure">
                                                         <div class="vc_single_image-wrapper vc_box_border_grey">
-                                                            <img width="807" height="253" src="{{asset('images/wine-bottles/main-mockup.png')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy"
-                                                                 srcset="images/wine-bottles/main-mockup.png 807w, images/wine-bottles/vertical-red-wine-300x94.png 300w, mages/wine-bottles/vertical-red-wine-768x241.png 768w" sizes="(max-width: 807px) 100vw, 807px" />
+                                                            <img width="807" height="253" src="{{asset('images/wine-bottles/vertical-red-wine.png')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy"
+                                                                 srcset="images/wine-bottles/vertical-red-wine.png 807w, images/wine-bottles/vertical-red-wine-300x94.png 300w, mages/wine-bottles/vertical-red-wine-768x241.png 768w" sizes="(max-width: 807px) 100vw, 807px" />
                                                         </div>
                                                     </figure>
                                                 </div>
@@ -332,8 +346,8 @@
 
                                                     <figure class="wpb_wrapper vc_figure">
                                                         <div class="vc_single_image-wrapper vc_box_border_grey">
-                                                            <img width="807" height="291" src="images/wine-bottles/main-mockup-flip.png" class="vc_single_image-img attachment-full" alt="" loading="lazy"
-                                                                 srcset="images/wine-bottles/main-mockup-flip.png 807w, wp-content/uploads/2021/04/white-bottle-171-300x108.png 300w, wp-content/uploads/2021/04/white-bottle-171-768x277.png 768w" sizes="(max-width: 807px) 100vw, 807px" />
+                                                            <img width="807" height="291" src="images/wine-bottles/vertical-white-wine.png" class="vc_single_image-img attachment-full" alt="" loading="lazy"
+                                                                 srcset="images/wine-bottles/vertical-white-wine.png 807w, wp-content/uploads/2021/04/white-bottle-171-300x108.png 300w, wp-content/uploads/2021/04/white-bottle-171-768x277.png 768w" sizes="(max-width: 807px) 100vw, 807px" />
                                                         </div>
                                                     </figure>
                                                 </div>
@@ -432,14 +446,15 @@
                                                         <div class="media">
                                                             <div class="media-left">
                                                                 <h2 class="widgettitle">Instagram</h2>
-                                                                <p class="followers">24K     <span>Instagram Followers</span>
+                                                                <p class="followers">10K <span>Instagram Followers</span>
                                                                 </p>
 
                                                             </div> <!-- .media-left -->
 
                                                             <div class="media-body">
 
-                                                                <div id="sb_instagram" class="sbi sbi_col_3  sbi_width_resp" style="width: 100%;" data-feedid="sbi_#6" data-res="auto" data-cols="3" data-num="6" data-shortcode-atts="{&quot;num&quot;:&quot;6&quot;,&quot;imagepadding&quot;:&quot;0&quot;,&quot;cols&quot;:&quot;3&quot;,&quot;hoverdisplay&quot;:&quot;likes&quot;,&quot;showheader&quot;:&quot;false&quot;,&quot;showbutton&quot;:&quot;false&quot;,&quot;showfollow&quot;:&quot;false&quot;}"  data-postid="193" data-locatornonce="831af2ae97" data-sbi-flags="favorLocal">
+                                                                <div id="sb_instagram" class="sbi sbi_col_3  sbi_width_resp" style="width: 100%;" data-feedid="sbi_#6"
+                                                                     data-res="auto" data-cols="3" data-num="6" data-shortcode-atts="{&quot;num&quot;:&quot;6&quot;,&quot;imagepadding&quot;:&quot;0&quot;,&quot;cols&quot;:&quot;3&quot;,&quot;hoverdisplay&quot;:&quot;likes&quot;,&quot;showheader&quot;:&quot;false&quot;,&quot;showbutton&quot;:&quot;false&quot;,&quot;showfollow&quot;:&quot;false&quot;}"  data-postid="193" data-locatornonce="831af2ae97" data-sbi-flags="favorLocal">
 
                                                                     <div id="sbi_images">
                                                                     </div>
@@ -463,23 +478,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="vc_row-full-width vc_clearfix"></div>
-                                <div class="vc_row wpb_row vc_row-fluid center-text vc_custom_1458048524081 vc_row-has-fill vc_row-o-content-middle vc_row-flex">
-                                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                                        <div class="vc_column-inner vc_custom_1458045278797">
-                                            <div class="wpb_wrapper">
-                                                <div class="title-subtitle-box  " style=" text-align: center;">
-                                                    <p  style="">Be connected</p>
-                                                    <h1 style=" font-style: normal;">Join Our Newsletter</h1>
-                                                </div> <div class="vc_widget vc_widget_mailchimp ">
-                                                    <div class="widget widget_mc4wp_form_widget">
-                                                        <h2 class="widgettitle">Newsletter</h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div><!-- .entry-content -->
 
 
@@ -497,7 +495,11 @@
         <nav id="side-cart" class="side-panel">
             <header>
                 <h6>Shopping cart</h6>
-                <a href="#" class="thb-close" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve"><path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path></svg></a>
+                <a href="#" class="thb-close" title="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve">
+                        <path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path>
+                    </svg>
+                </a>
             </header>
             <div class="side-panel-content">
                 <div class="widget woocommerce widget_shopping_cart">

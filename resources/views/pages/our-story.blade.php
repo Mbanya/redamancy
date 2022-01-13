@@ -1,5 +1,18 @@
 @extends('layouts.main')
 @section('assets')
+    <style>
+        .vc_custom_1459442923303 {
+            padding-top: 120px !important;
+            background-image: url(https://okthemes.com/villenoir/wp-content/uploads/2016/03/our-story-back-image.jpg?id=348) !important;
+            background-position: 0 0 !important;
+            background-repeat: no-repeat !important;
+        }
+        .vc_custom_1617354057629 {
+            background-image: url(https://okthemes.com/villenoir/wp-content/uploads/2016/03/our-story-back-image-2.jpg?id=723) !important;
+            background-position: 0 0 !important;
+            background-repeat: no-repeat !important;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -66,116 +79,132 @@
 
 
                             <div class="entry-content">
-                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid gg-force-background-bottom vc_custom_1459442923303 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+                                <div data-vc-full-width="true" data-vc-full-width-init="false"
+                                     class="vc_row wpb_row vc_row-fluid gg-force-background-bottom vc_custom_1459442923303 vc_row-has-fill">
+                                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
                                                 <div class="wpb_text_column wpb_content_element " >
                                                     <div class="wpb_wrapper">
                                                         <h2>How we started</h2>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet elit leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate nibh et nulla hendrerit, ut condimentum odio porttitor. Nulla consectetur nibh massa, eget scelerisque nisl volutpat et. Integer pharetra efficitur tempor. Quisque finibus suscipit nisi, quis scelerisque nunc efficitur vitae. Duis interdum aliquam mauris, ut fermentum enim suscipit.</p>
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Curabitur sit amet elit leo. Lorem ipsum dolor sit amet,
+                                                            consectetur adipiscing elit. Donec vulputate nibh et nulla hendrerit,
+                                                            ut condimentum odio porttitor.
+                                                            Nulla consectetur nibh massa, eget scelerisque nisl volutpat et.
+                                                            Integer pharetra efficitur tempor. Quisque finibus suscipit nisi,
+                                                            quis scelerisque nunc efficitur vitae.
+                                                            Duis interdum aliquam mauris, ut fermentum enim suscipit.
+                                                        </p>
                                                         <h2>Passion</h2>
-                                                        <p>Suspendisse commodo ex eget lorem iaculis, vel ultrices neque sodales. Sed bibendum egestas felis, commodo mattis ligula. Mauris aliquam lacus id hendrerit venenatis. Quisque dignissim mi ut dictum gravida.</p>
+                                                        <p>
+                                                            Suspendisse commodo ex eget lorem iaculis, vel ultrices neque sodales.
+                                                            Sed bibendum egestas felis, commodo mattis ligula. Mauris aliquam lacus
+                                                            id hendrerit venenatis. Quisque dignissim mi ut dictum gravida.
+                                                        </p>
                                                         <h2>Craftmanship</h2>
-                                                        <p>Duis sit amet ex sit amet tortor posuere posuere. Mauris sodales rutrum tincidunt. Donec non massa ullamcorper, volutpat ex ac, volutpat libero. Morbi vel metus fermentum augue lacinia maximus sit amet ut dolor.</p>
+                                                        <p>
+                                                            Duis sit amet ex sit amet tortor posuere posuere.
+                                                            Mauris sodales rutrum tincidunt. Donec non massa ullamcorper, volutpat ex ac,
+                                                            volutpat libero.
+                                                            Morbi vel metus fermentum augue lacinia maximus sit amet ut dolor.
+                                                        </p>
 
                                                     </div>
                                                 </div>
-                                            </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
-                                                <div class="title-subtitle-box  " style=" padding: 90px 0 0 0px; text-align: center;">
-                                                    <p  style="">redamancy statement</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="title-subtitle-box" style=" padding: 90px 0 0 0px; text-align: center;">
+                                                    <p style="">Redamancy statement</p>
                                                     <h1 style=" font-style: normal;">We thrive in making fine wines that enrich the taste&amp;soul.</h1>
-                                                </div> </div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid gg-force-background-bottom-no-cover vc_custom_1617354057629 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1458310150528"><div class="wpb_wrapper">
-                                                <div class="title-subtitle-box  " style=" text-align: left;">
-                                                    <p  style="">History</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row-full-width vc_clearfix">
+
+                                </div>
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid gg-force-background-bottom-no-cover vc_custom_1617354057629 vc_row-has-fill">
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner vc_custom_1458310150528">
+                                            <div class="wpb_wrapper">
+                                                <div class="title-subtitle-box" style=" text-align: left;">
+                                                    <p style="">History</p>
                                                 </div>
                                                 <div class="wpb_text_column wpb_content_element " >
                                                     <div class="wpb_wrapper">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet elit leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate nibh et nulla hendrerit, ut condimentum odio porttitor.</p>
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet elit leo.
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Donec vulputate nibh et nulla hendrerit,
+                                                            ut condimentum odio porttitor.
+                                                        </p>
 
                                                     </div>
                                                 </div>
-                                            </div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
-                                                <div class="title-subtitle-box  " style=" text-align: left;">
-                                                    <p  style="">Results</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="title-subtitle-box" style=" text-align: left;">
+                                                    <p style="">Results</p>
                                                 </div>
-                                                <div class="wpb_text_column wpb_content_element " >
+                                                <div class="wpb_text_column wpb_content_element" >
                                                     <div class="wpb_wrapper">
-                                                        <p>Suspendisse commodo ex eget lorem iaculis, vel ultrices neque sodales. Sed bibendum egestas felis, commodo mattis ligula. Mauris aliquam lacus id hendrerit venenatis. Quisque dignissim mi ut dictum gravida.</p>
+                                                        <p>
+                                                            Suspendisse commodo ex eget lorem iaculis, vel ultrices neque sodales.
+                                                            Sed bibendum egestas felis, commodo mattis ligula.
+                                                            Mauris aliquam lacus id hendrerit venenatis.
+                                                            Quisque dignissim mi ut dictum gravida.
+                                                        </p>
 
                                                     </div>
                                                 </div>
 
-                                                <div class="title-subtitle-box  " style=" padding: 25px 0 0 0px; text-align: left;">
+                                                <div class="title-subtitle-box" style=" padding: 25px 0 0 0px; text-align: left;">
                                                     <p  style="">Vision</p>
                                                 </div>
                                                 <div class="wpb_text_column wpb_content_element " >
                                                     <div class="wpb_wrapper">
-                                                        <p>Duis sit amet ex sit amet tortor posuere posuere. Mauris sodales rutrum tincidunt. Donec non massa ullamcorper, volutpat ex ac, volutpat libero. Morbi vel metus fermentum augue lacinia maximus sit amet ut dolor.</p>
+                                                        <p>
+                                                            Duis sit amet ex sit amet tortor posuere posuere.
+                                                            Mauris sodales rutrum tincidunt.
+                                                            Donec non massa ullamcorper, volutpat ex ac,
+                                                            volutpat libero.
+                                                            Morbi vel metus fermentum augue lacinia maximus sit amet ut dolor.
+                                                        </p>
 
                                                     </div>
                                                 </div>
 
                                                 <div class="wpb_text_column wpb_content_element " >
                                                     <div class="wpb_wrapper">
-                                                        <p><strong>Duis sit amet ex sit amet tortor posuere posuere. Mauris sodales rutrum tincidunt. </strong></p>
+                                                        <p>
+                                                            <strong>Duis sit amet ex sit amet tortor posuere posuere. Mauris sodales rutrum tincidunt. </strong>
+                                                        </p>
 
                                                     </div>
                                                 </div>
-                                            </div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1460974692501 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
-                                                <div class="title-subtitle-box  " style=" margin-bottom:90px; text-align: left;">
-                                                    <p  style="">Redamancy</p>
-                                                    <h1 style=" font-style: normal;">Our Timeline</h1>
-                                                </div> <section id="cd-timeline" class="cd-container horizontal">
-                                                    <div class="cd-timeline-block">
-                                                        <div class="cd-timeline-img cd-picture">
-                                                            <img src="wp-content/themes/villenoir/images/cd-icon-location.svg" alt="Location">
-                                                        </div>
-                                                        <div class="cd-timeline-content">
-                                                            <img class="wp-post-image " src="wp-content/uploads/2021/04/our-story-header-image-11-17.jpg" alt="" />
-                                                            <div class="cd-timeline-content-wrapper">
-                                                                <p class="cd-title">Purchased Farm</p>
-                                                                <p>Praesent non nunc dapibus metus luctus laoreet nec id orci. Maecenas felis felis, laoreet congue iaculis ut, mattis sit amet felis. Etiam aliquet nec lorem ac ultricies.</p>
-                                                                <h4 class="cd-date">1999</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="cd-timeline-block">
-                                                        <div class="cd-timeline-img cd-picture">
-                                                            <img src="wp-content/themes/villenoir/images/cd-icon-location.svg" alt="Location">
-                                                        </div>
-                                                        <div class="cd-timeline-content">
-                                                            <img class="wp-post-image " src="wp-content/uploads/2021/04/our-story-header-image-11-17.jpg" alt="" />
-                                                            <div class="cd-timeline-content-wrapper">
-                                                                <p class="cd-title">Planted Vineyard</p>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non nunc dapibus metus luctus laoreet nec id orci. Maecenas felis felis, laoreet congue iaculis ut, mattis sit amet felis. Etiam aliquet nec lorem ac ultricies</p>
-                                                                <h4 class="cd-date">2001</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="cd-timeline-block">
-                                                        <div class="cd-timeline-img cd-picture">
-                                                            <img src="wp-content/themes/villenoir/images/cd-icon-location.svg" alt="Location">
-                                                        </div>
-                                                        <div class="cd-timeline-content">
-                                                            <img class="wp-post-image " src="wp-content/uploads/2021/04/our-story-header-image-11-17.jpg" alt="" />
-                                                            <div class="cd-timeline-content-wrapper">
-                                                                <p class="cd-title">First Production</p>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non nunc dapibus metus luctus laoreet nec id orci. Maecenas felis felis, laoreet congue iaculis ut, mattis sit amet felis. Etiam aliquet nec lorem ac ultricies</p>
-                                                                <h4 class="cd-date">2003</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="cd-timeline-block">
-                                                        <div class="cd-timeline-img cd-picture">
-                                                            <img src="wp-content/themes/villenoir/images/cd-icon-location.svg" alt="Location">
-                                                        </div>
-                                                        <div class="cd-timeline-content">
-                                                            <img class="wp-post-image " src="wp-content/uploads/2021/04/our-story-header-image-11-17.jpg" alt="" />
-                                                            <div class="cd-timeline-content-wrapper">
-                                                                <p class="cd-title">Awards won</p>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non nunc dapibus metus luctus laoreet nec id orci. Maecenas felis felis, laoreet congue iaculis ut, mattis sit amet felis. Etiam aliquet nec lorem ac ultricies</p>
-                                                                <h4 class="cd-date">2005</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div></section></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row-full-width vc_clearfix"></div>
                             </div><!-- .entry-content -->
 
 
@@ -192,16 +221,25 @@
         <nav id="side-cart" class="side-panel">
             <header>
                 <h6>Shopping cart</h6>
-                <a href="#" class="thb-close" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve"><path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path></svg></a>
+                <a href="#" class="thb-close" title="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve">
+                        <path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path>
+                    </svg>
+                </a>
             </header>
             <div class="side-panel-content">
-                <div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content"></div></div>            </div>
+                <div class="widget woocommerce widget_shopping_cart">
+                    <div class="widget_shopping_cart_content"></div>
+                </div>
+            </div>
         </nav>
         <div class="click-capture"></div>
 
         <div id="fullscreen-searchform">
             <button type="button" class="close">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve"><path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve">
+                    <path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path>
+                </svg>
             </button>
             <form method="get" id="searchform" class="" action="http://127.0.0.1:81/wordpress/">
                 <input type="search" value="" placeholder="Search for products" name="s" id="s" />

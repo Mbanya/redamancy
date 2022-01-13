@@ -33,7 +33,7 @@ Route::get('reds', function () {
     return view('pages.red-wines');
 })->name('red-wine');
 
-Route::get('contact', function () {
-    return view('pages.contact');
-})->name('contact');
+//Route::get('contact', function () {
+//    return view('pages.contact');
+//})->name('contact');
 
