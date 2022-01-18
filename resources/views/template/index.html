@@ -85,7 +85,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 <script type='text/javascript' src='wp-content/themes/villenoir/js/primary-navigation080f.js?ver=5.8.2' id='villenoir-navigation-js'></script>
 <script type='text/javascript' src='wp-content/themes/villenoir/js/jquery.waypoints.min080f.js?ver=5.8.2' id='waypoints-js'></script>
 <link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/193.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
 <meta name="generator" content="WordPress 5.8.2" />
 <meta name="generator" content="WooCommerce 6.0.0" />
 <link rel="canonical" href="index.html" />
@@ -123,10 +123,10 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 <link rel="apple-touch-icon" href="wp-content/uploads/2021/12/cropped-logo-180x180.png" />
 <meta name="msapplication-TileImage" content="http://127.0.0.1:81/wordpress/wp-content/uploads/2021/12/cropped-logo-270x270.png" />
 <script type="text/javascript">function setREVStartSize(e){
-			//window.requestAnimationFrame(function() {				 
-				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;	
-				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;	
-				try {								
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
 					var pw = document.getElementById(e.c).parentNode.offsetWidth,
 						newh;
 					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
@@ -136,37 +136,38 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
 					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
 					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
-					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);		
-					if(e.layout==="fullscreen" || e.l==="fullscreen") 						
-						newh = Math.max(e.mh,window.RSIH);					
-					else{					
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
 						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
-						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];					
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
 						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
 						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
 						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
-											
+
 						var nl = new Array(e.rl.length),
-							ix = 0,						
-							sl;					
+							ix = 0,
+							sl;
 						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
 						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
 						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
-						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
 						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
-						sl = nl[0];									
-						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
-						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
 						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
-					}				
-					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));					
+					}
+					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));
 					document.getElementById(e.c).height = newh+"px";
-					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";				
+					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";
 				} catch(e){
 					console.log("Failure at Presize of Slider:" + e)
-				}					   
+				}
 			//});
-		  };</script>
+		  };
+</script>
 <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1617302572453{padding-top: 0px !important;padding-bottom: 0px !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}.vc_custom_1458035087061{padding-bottom: 35px !important;background-color: #f1f1f1 !important;}.vc_custom_1617302641081{background-color: #f1f1f1 !important;}.vc_custom_1617302742710{padding-top: 0px !important;background-color: #f1f1f1 !important;}.vc_custom_1617302734517{padding-bottom: 0px !important;}.vc_custom_1617302663690{padding-top: 0px !important;}.vc_custom_1457626757165{background-color: #f1f1f1 !important;}.vc_custom_1458048524081{padding-right: 10% !important;padding-left: 10% !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1460549807462{margin-bottom: 0px !important;padding-top: 20% !important;padding-right: 20% !important;padding-bottom: 20% !important;padding-left: 30px !important;}.vc_custom_1617353560917{margin-bottom: 0px !important;}.vc_custom_1639980014165{margin-bottom: 90px !important;}.vc_custom_1617357445182{margin-top: 90px !important;margin-bottom: 0px !important;}.vc_custom_1460628359633{margin-top: 0px !important;margin-right: 0px !important;margin-bottom: 0px !important;margin-left: 0px !important;padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1460628348165{padding-right: 15% !important;padding-left: 30px !important;}.vc_custom_1617357504438{margin-top: 0px !important;margin-right: 0px !important;margin-bottom: 0px !important;margin-left: 0px !important;padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1639980038304{margin-bottom: 90px !important;}.vc_custom_1457619221167{margin-bottom: 90px !important;}.vc_custom_1617350478559{margin-right: 30px !important;margin-bottom: 0px !important;}.vc_custom_1617350497245{margin-bottom: 0px !important;}.vc_custom_1458032377294{margin-top: 90px !important;}.vc_custom_1617357592041{padding-top: 20% !important;padding-right: 20% !important;padding-bottom: 20% !important;padding-left: 20% !important;background-image: url(../../okthemes.com/villenoirdemonew/wp-content/uploads/2021/04/box-promo-pattern-171df7a.png?id=2314) !important;background-position: 0 0 !important;background-repeat: repeat !important;}.vc_custom_1460369664258{margin-top: 0px !important;margin-right: 0px !important;margin-bottom: 0px !important;margin-left: 0px !important;padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1617353581048{margin-bottom: 0px !important;}.vc_custom_1460370683208{padding-right: 60px !important;}.vc_custom_1617358182464{padding-top: 20% !important;padding-right: 20% !important;padding-bottom: 20% !important;padding-left: 20% !important;background: #ffffff url(http://okthemes.com/villenoirdemonew/wp-content/uploads/2021/04/triangles-icn-171.png?id=2323) !important;background-position: 0 0 !important;background-repeat: no-repeat !important;}.vc_custom_1617350580088{margin-bottom: 0px !important;}.vc_custom_1617358237740{padding-top: 20% !important;padding-right: 20% !important;padding-bottom: 20% !important;padding-left: 20% !important;background: #ffffff url(http://okthemes.com/villenoirdemonew/wp-content/uploads/2021/04/triangles-icn-171.png?id=2323) !important;background-position: 0 0 !important;background-repeat: no-repeat !important;}.vc_custom_1460370664276{padding-left: 60px !important;}.vc_custom_1617350592249{margin-bottom: 0px !important;}.vc_custom_1460370846525{margin-top: 0px !important;margin-right: 0px !important;margin-bottom: 0px !important;margin-left: 0px !important;padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1466409537918{padding-top: 20% !important;padding-right: 20% !important;padding-bottom: 20% !important;padding-left: 20% !important;background-color: #f1f1f1 !important;}.vc_custom_1617353596057{margin-top: 0px !important;margin-right: 0px !important;margin-bottom: 0px !important;margin-left: 0px !important;padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1457626016290{margin-bottom: 90px !important;}.vc_custom_1566978619501{margin-top: 0px !important;margin-right: 0px !important;margin-bottom: 0px !important;margin-left: 0px !important;padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1458045278797{padding-top: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
 
 <body class="home page-template-default page page-id-193 theme-villenoir woocommerce-no-js tribe-no-js gg-page-has-header-slider gg-slider-is-beneath_header gg-page-header-style1 gg-has-stiky-menu gg-has-sticky-logo gg-has-mobile-logo gg-has-style_1-menu single-author gg-shop-style1 wpb-js-composer js-comp-ver-6.6.0 vc_responsive wpb-is-on">
@@ -203,7 +204,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 <img style=" max-width: 50px;" src="wp-content/uploads/2021/04/logo-sticky.png" width="212" height="160" alt="Redamancy" />
 </a>
             </div><!-- .logo-wrapper -->
-            
+
             <!-- Begin Main Navigation -->
             <ul id="main-menu" class="nav navbar-nav navbar-middle"><li id="menu-item-2397" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-193 current_page_item menu-item-2397"><a href="index.html" aria-current="page">Home</a></li>
 <li id="menu-item-2374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2374"><a href="our-story/index.html">Our story</a></li>
@@ -220,7 +221,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 
             <!-- Begin Second Navigation -->
                     <ul class="nav navbar-nav secondary-nav">
-            
+
             <li class="gg-woo-mini-cart dropdown">    <a id="quick_cart" data-target="open-cart" href="cart-2/index.html" title="View your shopping cart">
         <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
@@ -248,7 +249,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 
         <div class="subheader-slider">
         <div class="container">
-            
+
 			<!-- START Main Slideshow REVOLUTION SLIDER 6.4.6 --><p class="rs-p-wp-fix"></p>
 			<rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="background:transparent;padding:0;">
 				<rs-module id="rev_slider_1_1" style="" data-version="6.4.6">
@@ -257,7 +258,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 							<img src="wp-content/uploads/2016/03/slide-1-background.jpg" title="slide-1-background" width="1440" height="763" class="rev-slidebg tp-rs-img" data-no-retina>
 <!--
 							--><rs-layer
-								id="slider-1-slide-1-layer-1" 
+								id="slider-1-slide-1-layer-1"
 								data-type="image"
 								data-rsp_ch="on"
 								data-xy="x:r,r,c,c;xo:-100px,-150px,0,0;y:m,m,b,b;yo:0,0,30px,25px;"
@@ -267,11 +268,11 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 								data-frame_1="st:1250;sp:1000;sR:1250;"
 								data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:6750;"
 								style="z-index:8;"
-							><img src="wp-content/uploads/2016/03/slider-bottle.png" class="tp-rs-img" width="794" height="754" data-no-retina> 
+							><img src="wp-content/uploads/2016/03/slider-bottle.png" class="tp-rs-img" width="794" height="754" data-no-retina>
 							</rs-layer><!--
 
 							--><rs-layer
-								id="slider-1-slide-1-layer-7" 
+								id="slider-1-slide-1-layer-7"
 								class="Villenoir-Title-Italic"
 								data-type="text"
 								data-color="rgba(255, 255, 255, 1)"
@@ -282,11 +283,11 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 								data-frame_1="e:power2.out;st:1000;sp:1000;sR:1000;"
 								data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:7000;"
 								style="z-index:5;font-family:Playfair Display;font-style:italic;font-weight:300;"
-							>Refinement 
+							>Refinement
 							</rs-layer><!--
 
 							--><rs-layer
-								id="slider-1-slide-1-layer-10" 
+								id="slider-1-slide-1-layer-10"
 								class="Villenoir-Subtitle"
 								data-type="text"
 								data-color="rgba(176, 151, 109, 1)"
@@ -297,11 +298,11 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 								data-frame_1="e:power2.out;st:1250;sp:1000;sR:1250;"
 								data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:6750;"
 								style="z-index:6;font-family:Lato;text-transform:uppercase;font-weight:500;"
-							>Introducing Redamancy Wines  
+							>Introducing Redamancy Wines
 							</rs-layer><!--
 
 							--><rs-layer
-								id="slider-1-slide-1-layer-11" 
+								id="slider-1-slide-1-layer-11"
 								class="Villenoir-Title-Regular"
 								data-type="text"
 								data-color="rgba(255, 255, 255, 1)"
@@ -312,7 +313,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 								data-frame_1="e:power2.out;st:1500;sp:1000;sR:1500;"
 								data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:6500;"
 								style="z-index:7;font-family:Playfair Display;"
-							>in a bottle 
+							>in a bottle
 							</rs-layer><!--
 -->						</rs-slide>
 					</rs-slides>
@@ -351,7 +352,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 								},
 							});
 						}
-						
+
 					});
 					} // End of RevInitScript
 				var once_revslider11 = false;
@@ -362,8 +363,8 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
         </div>
     </div>
     <div class="clearfix"></div>
-               
-    
+
+
 
 </header>
 <!-- End Header. Begin Template Content -->
@@ -372,14 +373,14 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
         <div class="row">
             <div class="col-xs-12 col-md-12">
 
-                
+
 <article id="post-193" class="post-193 page type-page status-publish hentry">
-	
-		
+
+
 	<div class="entry-content">
 		<div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid gg-force-background-left vc_custom_1617302572453 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617353560917">
-		
+
 		<figure class="wpb_wrapper vc_figure">
 			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="633" height="949" src="wp-content/uploads/2021/04/man-17.jpg" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/man-17.jpg 633w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/man-17-200x300.jpg 200w" sizes="(max-width: 633px) 100vw, 633px" /></div>
 		</figure>
@@ -388,7 +389,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 	<div class="title-subtitle-box  vc_custom_1639980014165" style=" margin-bottom:90px; text-align: left;">
 		<p  style="">Message from Redamancy</p>
 		<h1 style=" font-style: normal;">A New Generation of Winemakers</h1>
-	</div> 
+	</div>
 	<div class="wpb_text_column wpb_content_element " >
 		<div class="wpb_wrapper">
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet elit leo.</p>
@@ -398,14 +399,14 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 	</div>
 
 	<div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617357445182">
-		
+
 		<figure class="wpb_wrapper vc_figure">
 			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="302" height="99" src="wp-content/uploads/2021/04/signature-black-171.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/signature-black-171.png 302w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/signature-black-171-300x98.png 300w" sizes="(max-width: 302px) 100vw, 302px" /></div>
 		</figure>
 	</div>
 </div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1458035087061 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460628359633"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617357504438">
-		
+
 		<figure class="wpb_wrapper vc_figure">
 			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1500" height="2299" src="wp-content/uploads/2021/04/current-release-181.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/current-release-181.png 1500w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/current-release-181-196x300.png 196w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/current-release-181-668x1024.png 668w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/current-release-181-768x1177.png 768w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/current-release-181-1002x1536.png 1002w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/current-release-181-1336x2048.png 1336w" sizes="(max-width: 1500px) 100vw, 1500px" /></div>
 		</figure>
@@ -413,11 +414,11 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460628348165"><div class="wpb_wrapper">
 	<div class="title-subtitle-box  " style=" margin-bottom:5px; text-align: left;">
 		<h2 style=" font-style: normal;">2015</h2>
-	</div> 
+	</div>
 	<div class="title-subtitle-box  vc_custom_1639980038304" style=" margin-bottom:90px; text-align: left;">
 		<p  style="">Current release</p>
 		<h1 style=" font-style: normal;">Cabernet Sauvignon</h1>
-	</div> 
+	</div>
 	<div class="wpb_text_column wpb_content_element  vc_custom_1457619221167" >
 		<div class="wpb_wrapper">
 			<p>Served well-chilled our authentically made Villenoir Cabernet Sauvignon is a refreshingly delicate dry wine with hints of strawberry, citrus, and peach laced fruit.</p>
@@ -434,7 +435,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 	</div>
 </div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6 vc_col-has-fill"><div class="vc_column-inner vc_custom_1617357592041"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_center">
-		
+
 		<figure class="wpb_wrapper vc_figure">
 			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="32" height="44" src="wp-content/uploads/2021/04/grape-icn-171.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" /></div>
 		</figure>
@@ -445,14 +446,14 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 		<h1 style=" color:#ffffff;  font-style: normal;">We thrive in making fine wines that enrich the taste&amp;soul.</h1>
 	</div> </div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460369664258"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617353581048">
-		
+
 		<figure class="wpb_wrapper vc_figure">
 			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1170" height="1400" src="wp-content/uploads/2021/04/estate-tasting-11-17.jpg" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/estate-tasting-11-17.jpg 1170w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/estate-tasting-11-17-251x300.jpg 251w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/estate-tasting-11-17-856x1024.jpg 856w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/estate-tasting-11-17-768x919.jpg 768w" sizes="(max-width: 1170px) 100vw, 1170px" /></div>
 		</figure>
 	</div>
 </div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1617302641081 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-7 vc_col-lg-8 vc_col-md-8"><div class="vc_column-inner vc_custom_1460370683208"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left   force-90-width-large-screen">
-		
+
 		<figure class="wpb_wrapper vc_figure">
 			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="807" height="253" src="wp-content/uploads/2021/04/red-bottle-171.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/red-bottle-171.png 807w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/red-bottle-171-300x94.png 300w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/red-bottle-171-768x241.png 768w" sizes="(max-width: 807px) 100vw, 807px" /></div>
 		</figure>
@@ -479,7 +480,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 	<div class="title-subtitle-box  " style=" text-align: left;">
 		<p  style="">Varieties</p>
 		<h2 style=" font-style: normal;">The Reds</h2>
-	</div> 
+	</div>
 	<div class="gg_list list_style_line  ">
 <ul>
 <li>Cabernet Sauvignon</li>
@@ -490,7 +491,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 	<div class="title-subtitle-box  " style=" text-align: left;">
 		<p  style="">Varieties</p>
 		<h2 style=" font-style: normal;">The Whites</h2>
-	</div> 
+	</div>
 	<div class="gg_list list_style_line  ">
 <ul>
 <li>Chardonnay</li>
@@ -499,7 +500,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 </ul>
 </div><div class="vc_btn3-container vc_btn3-inline vc_custom_1617350592249" ><a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="http://okthemes.com/villenoirdemonew/product-category/white-wines/" title="">Shop now</a></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-7 vc_col-lg-8 vc_col-md-8"><div class="vc_column-inner vc_custom_1460370664276"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_right   force-90-width-large-screen">
-		
+
 		<figure class="wpb_wrapper vc_figure">
 			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="807" height="291" src="wp-content/uploads/2021/04/white-bottle-171.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/white-bottle-171.png 807w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/white-bottle-171-300x108.png 300w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/white-bottle-171-768x277.png 768w" sizes="(max-width: 807px) 100vw, 807px" /></div>
 		</figure>
@@ -524,7 +525,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 			</div>
 	</div> </div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1617302734517 vc_row-o-equal-height vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6"><div class="vc_column-inner vc_custom_1460370846525"><div class="wpb_wrapper">
 	<div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617353596057">
-		
+
 		<figure class="wpb_wrapper vc_figure">
 			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1170" height="1400" src="wp-content/uploads/2021/04/estate-tasting-11-17.jpg" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/estate-tasting-11-17.jpg 1170w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/estate-tasting-11-17-251x300.jpg 251w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/estate-tasting-11-17-856x1024.jpg 856w, http://127.0.0.1:81/wordpress/wp-content/uploads/2021/04/estate-tasting-11-17-768x919.jpg 768w" sizes="(max-width: 1170px) 100vw, 1170px" /></div>
 		</figure>
@@ -533,7 +534,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 	<div class="title-subtitle-box  " style=" margin-bottom:90px; text-align: center;">
 		<p  style="">The estate</p>
 		<h1 style=" font-style: normal;">Tasting &amp; Tours</h1>
-	</div> 
+	</div>
 	<div class="wpb_text_column wpb_content_element  vc_custom_1457626016290" >
 		<div class="wpb_wrapper">
 			<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing. Cras vel iaculis urna. Cras bibendum ex id dolor facilisis, in tempor lacus dapibus.</p>
@@ -551,20 +552,20 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
         <h2 class="widgettitle">Instagram</h2>
                 <p class="followers">24K            <span>Instagram Followers</span>
         </p>
-        
+
                 </div> <!-- .media-left -->
-        
+
         <div class="media-body">
-        
+
 <div id="sb_instagram" class="sbi sbi_col_3  sbi_width_resp" style="width: 100%;" data-feedid="sbi_#6" data-res="auto" data-cols="3" data-num="6" data-shortcode-atts="{&quot;num&quot;:&quot;6&quot;,&quot;imagepadding&quot;:&quot;0&quot;,&quot;cols&quot;:&quot;3&quot;,&quot;hoverdisplay&quot;:&quot;likes&quot;,&quot;showheader&quot;:&quot;false&quot;,&quot;showbutton&quot;:&quot;false&quot;,&quot;showfollow&quot;:&quot;false&quot;}"  data-postid="193" data-locatornonce="831af2ae97" data-sbi-flags="favorLocal">
-	
+
 	<div id="sbi_images">
 			</div>
 
 	<div id="sbi_load">
 
-	
-	
+
+
 </div>
 
 		<span class="sbi_resized_image_data" data-feed-id="sbi_#6" data-resized="[]">
@@ -573,43 +574,43 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 
         </div><!-- .media-body -->
         </div><!-- .media -->
-        
+
         </div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid center-text vc_custom_1458048524081 vc_row-has-fill vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1458045278797"><div class="wpb_wrapper">
 	<div class="title-subtitle-box  " style=" text-align: center;">
 		<p  style="">Be connected</p>
 		<h1 style=" font-style: normal;">Join Our Newsletter</h1>
 	</div> <div class="vc_widget vc_widget_mailchimp "><div class="widget widget_mc4wp_form_widget"><h2 class="widgettitle">Newsletter</h2></div></div></div></div></div></div>
 			</div><!-- .entry-content -->
-	
-	
+
+
 </article><!-- #post -->
             </div><!-- end page container -->
-            
+
         </div><!-- .row -->
-    </div><!-- .container -->    
+    </div><!-- .container -->
 </section>
 
-    
-    
+
+
     <footer class="site-footer">
 
         <div class="container">
             <div class="row">
 
-                    
-                    <div class="footer-message"> 
+
+                    <div class="footer-message">
                 <div class="heading">
 <p class="h_subtitle">Villenoir promise</p>
 <h2 class="h_title">We make good wines</h2>
 </div>            </div>
-            
-    
+
+
                         <div class="footer-widgets col-md-12">
-                
+
 
             </div>
-                        
-                    
+
+
                 <div class="footer-extras">
 
             <!-- Begin Footer Navigation -->
@@ -620,7 +621,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 </ul></div>            <!-- End Footer Navigation -->
 
             <!-- Begin Footer Social -->
-            
+
                         <div class="footer-social">
                 <ul>
                     <li><a href="http://www.google.com/" target="_blank"><i class="fa fa-behance"></i></a></li><li><a href="http://www.google.com/" target="_blank"><i class="fa fa-dribbble"></i></a></li><li><a href="http://www.google.com/" target="_blank"><i class="fa fa-twitter"></i></a></li><li><a href="http://www.google.com/" target="_blank"><i class="fa fa-facebook"></i></a></li><li><a href="http://www.google.com/" target="_blank"><i class="fa fa-linkedin"></i></a></li>                </ul>
@@ -629,12 +630,12 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 
             <!-- Copyright -->
                         <div class="footer-copyright">
-                &copy; 2021 VILLENOIR.  All rights reserved            </div>    
-            
+                &copy; 2021 VILLENOIR.  All rights reserved            </div>
+
 
         </div><!-- /footer-extras -->
-        
-    
+
+
             </div><!-- .row -->
         </div><!-- /.container -->
     </footer>
@@ -648,7 +649,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
                 <div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content"></div></div>            </div>
         </nav>
         <div class="click-capture"></div>
-        
+
 <div id="fullscreen-searchform">
     <button type="button" class="close">
     	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve"><path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path></svg>
@@ -665,7 +666,7 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
             </g>
         </svg>
         </a>
-        
+
         </div><!-- .site-wrapper -->
 
     		<script>
@@ -674,21 +675,21 @@ var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php",
 			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
 		} )( document.body );
 		</script>
-		
+
 		<div id="av-overlay-wrap">
 
-			
+
 			<div id="av-overlay">
 
 				<h1>You must be 21 years old to visit this site.</h1>
 
 				<p>Please verify your age</p>
-				
+
 				<input type="hidden" id="av-nonce" name="av-nonce" value="69c12ac09f" /><input type="hidden" name="_wp_http_referer" value="/wordpress/" /><form id="av_verify_form" action="http://127.0.0.1:81/wordpress/" method="post"><input type="hidden" id="av-nonce" name="av-nonce" value="69c12ac09f" /><input type="hidden" name="_wp_http_referer" value="/wordpress/" /><p><select name="av_verify_m" id="av_verify_m"><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select> - <select name="av_verify_d" id="av_verify_d"><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select> - <select name="av_verify_y" id="av_verify_y"><option value="1910" >1910</option><option value="1911" >1911</option><option value="1912" >1912</option><option value="1913" >1913</option><option value="1914" >1914</option><option value="1915" >1915</option><option value="1916" >1916</option><option value="1917" >1917</option><option value="1918" >1918</option><option value="1919" >1919</option><option value="1920" >1920</option><option value="1921" >1921</option><option value="1922" >1922</option><option value="1923" >1923</option><option value="1924" >1924</option><option value="1925" >1925</option><option value="1926" >1926</option><option value="1927" >1927</option><option value="1928" >1928</option><option value="1929" >1929</option><option value="1930" >1930</option><option value="1931" >1931</option><option value="1932" >1932</option><option value="1933" >1933</option><option value="1934" >1934</option><option value="1935" >1935</option><option value="1936" >1936</option><option value="1937" >1937</option><option value="1938" >1938</option><option value="1939" >1939</option><option value="1940" >1940</option><option value="1941" >1941</option><option value="1942" >1942</option><option value="1943" >1943</option><option value="1944" >1944</option><option value="1945" >1945</option><option value="1946" >1946</option><option value="1947" >1947</option><option value="1948" >1948</option><option value="1949" >1949</option><option value="1950" >1950</option><option value="1951" >1951</option><option value="1952" >1952</option><option value="1953" >1953</option><option value="1954" >1954</option><option value="1955" >1955</option><option value="1956" >1956</option><option value="1957" >1957</option><option value="1958" >1958</option><option value="1959" >1959</option><option value="1960" >1960</option><option value="1961" >1961</option><option value="1962" >1962</option><option value="1963" >1963</option><option value="1964" >1964</option><option value="1965" >1965</option><option value="1966" >1966</option><option value="1967" >1967</option><option value="1968" >1968</option><option value="1969" >1969</option><option value="1970" >1970</option><option value="1971" >1971</option><option value="1972" >1972</option><option value="1973" >1973</option><option value="1974" >1974</option><option value="1975" >1975</option><option value="1976" >1976</option><option value="1977" >1977</option><option value="1978" >1978</option><option value="1979" >1979</option><option value="1980" >1980</option><option value="1981" >1981</option><option value="1982" >1982</option><option value="1983" >1983</option><option value="1984" >1984</option><option value="1985" >1985</option><option value="1986" >1986</option><option value="1987" >1987</option><option value="1988" >1988</option><option value="1989" >1989</option><option value="1990" >1990</option><option value="1991" >1991</option><option value="1992" >1992</option><option value="1993" >1993</option><option value="1994" >1994</option><option value="1995" >1995</option><option value="1996" >1996</option><option value="1997" >1997</option><option value="1998" >1998</option><option value="1999" >1999</option><option value="2000" >2000</option><option value="2001" >2001</option><option value="2002" >2002</option><option value="2003" >2003</option><option value="2004" >2004</option><option value="2005" >2005</option><option value="2006" >2006</option><option value="2007" >2007</option><option value="2008" >2008</option><option value="2009" >2009</option><option value="2010" >2010</option><option value="2011" >2011</option><option value="2012" >2012</option><option value="2013" >2013</option><option value="2014" >2014</option><option value="2015" >2015</option><option value="2016" >2016</option><option value="2017" >2017</option><option value="2018" >2018</option><option value="2019" >2019</option><option value="2020" >2020</option><option value="2021" selected="selected">2021</option></select></p><p class="submit"><label for="av_verify_remember"><input type="checkbox" name="av_verify_remember" id="av_verify_remember" value="1" /> Remember me</label> <input type="submit" name="av_verify" id="av_verify" value="Enter Site &raquo;" /></p></form>
-				
+
 			</div>
 
-			
+
 		</div>
 	<!-- Instagram Feed JS -->
 <script type="text/javascript">

@@ -43,14 +43,14 @@
 
                                 </h1>
 
-                                <div id="nav_crumb" class="nav_crumb left" ><a href="{{url('/')}}">Home</a>  <span class="delimiter">&frasl;</span>  <span class="current">Our story</span></div>
+                                <div id="nav_crumb" class="nav_crumb left" >
+                                    <a href="{{url('/')}}">Home</a>  <span class="delimiter">&frasl;</span>
+                                    <span class="current">Our story</span>
+                                </div>
 
 
                                 <div class="header-page-description">
-                                    <p>In tempor, mauris nec viverra molestie, lorem diam dignissim ex,
-                                        quis lobortis dui turpis ut enim. Aenean dui nulla, placerat in massa eget,
-                                        lacinia accumsan nunc. Curabitur et mauris dolor.
-                                    </p>
+                                    <p>Wine is a treat and Redamancy wines seek to fill your experience with deep affection  </p>
                                 </div>
                             </div><!-- .page-meta-wrapper -->
 
@@ -88,27 +88,35 @@
                                                     <div class="wpb_wrapper">
                                                         <h2>How we started</h2>
                                                         <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                            Curabitur sit amet elit leo. Lorem ipsum dolor sit amet,
-                                                            consectetur adipiscing elit. Donec vulputate nibh et nulla hendrerit,
-                                                            ut condimentum odio porttitor.
-                                                            Nulla consectetur nibh massa, eget scelerisque nisl volutpat et.
-                                                            Integer pharetra efficitur tempor. Quisque finibus suscipit nisi,
-                                                            quis scelerisque nunc efficitur vitae.
-                                                            Duis interdum aliquam mauris, ut fermentum enim suscipit.
+                                                            Ours is an organic tale of companionship, dreams, poetry and commitment.
+                                                            We are Marc Van Uytvanck, Belgian and Antoinette Rapitsi, South African.
+                                                            Our dogs are Brave from Kenya and Maisha from South Africa.
+                                                            We famously love Chardonnay, wild life, Golden Retrievers, food and travel.
+                                                            This journey began in 2010, frequenting the same distinctive spot in Devon Valley,
+                                                            Stellenbosch, this ritual inspired an imagined life of making wine, sharing it with
+                                                            family and friends, taking long walks with our Golden Retrievers,
+                                                            and ending the day with our own glass of wine.
                                                         </p>
                                                         <h2>Passion</h2>
                                                         <p>
-                                                            Suspendisse commodo ex eget lorem iaculis, vel ultrices neque sodales.
-                                                            Sed bibendum egestas felis, commodo mattis ligula. Mauris aliquam lacus
-                                                            id hendrerit venenatis. Quisque dignissim mi ut dictum gravida.
+                                                            In 2015 when this distinctive spot in the breathtaking valleys of Stellenbosch went on the market,
+                                                            we were entranced and that was it.  We were lucky and felt that this most beautiful sloped piece
+                                                            of land wanted us as much as we wanted it.  Years went by as we continued to work our usual jobs -
+                                                            one Agronomic Science Engineer in development aid, and one Interior architect.
+                                                            For our work, we live a nomadic life across the globe always in tow with our loyal retrievers.
+
+                                                            In 2019 life changed for everyone, Covid19 affected life as we know it.  For us, working from home
+                                                            afforded us the much-needed time to map out our ideas and gradually begin work on the business of wine.
+                                                            At that stage, the premium wine scene had gained traction in South Africa; passionate and nature loving
+                                                            winemakers and producers were changing the wine industry, allowing us to be part of the new narrative.
+
                                                         </p>
-                                                        <h2>Craftmanship</h2>
+                                                        <h2>Craftsmanship</h2>
                                                         <p>
-                                                            Duis sit amet ex sit amet tortor posuere posuere.
-                                                            Mauris sodales rutrum tincidunt. Donec non massa ullamcorper, volutpat ex ac,
-                                                            volutpat libero.
-                                                            Morbi vel metus fermentum augue lacinia maximus sit amet ut dolor.
+                                                            By nature we are an experimental pair - we also have high regard for old-fashioned hard work,
+                                                            nature and humanity.  For us wine is emotional, every time we have a good glass of wine we exclaim its greatness
+                                                            because we are emotionally charged at that very moment by the experience.
+                                                            Wine is a treat and Redamancy wines seek to fill your experience with deep affection.
                                                         </p>
 
                                                     </div>

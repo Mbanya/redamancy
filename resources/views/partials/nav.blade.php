@@ -42,27 +42,10 @@
                     <a href="{{route('our-story')}}" aria-current="page">Our story</a>
                 </li>
                 <li id="menu-item-2373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2373">
-                    <a href="">Shop</a>
-                    <button class="sub-menu-toggle depth-0" aria-expanded="false" onClick="villenoirExpandSubMenu(this)">
-                        <span class="icon-plus">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="icon-minus">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 11h12v2H6z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span class="screen-reader-text">Open menu</span>
-                    </button>
-                    <ul class="sub-menu">
-                        <li id="menu-item-2360" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2360"><a href="{{route('red-wine')}}">Red wines</a></li>
-                        <li id="menu-item-2361" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2361"><a href="{{route('white-wine')}}">White wines</a></li>
-                    </ul>
+                    <a href="{{route('shop.index')}}">Shop</a>
                 </li>
-                <li id="menu-item-2386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2386"><a href="{{route('wine-club')}}">Wine Club</a></li>
-{{--                <li id="menu-item-2372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2372"><a href="{{route('contact')}}">Contact</a></li>--}}
+{{--                <li id="menu-item-2386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2386"><a href="{{route('wine-club')}}">Wine Club</a></li>--}}
+                <li id="menu-item-2372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2372"><a href="{{route('contact')}}">Contact</a></li>
             </ul>
             <!-- End Main Navigation -->
 

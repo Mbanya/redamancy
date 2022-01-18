@@ -1,5 +1,50 @@
 @extends('layouts.main')
 @section('assets')
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {}
+    </style>
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required { visibility: visible; }
+    </style>
+
+    <style id='villenoir-style-inline-css' type='text/css'>
+        body .wpb_row:not(.vc_inner),
+        body .vc_row.wpb_row:not(.vc_inner),
+        body.post-type-archive.wpb-is-on #content,
+        body #content,
+        body.post-type-archive.wpb-is-on #content,
+        body.woocommerce.single-product.wpb-is-on #content {
+            padding: 100px 0 100px 0;
+        }
+    </style>
+    <style type="text/css">
+
+        #av-overlay-wrap {
+            background: #ffffff;
+        }
+
+        #av-overlay {
+            background: #fff;
+        }
+
+    </style>
+    <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1617011745641{margin-top: 0px !important;margin-bottom: 90px !important;padding-top: 90px !important;padding-bottom: 0px !important;background-color: #000000 !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+
 @endsection
 
 @section('content')
@@ -8,14 +53,10 @@
         <header class="site-header default">
 
          @include('partials.nav')
-
-
             <!-- Page header image -->
             <!-- End Page header image -->
-
-
             <!-- Page meta -->
-            <div class="page-meta style3-image-header" style="background-image: url({{asset('wp-content/uploads/2021/04/our-story-header-image-11-17.jpg')}});">
+            <div class="page-meta style3-image-header" style="background-image: url({{asset('images/contact/header-image.jpg')}}); background-size: cover; background-position: bottom;">
 
                 <div class="container">
                     <div class="row">
@@ -62,53 +103,51 @@
 
                             <div class="entry-content">
                                 <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1617011745641 vc_row-has-fill">
-                                    <div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+                                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
                                                 <div class="gg-infobox " style="text-align:left;">
                                                     <p class="subtitle" >Redamancy Wines</p>
-                                                    <div class="description" style="color: #ffffff;"><p>Westlands Rhapta Road<br />
-                                                            Nairobi Kenya<br />
-                                                            <a href="#">Get directions</a></p>
+                                                    <div class="description" style="color: #ffffff;">
+                                                        <p> Pretoria,<br/> South Africa <br/>
+                                                        </p>
                                                     </div>
                                                 </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
                                                 <div class="gg-infobox " style="text-align:left;">
                                                     <p class="subtitle" >talk to us</p>
-                                                    <div class="description" style="color: #ffffff;"><p><a href="mailto:hello@redamancy.com">hello@redamancy.com</a><br />
-                                                            +254(712) 345678</p>
+                                                    <div class="description" style="color: #ffffff;">
+                                                        <p>
+                                                            <a href="mailto:hello@redamancy.com">info@redamancy.co.za</a>
+                                                            <br />
+                                                            +27 83 580 1461
+                                                        </p>
                                                     </div>
-                                                </div> </div></div></div>
-                                    <div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="gg-horizontal-list "><p class="subtitle">Tastin room hours</p><dl class="horizontal">
-                                                        <dt style="color: #ffffff;">MONDAY - THURSDAY</dt>
-                                                        <dd style="color: #ffffff;">11AM - 5PM</dd>
-                                                        <dt style="color: #ffffff;">FRIDAY - SUNDAY</dt>
-                                                        <dd style="color: #ffffff;">10AM - 5PM</dd>
-                                                        <dt style="color: #ffffff;">LAST POUR</dt>
-                                                        <dd style="color: #ffffff;">4:30PM</dd></dl></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row-full-width vc_clearfix"></div>
                             </div><!-- .entry-content -->
 
 
                         </article><!-- #post -->
-                        <div class="clearfix"></div>
-
-                        <div class="col-xs-12 col-md-6 col-md-offset-3 gg-view-map-wrapper">
-                            <a class="lightbox-el gg-popup" data-effect="mfp-zoom-in" href="#gg-map-popup"> View map                </a>
-                        </div>
-
-                        <div class="clearfix"></div>
-
-                        <div class="contact-form-wrapper col-xs-12 col-md-6 col-md-offset-3">
+                        <div class="contact-form-wrapper col-xs-12 col-md-12 vc_align_center" style="margin: 30px 30px;">
 
                             <div class="contact-form-description">
-                                If you have an inquiry about our wines or services fill out the contact form. Please fill out the form as detailed as possible in order to serve you the best. Thank you for sharing your comments and suggestions with us.
+                                If you have an inquiry about our wines or services fill out the contact form.
+                                Please fill out the form as detailed as possible in order to serve you the best.
+                                Thank you for sharing your comments and suggestions with us.
                             </div>
 
-                            <form id="contact-form"
-                                  data-fv-addons="mandatoryIcon"
-                                  data-fv-addons-mandatoryicon-icon="fa fa-asterisk"
-
-                                  data-fv-message="This value is not valid"
-                                  data-fv-feedbackicons-valid="fa fa-check"
-                                  data-fv-feedbackicons-invalid="fa fa-times"
-                                  data-fv-feedbackicons-validating="fa fa-refresh">
+                            <form id="contact-form">
 
                                 <div id="cf-msg"></div><!-- Message display -->
 
@@ -148,7 +187,6 @@
                 </div><!-- .row -->
             </div><!-- .container -->
         </section>
-
 
 
 @include('partials.footer')

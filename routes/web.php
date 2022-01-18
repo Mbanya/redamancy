@@ -25,15 +25,8 @@ Route::get('wine-club', function () {
     return view('pages.wine-club');
 })->name('wine-club');
 
-Route::get('whites', function () {
-    return view('pages.white-wines');
-})->name('white-wine');
-
-Route::get('reds', function () {
-    return view('pages.red-wines');
-})->name('red-wine');
-
-//Route::get('contact', function () {
-//    return view('pages.contact');
-//})->name('contact');
+Route::resource('shop',\App\Http\Controllers\ShopController::class);
+Route::get('contact', function () {
+    return view('pages.contact');
+})->name('contact');
 
