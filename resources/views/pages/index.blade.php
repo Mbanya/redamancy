@@ -34,7 +34,8 @@
                                         data-frame_1="st:1250;sp:1000;sR:1250;"
                                         data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:6750;"
                                         style="z-index:8;"
-                                    ><img src="{{asset('images/wine-bottles/slider-bottle-main.png')}}" class="tp-rs-img" width="794" height="754" data-no-retina>
+                                    >
+{{--                                        <img src="{{asset('images/wine-bottles/slider-bottle-main.png')}}" class="tp-rs-img" width="794" height="754" data-no-retina>--}}
                                     </rs-layer><!--
 
 							--><rs-layer
@@ -167,7 +168,7 @@
                                             <div class="wpb_wrapper">
                                                 <div class="title-subtitle-box" style="margin-bottom:60px; text-align: left;">
                                                     <p style="">Message from Redamancy</p>
-                                                    <h1 style=" font-style: normal;">A New Generation of Winemakers</h1>
+                                                    <h1 style=" font-style: normal;">A New Generation of Wine Producers</h1>
                                                 </div>
                                                 <div class="wpb_text_column wpb_content_element " >
                                                     <div class="wpb_wrapper">
@@ -221,7 +222,7 @@
                                         <div class="vc_column-inner vc_custom_1460628348165">
                                             <div class="wpb_wrapper">
                                                 <div class="title-subtitle-box" style=" margin-bottom:5px; text-align: left;">
-                                                    <h2 style=" font-style: normal;">2015</h2>
+                                                    <h2 style=" font-style: normal;">2021</h2>
                                                 </div>
                                                 <div class="title-subtitle-box  vc_custom_1639980038304" style=" margin-bottom:90px; text-align: left;">
                                                     <p  style="">Current release</p>
