@@ -25,6 +25,7 @@ Route::get('wine-club', function () {
     return view('pages.wine-club');
 })->name('wine-club');
 Route::view('wine-details','shop.show')->name('wine-details');
+Route::view('wine-details-2','shop.other')->name('wine-details-2');
 
 Route::resource('shop',\App\Http\Controllers\ShopController::class);
 Route::get('contact', function () {

@@ -109,7 +109,7 @@
                                                 <div class="gg-infobox " style="text-align:left;">
                                                     <p class="subtitle" >Redamancy Wines</p>
                                                     <div class="description" style="color: #ffffff;">
-                                                        <p> Pretoria,<br/> South Africa <br/>
+                                                        <p> Johannesburg,<br/> South Africa <br/>
                                                         </p>
                                                     </div>
                                                 </div>
