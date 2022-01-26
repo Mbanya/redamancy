@@ -1,5 +1,17 @@
 @extends('layouts.main')
 @section('assets')
+    <style>
+        .woocommerce .cart .quantity {
+            position: relative;
+            max-width: 170px;
+            float: left;
+            margin-right: 30px;
+        }
+        .woocommerce form label {
+            display: inline-block;
+            clear: left;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -42,8 +54,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
-                        <div class="woocommerce-notices-wrapper"></div><p class="woocommerce-result-count">
-                            Showing all 3 results</p>
+                        @if ($message = Session::get('success'))
+                            <div class="woocommerce-notices-wrapper" style="margin: 30px 0">
+                                <div class="woocommerce-message" role="alert">
+                                    {{ $message }}
+                                </div>
+                            </div>
+                        @endif
+                        <p class="woocommerce-result-count">
+                            Showing all 3 results
+                        </p>
                         <form class="woocommerce-ordering" method="get">
                             <select name="orderby" class="orderby" aria-label="Shop order">
                                 <option value="menu_order"  selected='selected'>Default sorting</option>
@@ -57,83 +77,68 @@
                         </form>
 
                         <div class="row">
+
                             <ul class="products" style="margin: 30px 30px;">
-
-                                <li class="col-xs-12 col-sm-6 col-md-6 product type-product post-645 status-publish instock
+                                @foreach($items as $item)
+                                    <li class="col-xs-12 col-sm-6 col-md-6 product type-product post-645 status-publish instock
                                 product_cat-red-wines product_tag-red product_tag-wine has-post-thumbnail shipping-taxable purchasable product-type-simple">
 
-                                    <a href="{{route('wine-details-2')}}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                        <h2 class="woocommerce-loop-product__title">Chardonnay</h2>
-                                        <div class="gg-product-image-wrapper">
-                                            <img width="840" height="1335" src="{{asset('images/shop/white-wine-glass-shop.png')}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                 alt="" loading="lazy" srcset="images/shop/white-wine-glass-shop.png 840w,
-                                                 http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/Red-Cabernet-Sauvignon-w-cup-v2-189x300.png 189w,
-                                                  http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/Red-Cabernet-Sauvignon-w-cup-v2-644x1024.png 644w,
-                                                  http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/Red-Cabernet-Sauvignon-w-cup-v2-768x1221.png 768w"
-                                                 sizes="(max-width: 840px) 100vw, 840px" />
-                                        </div>
-                                    </a>
-                                    <div class="gg-product-meta-wrapper">
+                                        <a href="{{route('shop.show',$item->slug)}}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                            <h2 class="woocommerce-loop-product__title">{{$item->product_name}}</h2>
+                                            <div class="gg-product-image-wrapper">
+                                                <img width="840" height="1335" src="{{$item->product_image}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                     alt="" loading="lazy" srcset="{{$item->product_image}} 840w,
+                                                    Red-Cabernet-Sauvignon-w-cup-v2-189x300.png 189w,
+                                                    Red-Cabernet-Sauvignon-w-cup-v2-644x1024.png 644w,
+                                                    Red-Cabernet-Sauvignon-w-cup-v2-768x1221.png 768w"
+                                                     sizes="(max-width: 840px) 100vw, 840px" />
+                                            </div>
+                                        </a>
+                                        <div class="gg-product-meta-wrapper">
 
-                                        <dl>
-                                            <dt> Year </dt>
-                                            <dd>
-                                                <span class="year">2021</span>
-                                            </dd>
+                                            <dl>
+                                                <dt> Year </dt>
+                                                <dd>
+                                                    <span class="year">{{$item->vintage}}</span>
+                                                </dd>
 
-                                            <dt> Price </dt>
-                                            <dd>
+                                                <dt> Price </dt>
+                                                <dd>
                                                 <span class="price">
                                                     <span class="woocommerce-Price-amount amount">
-                                                        <bdi><span class="woocommerce-Price-currencySymbol">KSh</span>&nbsp;110.00</bdi>
+                                                        <bdi><span class="woocommerce-Price-currencySymbol">USD</span>&nbsp;{{number_format($item->price)}}</bdi>
                                                     </span>
                                                 </span>
-                                            </dd>
-                                        </dl>
-                                        <a href="" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                           data-product_id="645" data-product_sku="" aria-label="Add &ldquo;Redamancy Cabernet Sauvignon&rdquo; to your cart" rel="nofollow">
-                                            Add to cart
-                                        </a>
-                                    </div>
-                                </li>
+                                                </dd>
+                                            </dl>
 
-                                <li class="col-xs-12 col-sm-6 col-md-6 product type-product post-645 status-publish instock
-                                product_cat-red-wines product_tag-red product_tag-wine has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                            <form action="{{route('cart.store')}}" method="post" enctype="multipart/form-data">
+                                                @csrf
+                                                <input type="hidden" value="{{$item->id}}" name="id">
+                                                <input type="hidden" value="{{$item->product_name}}" name="product_name">
+                                                <input type="hidden" value="{{$item->price}}" name="price">
+                                                <input type="hidden" value="{{$item->product_image}}" name="image">
 
-                                    <a href="{{route('wine-details')}}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link" >
-                                        <h2 class="woocommerce-loop-product__title">Cabernet Sauvignon</h2>
-                                        <div class="gg-product-image-wrapper">
-                                            <img width="840" height="1335" src="{{asset('images/shop/red-wine-glass-shop.png')}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                 alt="" loading="lazy" srcset="images/shop/red-wine-glass-shop.png 840w,
-                                                 http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/Red-Cabernet-Sauvignon-w-cup-v2-189x300.png 189w,
-                                                  http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/Red-Cabernet-Sauvignon-w-cup-v2-644x1024.png 644w,
-                                                  http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/Red-Cabernet-Sauvignon-w-cup-v2-768x1221.png 768w"
-                                                 sizes="(max-width: 840px) 100vw, 840px" />
+                                                <label for="qty">Quantity</label>
+                                                <select name="quantity" id="qty" class="form-control">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+
+                                                <button class="button product_type_simple add_to_cart_button ajax_add_to_cart" aria-label="{{$item->product_name}}" type="submit">
+                                                    Add to cart
+                                                </button>
+                                            </form>
+
                                         </div>
-                                    </a>
-                                    <div class="gg-product-meta-wrapper">
+                                    </li>
+                                @endforeach
 
-                                        <dl>
-                                            <dt> Year </dt>
-                                            <dd>
-                                                <span class="year">2021</span>
-                                            </dd>
 
-                                            <dt> Price </dt>
-                                            <dd>
-                                                <span class="price">
-                                                    <span class="woocommerce-Price-amount amount">
-                                                        <bdi><span class="woocommerce-Price-currencySymbol">KSh</span>&nbsp;110.00</bdi>
-                                                    </span>
-                                                </span>
-                                            </dd>
-                                        </dl>
-                                        <a href="" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                           data-product_id="645" data-product_sku="" aria-label="Add &ldquo;Redamancy Cabernet Sauvignon&rdquo; to your cart" rel="nofollow">
-                                            Add to cart
-                                        </a>
-                                    </div>
-                                </li>
+
                             </ul>
                         </div>
 
@@ -147,14 +152,7 @@
 
         @include('partials.footer')
 
-        <nav id="side-cart" class="side-panel">
-            <header>
-                <h6>Shopping cart</h6>
-                <a href="#" class="thb-close" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve"><path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path></svg></a>
-            </header>
-            <div class="side-panel-content">
-                <div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content"></div></div>            </div>
-        </nav>
+        <livewire:side-cart/>
         <div class="click-capture"></div>
 
         <div id="fullscreen-searchform">

@@ -8,37 +8,37 @@
 
     <title>Redamancy &#8211; Wine Shop</title>
 
-    <link rel='stylesheet' id='sb_instagram_styles-css'  href='wp-content/plugins/instagram-feed/css/sbi-styles.min4315.css?ver=2.9.8' type='text/css' media='all' />
-    <link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min080f.css?ver=5.8.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='rs-plugin-settings-css'  href='wp-content/plugins/revslider/public/assets/css/rs6a8d6.css?ver=6.4.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='sb_instagram_styles-css'  href='{{asset('plugins/instagram-feed/css/instagram.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css'  href='{{asset('css/block-library/block-library.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'  href='{{asset('plugins/revslider/css/rs6a8d6.css')}}' type='text/css' media='all' />
     <style id='rs-plugin-settings-inline-css' type='text/css'>
         #rs-demo-id {}
     </style>
 
-    <link rel='stylesheet' id='villenoir-woocommerce-css'  href='wp-content/themes/villenoir/styles/gg-woocommerce5fba.css?ver=5.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='villenoir-woocommerce-css'  href='{{asset('themes/villenoir/styles/gg-woocommerce5fba.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='acfgfs-enqueue-fonts-css'  href='http://fonts.googleapis.com/css?family=Playfair+Display%3A400%2Citalic%2C700%2C700italic%2C900%2C900italic%7CLato%3A100%2C100italic%2C300%2C300italic%2C400%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;subset=cyrillic%2Clatin-ext%2Clatin&amp;ver=1.0.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='bootstrap-css'  href='wp-content/themes/villenoir/assets/bootstrap/css/bootstrap.min5fba.css?ver=5.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='font-awesome-css'  href='wp-content/themes/villenoir/assets/font-awesome/css/font-awesome.min5fba.css?ver=5.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='pace-css'  href='wp-content/themes/villenoir/styles/site-loader5fba.css?ver=5.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='isotope-css'  href='wp-content/themes/villenoir/styles/isotope5fba.css?ver=5.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='magnific-popup-css'  href='wp-content/themes/villenoir/styles/magnific-popup5fba.css?ver=5.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='slick-css'  href='wp-content/themes/villenoir/assets/slick/slick5fba.css?ver=5.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='villenoir-bootval-css'  href='wp-content/themes/villenoir/assets/bootstrap-validator/css/formValidation.min5fba.css?ver=5.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='villenoir-style-css'  href='wp-content/themes/villenoir/style080f.css?ver=5.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap-css'  href='{{asset('themes/villenoir/assets/bootstrap/css/bootstrap.min5fba.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css'  href='{{asset('themes/villenoir/assets/font-awesome/css/font-awesome.min5fba.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='pace-css'  href='{{asset('themes/villenoir/styles/site-loader5fba.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='isotope-css'  href='{{asset('themes/villenoir/styles/isotope5fba.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='magnific-popup-css'  href='{{asset('themes/villenoir/styles/magnific-popup5fba.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='slick-css'  href='{{asset('themes/villenoir/assets/slick/slick5fba.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='villenoir-bootval-css'  href='{{asset('themes/villenoir/assets/bootstrap-validator/css/formValidation.min5fba.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='villenoir-style-css'  href='{{asset('themes/villenoir/style080f.css')}}' type='text/css' media='all' />
 
-    <link rel='stylesheet' id='villenoir-child-style-css'  href='wp-content/themes/villenoir/style5fba.css?ver=5.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='villenoir-responsive-css'  href='wp-content/themes/villenoir/styles/responsive5fba.css?ver=5.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='js_composer_front-css'  href='wp-content/plugins/js_composer/assets/css/js_composer.min31dc.css?ver=6.6.0' type='text/css' media='all' />
-    <script type='text/javascript' src='wp-includes/js/jquery/jquery.minaf6c.js?ver=3.6.0' id='jquery-core-js'></script>
-    <script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
-    <script type='text/javascript' src='wp-content/plugins/revslider/public/assets/js/rbtools.min5352.js?ver=6.4.4' id='tp-tools-js'></script>
-    <script type='text/javascript' src='wp-content/plugins/revslider/public/assets/js/rs6.mina8d6.js?ver=6.4.6' id='revmin-js'></script>
-    <script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min8811.js?ver=2.7.0-wc.6.0.0' id='jquery-blockui-js'></script>
+    <link rel='stylesheet' id='villenoir-child-style-css'  href='{{asset('themes/villenoir/style5fba.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='villenoir-responsive-css'  href='{{asset('themes/villenoir/styles/responsive5fba.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css'  href='{{asset('plugins/js_composer/assets/css/js_composer.min31dc.css')}}' type='text/css' media='all' />
+    <script type='text/javascript' src='{{asset('js/jquery/jquery.minaf6c.js')}}' id='jquery-core-js'></script>
+    <script type='text/javascript' src='{{asset('js/jquery/jquery-migrate.mind617.js')}}' id='jquery-migrate-js'></script>
+    <script type='text/javascript' src='{{asset('plugins/revslider/js/rbtools.min5352.js')}}?ver=6.4.4' id='tp-tools-js'></script>
+    <script type='text/javascript' src='{{asset('plugins/revslider/js/rs6.mina8d6.js')}}' id='revmin-js'></script>
+    <script type='text/javascript' src='{{asset('plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min8811.js')}}' id='jquery-blockui-js'></script>
 
-    <script type='text/javascript' src='wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.minaf8e.js?ver=6.0.0' id='wc-add-to-cart-js'></script>
-    <script type='text/javascript' src='wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart31dc.js?ver=6.6.0' id='vc_woocommerce-add-to-cart-js-js'></script>
-    <script type='text/javascript' src='wp-content/themes/villenoir/js/primary-navigation080f.js?ver=5.8.2' id='villenoir-navigation-js'></script>
-    <script type='text/javascript' src='wp-content/themes/villenoir/js/jquery.waypoints.min080f.js?ver=5.8.2' id='waypoints-js'></script>
+    <script type='text/javascript' src='{{asset('plugins/woocommerce/assets/js/frontend/add-to-cart.minaf8e.js')}}' id='wc-add-to-cart-js'></script>
+    <script type='text/javascript' src='{{asset('plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart31dc.js')}}' id='vc_woocommerce-add-to-cart-js-js'></script>
+    <script type='text/javascript' src='{{asset('themes/villenoir/js/primary-navigation080f.js')}}' id='villenoir-navigation-js'></script>
+    <script type='text/javascript' src='{{asset('themes/villenoir/js/jquery.waypoints.min080f.js')}}' id='waypoints-js'></script>
     <style type="text/css">
 
         #av-overlay-wrap {
@@ -51,10 +51,11 @@
 
     </style>
 
-    <link rel="icon" href="wp-content/uploads/2021/12/cropped-logo-32x32.png" sizes="32x32" />
-    <link rel="icon" href="wp-content/uploads/2021/12/cropped-logo-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="wp-content/uploads/2021/12/cropped-logo-180x180.png" />
-    <meta name="msapplication-TileImage" content="http://127.0.0.1:81/wordpress/wp-content/uploads/2021/12/cropped-logo-270x270.png" />
+    <link rel="icon" href="{{asset('cropped-logo-32x32.png')}}" sizes="32x32" />
+    <link rel="icon" href="{{asset('cropped-logo-192x192.png')}}" sizes="192x192" />
+    <link rel="apple-touch-icon" href="{{asset('cropped-logo-180x180.png')}}" />
+    <meta name="msapplication-TileImage" content="{{asset('cropped-logo-270x270.png')}}" />
+
     <script type="text/javascript">function setREVStartSize(e){
             //window.requestAnimationFrame(function() {
             window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
@@ -324,6 +325,7 @@
         }
     </style>
     <noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+@livewireStyles
 @yield('assets')
 <body class="home page-template-default page page-id-193 theme-villenoir woocommerce-no-js tribe-no-js gg-page-has-header-slider gg-slider-is-beneath_header gg-page-header-style1 gg-has-stiky-menu gg-has-sticky-logo gg-has-mobile-logo gg-has-style_1-menu single-author gg-shop-style1 wpb-js-composer js-comp-ver-6.6.0 vc_responsive wpb-is-on">
 
@@ -332,6 +334,8 @@
 
 
 @include('partials.scripts')
+
+@livewireScripts
 </body>
 
 </html>

@@ -24,10 +24,14 @@ Route::get('our-story', function () {
 Route::get('wine-club', function () {
     return view('pages.wine-club');
 })->name('wine-club');
-Route::view('wine-details','shop.show')->name('wine-details');
-Route::view('wine-details-2','shop.other')->name('wine-details-2');
+
 
 Route::resource('shop',\App\Http\Controllers\ShopController::class);
+
+Route::get('checkout',[\App\Http\Controllers\CheckoutController::class,'checkout'])->name('checkout');
+
+Route::get('cart',[\App\Http\Controllers\CartController::class,'cartList'])->name('cart.list');
+Route::post('cart', [\App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.store');
 Route::get('contact', function () {
     return view('pages.contact');
 })->name('contact');

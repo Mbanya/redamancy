@@ -1,6 +1,20 @@
 @extends('layouts.main')
 @section('assets')
-    <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1460727920666{padding-top: 0px !important;padding-bottom: 0px !important;background-color: #f2f2f2 !important;}.vc_custom_1460727927848{padding-top: 0px !important;padding-bottom: 0px !important;background-color: #f2f2f2 !important;}.vc_custom_1460727935440{padding-top: 0px !important;padding-bottom: 0px !important;background-color: #f2f2f2 !important;}.vc_custom_1460636569719{padding: 20% !important;}.vc_custom_1460635864072{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1460727890422{margin-bottom: 0px !important;}.vc_custom_1459091894099{margin-bottom: 0px !important;}.vc_custom_1460635871252{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1460636579755{padding: 20% !important;}.vc_custom_1459092021864{margin-bottom: 0px !important;}.vc_custom_1460636587092{padding: 20% !important;}.vc_custom_1460635878309{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}.vc_custom_1459092115753{margin-bottom: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+    <style type="text/css" data-type="vc_shortcodes-custom-css">
+        .vc_custom_1460727920666{padding-top: 0px !important;padding-bottom: 0px !important;background-color: #f2f2f2 !important;}
+        .vc_custom_1460727927848{padding-top: 0px !important;padding-bottom: 0px !important;background-color: #f2f2f2 !important;}
+        .vc_custom_1460727935440{padding-top: 0px !important;padding-bottom: 0px !important;background-color: #f2f2f2 !important;}
+        .vc_custom_1460636569719{padding: 20% !important;}
+        .vc_custom_1460635864072{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}
+        .vc_custom_1460727890422{margin-bottom: 0px !important;}.vc_custom_1459091894099{margin-bottom: 0px !important;}
+        .vc_custom_1460635871252{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}
+        .vc_custom_1460636579755{padding: 20% !important;}
+        .vc_custom_1459092021864{margin-bottom: 0px !important;}
+        .vc_custom_1460636587092{padding: 20% !important;}
+        .vc_custom_1460635878309{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}
+        .vc_custom_1459092115753{margin-bottom: 0px !important;}
+    </style>
+    <noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
 
 @endsection
 
@@ -14,22 +28,12 @@
             <!-- End Page header image -->
             <!-- Page meta -->
             <div class="page-meta " >
-
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-
                             <div class="page-meta-wrapper">
-
-
-
-
-
-
                             </div><!-- .page-meta-wrapper -->
-
                         </div><!-- .col-md-12 -->
-
                     </div><!-- .row -->
                 </div><!-- .container -->
 
@@ -49,16 +53,16 @@
                                 <div class="col-md-6">
                                     <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="transition: opacity .25s ease-in-out;">
                                         <figure class="woocommerce-product-gallery__wrapper">
-                                            <div data-thumb="http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/Dark-blue-Merlot-w-cup-v2-140x140.png"
+                                            <div data-thumb="{{$item->product_image}}"
                                                  data-thumb-alt="" class="woocommerce-product-gallery__image">
-                                                <a href="{{asset('images/wine-bottles/current-release.png')}}">
-                                                    <img width="840" height="1335" src="{{asset('images/wine-bottles/current-release.png')}}" class="wp-post-image" alt="" loading="lazy"
-                                                         title="Dark-blue-Merlot-w-cup-v2" data-caption="" data-src="{{asset('images/wine-bottles/current-release.png')}}"
-                                                         data-large_image="images/wine-bottles/current-release.png" data-large_image_width="840"
-                                                         data-large_image_height="1335" srcset="images/wine-bottles/current-release.png 840w,
-                                                         images/wine-bottles/current-release.png 189w,
-                                                         images/wine-bottles/current-release.png 644w,
-                                                         images/wine-bottles/current-release.png 768w" sizes="(max-width: 840px) 100vw, 840px" />
+                                                <a href="{{$item->product_image}}">
+                                                    <img width="840" height="1335" src="{{$item->product_image}}" class="wp-post-image" alt="" loading="lazy"
+                                                         title="Dark-blue-Merlot-w-cup-v2" data-caption="" data-src="{{$item->product_image}}"
+                                                         data-large_image="{{$item->product_image}}" data-large_image_width="840"
+                                                         data-large_image_height="1335" srcset="{{$item->product_image}} 840w,
+                                                         {{$item->product_image}} 189w,
+                                                         {{$item->product_image}} 644w,
+                                                        {{$item->product_image}} 768w" sizes="(max-width: 840px) 100vw, 840px" />
                                                 </a>
                                             </div>
                                         </figure>
@@ -67,9 +71,9 @@
 
                                 <div class="col-md-6">
                                     <div class="summary entry-summary">
-                                        <h1 class="product_title entry-title">Cabernet Sauvignon</h1>
+                                        <h1 class="product_title entry-title">{{$item->product_name}}</h1>
                                         <div itemprop="description">
-                                            <p>Served well-chilled our authentically made Cabernet Sauvignon is a refreshingly delicate dry wine with hints of strawberry, citrus, and peach laced fruit.</p>
+                                            <p>{{$item->product_description}}</p>
                                         </div>
                                         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
@@ -77,57 +81,47 @@
                                                 <span class="price-text-prefix">From </span>
                                                 <span class="woocommerce-Price-amount amount">
                                                     <bdi>
-                                                        <span class="woocommerce-Price-currencySymbol">KSh</span>&nbsp;150.00</bdi>
+                                                        <span class="woocommerce-Price-currencySymbol">USD</span>&nbsp;{{$item->price}}
+                                                    </bdi>
                                                 </span>
-                                                <span class="bottle-size">/750ml</span>
+                                                <span class="bottle-size">/ {{$item->volume}} ml</span>
                                             </p>
 
                                         </div>
-
-                                        <form class="variations_form cart" action="" method="post"
-                                              enctype='multipart/form-data' data-product_id="680"
-                                              data-product_variations="[{&quot;attributes&quot;:{&quot;attribute_vintage&quot;:&quot;2015&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/A&quot;,&quot;display_price&quot;:150,&quot;display_regular_price&quot;:150,&quot;image&quot;:{&quot;title&quot;:&quot;Dark-blue-Merlot-w-cup-v2&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;alt&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;srcset&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png 840w, http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-189x300.png 189w, http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-644x1024.png 644w, http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-768x1221.png 768w&quot;,&quot;sizes&quot;:&quot;(max-width: 840px) 100vw, 840px&quot;,&quot;full_src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;full_src_w&quot;:840,&quot;full_src_h&quot;:1335,&quot;gallery_thumbnail_src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-140x140.png&quot;,&quot;gallery_thumbnail_src_w&quot;:140,&quot;gallery_thumbnail_src_h&quot;:140,&quot;thumb_src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;thumb_src_w&quot;:840,&quot;thumb_src_h&quot;:1335,&quot;src_w&quot;:840,&quot;src_h&quot;:1335},&quot;image_id&quot;:1997,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:false,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;KSh&lt;\/span&gt;&amp;nbsp;150.00&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1373,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/A&quot;},{&quot;attributes&quot;:{&quot;attribute_vintage&quot;:&quot;2018&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/A&quot;,&quot;display_price&quot;:180,&quot;display_regular_price&quot;:180,&quot;image&quot;:{&quot;title&quot;:&quot;Dark-blue-Merlot-w-cup-v2&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;alt&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;srcset&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png 840w, http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-189x300.png 189w, http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-644x1024.png 644w, http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-768x1221.png 768w&quot;,&quot;sizes&quot;:&quot;(max-width: 840px) 100vw, 840px&quot;,&quot;full_src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;full_src_w&quot;:840,&quot;full_src_h&quot;:1335,&quot;gallery_thumbnail_src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-140x140.png&quot;,&quot;gallery_thumbnail_src_w&quot;:140,&quot;gallery_thumbnail_src_h&quot;:140,&quot;thumb_src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;thumb_src_w&quot;:840,&quot;thumb_src_h&quot;:1335,&quot;src_w&quot;:840,&quot;src_h&quot;:1335},&quot;image_id&quot;:1997,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:false,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;KSh&lt;\/span&gt;&amp;nbsp;180.00&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:2222,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/A&quot;},{&quot;attributes&quot;:{&quot;attribute_vintage&quot;:&quot;2020&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/A&quot;,&quot;display_price&quot;:190,&quot;display_regular_price&quot;:190,&quot;image&quot;:{&quot;title&quot;:&quot;Dark-blue-Merlot-w-cup-v2&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;alt&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;srcset&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png 840w, http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-189x300.png 189w, http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-644x1024.png 644w, http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-768x1221.png 768w&quot;,&quot;sizes&quot;:&quot;(max-width: 840px) 100vw, 840px&quot;,&quot;full_src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;full_src_w&quot;:840,&quot;full_src_h&quot;:1335,&quot;gallery_thumbnail_src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2-140x140.png&quot;,&quot;gallery_thumbnail_src_w&quot;:140,&quot;gallery_thumbnail_src_h&quot;:140,&quot;thumb_src&quot;:&quot;http:\/\/127.0.0.1:81\/wordpress\/wp-content\/uploads\/2016\/03\/Dark-blue-Merlot-w-cup-v2.png&quot;,&quot;thumb_src_w&quot;:840,&quot;thumb_src_h&quot;:1335,&quot;src_w&quot;:840,&quot;src_h&quot;:1335},&quot;image_id&quot;:1997,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:false,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;KSh&lt;\/span&gt;&amp;nbsp;190.00&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:2223,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/A&quot;}]">
-
+                                        <form action="{{route('cart.store')}}" method="post" enctype="multipart/form-data">
+                                            @csrf
                                             <div class="single_variation_wrap">
                                                 <div class="woocommerce-variation single_variation"></div>
                                                 <div class="woocommerce-variation-add-to-cart variations_button">
+                                            <input type="hidden" value="{{$item->id}}" name="id">
+                                            <input type="hidden" value="{{$item->product_name}}" name="product_name">
+                                            <input type="hidden" value="{{$item->price}}" name="price">
+                                            <input type="hidden" value="{{$item->product_image}}" name="image">
 
-{{--                                                    <div class="quantity">--}}
-{{--                                                        <label class="screen-reader-text" for="quantity_61c15e4c81c71">Cabernet Sauvignon quantity</label>--}}
-{{--                                                        <input--}}
-{{--                                                            type="number"--}}
-{{--                                                            id="quantity_61c15e4c81c71"--}}
-{{--                                                            class="input-text qty text"--}}
-{{--                                                            step="1"--}}
-{{--                                                            min="1"--}}
-{{--                                                            max=""--}}
-{{--                                                            name="quantity"--}}
-{{--                                                            value="1"--}}
-{{--                                                            title="Qty"--}}
-{{--                                                            inputmode="numeric"--}}
-{{--                                                            autocomplete="off"--}}
-{{--                                                        />--}}
-{{--                                                    </div>--}}
+                                            <label for="qty">Quantity</label>
+                                            <select name="quantity" id="qty" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
 
-                                                    <button type="submit" class="single_add_to_cart_button button alt">Add to cart</button>
-
-
-                                                    <input type="hidden" name="add-to-cart" value="680" />
-                                                    <input type="hidden" name="product_id" value="680" />
-                                                    <input type="hidden" name="variation_id" class="variation_id" value="0" />
+                                            <button class="button product_type_simple add_to_cart_button ajax_add_to_cart" aria-label="{{$item->product_name}}" type="submit" style="margin-top: 10px; margin-bottom: 10px;">
+                                                Add to cart
+                                            </button>
                                                 </div>
                                             </div>
+
+
 
                                         </form>
 
                                         <div class="product_meta">
 
-                                            <span class="sku_wrapper">SKU: <span class="sku">N/A</span></span>
 
                                             <span class="posted_in">Category: <a href="" rel="tag">Red wines</a></span>
-                                            <span class="tagged_as">Tags: <a href="" rel="tag">red</a>,
-                                                <a href="." rel="tag">wine</a>
-                                            </span>
+
 
                                         </div>
 
@@ -135,32 +129,32 @@
                                         <table class="woocommerce-product-attributes shop_attributes">
                                             <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_varietal">
                                                 <th class="woocommerce-product-attributes-item__label">VARIETAL</th>
-                                                <td class="woocommerce-product-attributes-item__value"><p>100% Cabernet </p>
+                                                <td class="woocommerce-product-attributes-item__value"><p>{{$item->varietal}} </p>
                                                 </td>
                                             </tr>
                                             <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_appellation">
                                                 <th class="woocommerce-product-attributes-item__label">APPELLATION</th>
-                                                <td class="woocommerce-product-attributes-item__value"><p>Redamancy Cabernet </p>
+                                                <td class="woocommerce-product-attributes-item__value"><p>{{$item->appellation}} </p>
                                                 </td>
                                             </tr>
                                             <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_vintage">
                                                 <th class="woocommerce-product-attributes-item__label">VINTAGE</th>
-                                                <td class="woocommerce-product-attributes-item__value"><p>2021</p>
+                                                <td class="woocommerce-product-attributes-item__value"><p>{{$item->vintage}}</p>
                                                 </td>
                                             </tr>
                                             <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_profile">
                                                 <th class="woocommerce-product-attributes-item__label">Profile</th>
-                                                <td class="woocommerce-product-attributes-item__value"><p>Semi-dry</p>
+                                                <td class="woocommerce-product-attributes-item__value"><p>{{$item->profile}}</p>
                                                 </td>
                                             </tr>
                                             <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_alcohol">
                                                 <th class="woocommerce-product-attributes-item__label">ALCOHOL</th>
-                                                <td class="woocommerce-product-attributes-item__value"><p>13.5%</p>
+                                                <td class="woocommerce-product-attributes-item__value"><p>{{$item->alcohol}}%</p>
                                                 </td>
                                             </tr>
                                             <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_volume">
                                                 <th class="woocommerce-product-attributes-item__label">VOLUME</th>
-                                                <td class="woocommerce-product-attributes-item__value"><p>750 mL</p>
+                                                <td class="woocommerce-product-attributes-item__value"><p>{{$item->volume}} mL</p>
                                                 </td>
                                             </tr>
                                         </table>
@@ -230,7 +224,7 @@
                                             <div class="wpb_text_column wpb_content_element " >
                                                 <div class="wpb_wrapper">
                                                     <p>
-                                                        One of our favorite blocks from the Villenoir vineyard. This block tends to lift the aromatic character and soften the palate of
+                                                        One of our favorite blocks from the Redamancy vineyard. This block tends to lift the aromatic character and soften the palate of
                                                         our Cabernet Sauvignon. We are proud to offer this very limited and barrel selected wine as a stand alone block.
                                                     </p>
 
@@ -284,7 +278,8 @@
 
                         </div>
 
-                    </div><!-- /.villenoir_page_container() -->
+                    </div>
+                    <!-- /.villenoir_page_container() -->
 
 
                 </div><!-- .row -->
@@ -292,14 +287,7 @@
         </section>
         @include('partials.footer')
 
-        <nav id="side-cart" class="side-panel">
-            <header>
-                <h6>Shopping cart</h6>
-                <a href="#" class="thb-close" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve"><path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path></svg></a>
-            </header>
-            <div class="side-panel-content">
-                <div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content"></div></div>            </div>
-        </nav>
+        <livewire:side-cart/>
         <div class="click-capture"></div>
 
         <div id="fullscreen-searchform">

@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Http\Livewire;
+
+use Illuminate\Http\Request;
+use Livewire\Component;
+
+class SideCart extends Component
+{
+    protected $listeners = ['cartUpdated'=>'$refresh'];
+    public $cartItems = [];
+
+    public function removeCart($id)
+    {
+
+        \Cart::remove($id);
+
+        session()->flash('success','Item removed successfully!');
+    }
+
+    public function clearAllCart()
+    {
+        \Cart::clear();
+        session()->flash('success','All items cleared successfully');
+    }
+
+    public function render()
+    {
+        $this->cartItems = \Cart::getContent()->toArray();
+        $items = $this->cartItems;
+        return view('livewire.side-cart', compact('items'));
+    }
+}

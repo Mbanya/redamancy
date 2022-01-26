@@ -61,6 +61,7 @@
                                 <path d="M16 10a4 4 0 0 1-8 0"></path>
                             </svg>
                         </span>
+                        <span class="quick_cart_count">{{Cart::getContent()->count()}}</span>
                     </a>
 
                 </li>
