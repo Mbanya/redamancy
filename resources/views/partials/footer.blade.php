@@ -6,9 +6,20 @@
 
             <div class="footer-message">
                 <div class="heading">
-                    <p class="h_subtitle">Redamancy promise</p>
-                    <h2 class="h_title">We make good wines</h2>
-                </div>            </div>
+                    <p class="h_subtitle">Redamancy Vineyards Promises</p>
+                    @if(Request::is('/'))
+                    <h2 class="h_title">Unaccustomed Pleasure</h2>
+                    @elseif(Request::is('our-story'))
+                        <h2>Resolute Commitment to Nature</h2>
+                    @elseif(Request::is('shop*'))
+                        <h2>The Propensity to Share</h2>
+                    @elseif(Request::is('contact'))
+                        <h2>
+                            Uninterrupted Musing
+                        </h2>
+                    @endif
+                </div>
+            </div>
 
 
 {{--            <div class="footer-widgets col-md-12">--}}

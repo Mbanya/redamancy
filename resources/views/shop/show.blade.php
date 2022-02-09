@@ -56,13 +56,13 @@
                                             <div data-thumb="{{$item->product_image}}"
                                                  data-thumb-alt="" class="woocommerce-product-gallery__image">
                                                 <a href="{{$item->product_image}}">
-                                                    <img width="840" height="1335" src="{{$item->product_image}}" class="wp-post-image" alt="" loading="lazy"
-                                                         title="Dark-blue-Merlot-w-cup-v2" data-caption="" data-src="{{$item->product_image}}"
-                                                         data-large_image="{{$item->product_image}}" data-large_image_width="840"
-                                                         data-large_image_height="1335" srcset="{{$item->product_image}} 840w,
-                                                         {{$item->product_image}} 189w,
-                                                         {{$item->product_image}} 644w,
-                                                        {{$item->product_image}} 768w" sizes="(max-width: 840px) 100vw, 840px" />
+                                                    <img width="840" height="1335" src="{{asset($item->product_image)}}" class="wp-post-image" alt="" loading="lazy"
+                                                         title="Dark-blue-Merlot-w-cup-v2" data-caption="" data-src="{{asset('$item->product_image')}}"
+                                                         data-large_image="{{asset('$item->product_image')}}" data-large_image_width="840"
+                                                         data-large_image_height="1335" srcset="{{asset($item->product_image)}} 840w,
+                                                         {{asset($item->product_image)}} 189w,
+                                                         {{asset($item->product_image)}} 644w,
+                                                        {{asset($item->product_image)}} 768w" sizes="(max-width: 840px) 100vw, 840px" />
                                                 </a>
                                             </div>
                                         </figure>
@@ -81,7 +81,7 @@
                                                 <span class="price-text-prefix">From </span>
                                                 <span class="woocommerce-Price-amount amount">
                                                     <bdi>
-                                                        <span class="woocommerce-Price-currencySymbol">USD</span>&nbsp;{{$item->price}}
+                                                        <span class="woocommerce-Price-currencySymbol">ZAR </span>&nbsp;{{$item->price}}
                                                     </bdi>
                                                 </span>
                                                 <span class="bottle-size">/ {{$item->volume}} ml</span>
@@ -174,8 +174,16 @@
                                             </div>
                                             <div class="wpb_text_column wpb_content_element  vc_custom_1460727890422" >
                                                 <div class="wpb_wrapper">
-                                                    <p>Deep garnet with a vibrant ruby edge, velvety soft on the palate with bright cherry to plum flavors. This wine is weighty and full of fresh ripe berries with rich, dark accents of cocoa nib. Intriguing and delicious. Aromas of dark chocolate, plum, black cherry, cedar and tarragon jump from the glass.</p>
-                                                    <p>A potent perfumed mix of berries, fresh herbs and roasted notes with a bit a mineral. A compelling blend of fresh and bright aroma next the rich and dark.</p>
+                                                    @if($item->product_name === 'Chardonnay')
+                                                    <p>
+                                                        A Creamy textured and subtly oaked Chardonnay showcasing nuances of lime and vanilla pod.
+                                                        The intriguing savoury character is a reflection of the special terroir where this wine finds its roots.
+                                                    </p>
+                                                    @else
+                                                    <p>
+                                                        ......................
+                                                    </p>
+                                                    @endif
 
                                                 </div>
                                             </div>
@@ -188,7 +196,23 @@
                                             <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1459091894099">
 
                                                 <figure class="wpb_wrapper vc_figure">
-                                                    <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1170" height="1400" src="../../wp-content/uploads/2016/03/product-img-1.jpg" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1.jpg 1170w, http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1-251x300.jpg 251w, http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1-856x1024.jpg 856w, http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1-768x919.jpg 768w" sizes="(max-width: 1170px) 100vw, 1170px" /></div>
+                                                    <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                                        @if($item->product_name === 'Chardonnay')
+                                                            <img width="1170" height="1400" src="{{asset('images/shop/chardonnay-tasting-notes.png')}}" class="vc_single_image-img attachment-full" alt=""
+                                                                 loading="lazy" srcset="{{asset('images/shop/chardonnay-tasting-notes.png')}} 1170w,
+                                                              {{asset('images/shop/chardonnay-tasting-notes.png')}} 251w,
+                                                               {{asset('images/shop/chardonnay-tasting-notes.png')}} 856w,
+                                                                {{asset('images/shop/chardonnay-tasting-notes.png')}} 768w"
+                                                                 sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                        @else
+                                                            <img width="1170" height="1400" src="../../wp-content/uploads/2016/03/product-img-1.jpg" class="vc_single_image-img attachment-full" alt=""
+                                                                 loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1.jpg 1170w,
+                                                              http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1-251x300.jpg 251w,
+                                                               http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1-856x1024.jpg 856w,
+                                                                http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1-768x919.jpg 768w"
+                                                                 sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                         @endif
+                                                    </div>
                                                 </figure>
                                             </div>
                                         </div>
@@ -203,11 +227,20 @@
 
                                                 <figure class="wpb_wrapper vc_figure">
                                                     <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                                        <img width="1170" height="1400" src="../../wp-content/uploads/2016/03/product-img-2.jpg" class="vc_single_image-img attachment-full" alt=""
-                                                             loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-2.jpg 1170w,
+                                                        @if($item->product_name === 'Chardonnay')
+                                                        <img width="1170" height="1400" src="{{asset('images/shop/maturation-potential.png')}}" class="vc_single_image-img attachment-full" alt=""
+                                                             loading="lazy" srcset="{{asset('images/shop/maturation-potential.png')}} 1170w,
+                                                             {{asset('images/shop/maturation-potential.png')}} 251w,
+                                                             {{asset('images/shop/maturation-potential.png')}} 856w,
+                                                             {{asset('images/shop/maturation-potential.png')}} 768w" sizes="(max-width: 1170px) 100vw, 1170px" />
+
+                                                        @else
+                                                            <img width="1170" height="1400" src="../../wp-content/uploads/2016/03/product-img-2.jpg" class="vc_single_image-img attachment-full" alt=""
+                                                                 loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-2.jpg 1170w,
                                                              http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-2-251x300.jpg 251w,
                                                              http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-2-856x1024.jpg 856w,
                                                              http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-2-768x919.jpg 768w" sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                        @endif
                                                     </div>
                                                 </figure>
                                             </div>
@@ -219,14 +252,49 @@
                                         <div class="wpb_wrapper">
                                             <div class="title-subtitle-box" style=" text-align: left;">
                                                 <p style="">Wine specs</p>
-                                                <h1 style=" font-style: normal;">Food pairing notes</h1>
+                                                <h1 style=" font-style: normal;">Maturation Potential</h1>
                                             </div>
                                             <div class="wpb_text_column wpb_content_element " >
                                                 <div class="wpb_wrapper">
-                                                    <p>
-                                                        One of our favorite blocks from the Redamancy vineyard. This block tends to lift the aromatic character and soften the palate of
-                                                        our Cabernet Sauvignon. We are proud to offer this very limited and barrel selected wine as a stand alone block.
-                                                    </p>
+                                                    @if($item->product_name === 'Chardonnay')
+                                                        <p>
+                                                            Ready to drink now, but will mature for a further 3 to 5 years.
+                                                            <br>
+                                                            Serving temperature
+                                                            Preferable 10 - 12° C <br>
+                                                            <strong>Vineyards</strong> <br>
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                Wine of Origin – Cape South Coast
+                                                            </li>
+                                                            <li>Soils – Limestone rich soils</li>
+                                                            <li>Planted – 2010 & 2011</li>
+                                                            <li>Variety – 100% Chardonnay</li>
+                                                            <li>Clones – Clone 95 on R99/R110</li>
+                                                            <li>Altitude – 100m above sea level</li>
+                                                        </ul>
+
+                                                    @else
+                                                        <p>
+                                                            Ready to drink now, but will mature for a further 5 to 10 years.
+                                                            <br>
+                                                            Serving temperature
+                                                            Preferable 14 - 18° C
+
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                Wine of Origin – Stellenbosch, Devon Valley
+                                                            </li>
+                                                            <li> Soils – ….</li>
+                                                            <li>Planted – …..</li>
+                                                            <li>Variety – 100% Cabernet Sauvignon</li>
+                                                            <li>Clones –</li>
+                                                            <li>Altitude – ……00m above sea level</li>
+                                                        </ul>
+                                                    @endif
+
 
                                                 </div>
                                             </div>
@@ -244,12 +312,22 @@
                                             </div>
                                             <div class="wpb_text_column wpb_content_element " >
                                                 <div class="wpb_wrapper">
-                                                    <p>
-                                                        Deep garnet with a vibrant ruby edge, velvety soft on the palate with bright cherry to plum flavors.
-                                                        This wine is weighty and full of fresh ripe berries with rich, dark accents of cocoa nib.
-                                                        Intriguing and delicious.
-                                                    </p>
-                                                    <p>Aromas of dark chocolate, plum, black cherry, cedar and tarragon jump from the glass.</p>
+
+                                                    @if($item->product_name === 'chardonnay')
+                                                        <p>
+                                                            Harvested by hand on 2 March 2021. Chilled overnight and selected manually on selection table before destemming.
+                                                            Pressed on 3 March 2021. Natural fermentation was done in 300 litre French oak barrels and matured for 9 months on the lees.
+                                                            No yeast or enzymes were added. Bottled in December 2021. Our winemaker is Guillaume Nell.
+                                                        </p>
+                                                    @else
+                                                        <p>
+                                                            Harvested by hand on March 2021 and selected manually on selection table before destemming.
+                                                            Natural fermentation was done in 225, 300 and 500 litre French oak barrels, 30% new oak.
+                                                            Matured for 15 months on the lees. No yeast or enzymes were added. Bottled in …… 2022.
+                                                            Our winemaker is Guillaume Nell.
+                                                        </p>
+                                                    @endif
+
 
                                                 </div>
                                             </div>
@@ -262,12 +340,21 @@
                                             <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1459092115753">
                                                 <figure class="wpb_wrapper vc_figure">
                                                     <div class="vc_single_image-wrapper vc_box_border_grey">
-                                                        <img width="1170" height="1400" src="../../wp-content/uploads/2016/03/product-img-3.jpg" class="vc_single_image-img attachment-full"
-                                                             alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-3.jpg 1170w,
+                                                        @if($item->product_name === 'Chardonnay')
+                                                        <img width="1170" height="1400" src="{{asset('images/shop/winemaker-notes.png')}}" class="vc_single_image-img attachment-full"
+                                                             alt="" loading="lazy" srcset="{{asset('images/shop/winemaker-notes.png')}} 1170w,
+                                                              {{asset('images/shop/winemaker-notes.png')}} 251w,
+                                                               {{asset('images/shop/winemaker-notes.png')}} 856w,
+                                                               {{asset('images/shop/winemaker-notes.png')}} 768w"
+                                                             sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                        @else
+                                                            <img width="1170" height="1400" src="../../wp-content/uploads/2016/03/product-img-3.jpg" class="vc_single_image-img attachment-full"
+                                                                 alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-3.jpg 1170w,
                                                               http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-3-251x300.jpg 251w,
                                                                http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-3-856x1024.jpg 856w,
                                                                 http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-3-768x919.jpg 768w"
-                                                             sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                                 sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                        @endif
                                                     </div>
                                                 </figure>
                                             </div>

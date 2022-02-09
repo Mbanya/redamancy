@@ -106,7 +106,7 @@
                                                 <dd>
                                                 <span class="price">
                                                     <span class="woocommerce-Price-amount amount">
-                                                        <bdi><span class="woocommerce-Price-currencySymbol">USD</span>&nbsp;{{number_format($item->price)}}</bdi>
+                                                        <bdi><span class="woocommerce-Price-currencySymbol">ZAR</span>&nbsp;{{number_format($item->price)}}</bdi>
                                                     </span>
                                                 </span>
                                                 </dd>
@@ -119,7 +119,7 @@
                                                 <input type="hidden" value="{{$item->price}}" name="price">
                                                 <input type="hidden" value="{{$item->product_image}}" name="image">
 
-                                                <label for="qty">Quantity</label>
+                                                <label for="qty">Quantity (Case)</label>
                                                 <select name="quantity" id="qty" class="form-control">
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -127,6 +127,12 @@
                                                     <option value="4">4</option>
                                                     <option value="5">5</option>
                                                 </select>
+
+                                                <p style="font-size: 13px; line-height: normal; padding: 30px 0;">
+                                                    <b>Note:</b>
+                                                    Minimum procurement: case of 6 bottles. Delivery fee is a flat rate of R120 for all orders and free delivery for orders of 2 cases and more.
+                                                    The wine for sale on this website is only for delivery within South Africa
+                                                </p>
 
                                                 <button class="button product_type_simple add_to_cart_button ajax_add_to_cart" aria-label="{{$item->product_name}}" type="submit">
                                                     Add to cart

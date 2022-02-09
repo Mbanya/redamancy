@@ -428,6 +428,7 @@
                                                                 <a href="" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.
                                                             </p>
                                                         </div>
+
                                                         <div class="woocommerce-terms-and-conditions" style="display: none; max-height: 200px; overflow: auto;">
                                                             <p>
                                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet nunc vel nulla condimentum laoreet sed non urna.
@@ -455,6 +456,7 @@
                                                                 a elementum dolor. Duis nec arcu odio. Pellentesque diam odio, accumsan ut tristique viverra, euismod ac neque. Praesent venenatis mi id purus porttitor sodales.
                                                             </p>
                                                         </div>
+
                                                         <p class="form-row validate-required">
                                                             <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
                                                                 <input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" name="terms" id="terms">
@@ -465,6 +467,13 @@
                                                             </label>
                                                             <input type="hidden" name="terms-field" value="1">
                                                         </p>
+                                                        <div class="woocomerce-terms-and-conditions" style="padding: 30px 0;">
+                                                            <p style="font-size: 14px;">
+                                                                <b>Note:</b>
+                                                                Minimum procurement: case of 6 bottles. Delivery fee is a flat rate of R120 for all orders and free delivery for orders of 2 cases and more.
+                                                                The wine for sale on this website is only for delivery within South Africa
+                                                            </p>
+                                                        </div>
                                                     </div>
 
 

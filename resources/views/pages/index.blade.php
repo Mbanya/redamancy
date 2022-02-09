@@ -50,10 +50,11 @@
                                         data-frame_1="e:power2.out;st:1000;sp:1000;sR:1000;"
                                         data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:7000;"
                                         style="z-index:5;font-family:Playfair Display;font-style:italic;font-weight:300;"
-                                    >Refinement
+                                    >Redamancy Wines
                                     </rs-layer><!--
 
-							--><rs-layer
+							-->
+                                    <rs-layer
                                         id="slider-1-slide-1-layer-10"
                                         class="Villenoir-Subtitle"
                                         data-type="text"
@@ -65,8 +66,9 @@
                                         data-frame_1="e:power2.out;st:1250;sp:1000;sR:1250;"
                                         data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:6750;"
                                         style="z-index:6;font-family:Lato;text-transform:uppercase;font-weight:500;"
-                                    >Introducing Redamancy Wines
-                                    </rs-layer><!--
+                                    >Introducing Redamancy Vineyards
+                                    </rs-layer>
+                                    <!--
 
 							--><rs-layer
                                         id="slider-1-slide-1-layer-11"
@@ -80,7 +82,7 @@
                                         data-frame_1="e:power2.out;st:1500;sp:1000;sR:1500;"
                                         data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:6500;"
                                         style="z-index:7;font-family:Playfair Display;"
-                                    >in a bottle
+                                    >are a Treat!
                                     </rs-layer><!--
 -->						</rs-slide>
                             </rs-slides>
@@ -130,10 +132,6 @@
                     <!-- END REVOLUTION SLIDER -->
                 </div>
             </div>
-            <div class="clearfix"></div>
-
-
-
         </header>
         <!-- End Header. Begin Template Content -->
         <section id="content">
@@ -149,14 +147,14 @@
                                 <div data-vc-full-width="true" data-vc-full-width-init="false"
                                      data-vc-stretch-content="true"
                                      class="vc_row wpb_row vc_row-fluid gg-force-background-left vc_custom_1617302572453 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
-                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6" style="margin-top: -3%">
                                         <div class="vc_column-inner">
                                             <div class="wpb_wrapper">
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617353560917">
                                                     <figure class="wpb_wrapper vc_figure">
                                                         <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                                            <img width="633" height="980" src="{{asset('images/landing/our-wines.png')}}" class="vc_single_image-img attachment-full" alt=""
-                                                                 loading="lazy" srcset="images/landing/our-wines.png 633w, images/olanding/our-wines.png 200w" sizes="(max-width: 633px) 100vw, 633px" />
+                                                            <img width="633" height="980" src="{{asset('images/landing/IMG_1098.jpg')}}" class="vc_single_image-img attachment-full" alt=""
+                                                                 loading="lazy" srcset="images/landing/IMG_1098.jpg 633w, images/landing/IMG_1098.jpg 200w" sizes="(max-width: 633px) 100vw, 633px" />
                                                         </div>
                                                     </figure>
                                                 </div>
@@ -167,7 +165,7 @@
                                         <div class="vc_column-inner vc_custom_1460549807462">
                                             <div class="wpb_wrapper">
                                                 <div class="title-subtitle-box" style="margin-bottom:60px; text-align: left;">
-                                                    <p style="">Message from Redamancy</p>
+                                                    <p style="">Message from proprietors and wine lovers</p>
                                                     <h1 style=" font-style: normal;">A New Generation of Wine Producers</h1>
                                                 </div>
                                                 <div class="wpb_text_column wpb_content_element " >
@@ -180,7 +178,7 @@
                                                            Our wines are the ultimate expression of our relationship – our mutual redamancy extends to our wine.
                                                            The wines are produced from carefully farmed premium grapes; the 2021 Chardonnay grapes are sourced from the South Coast,
                                                            particularly in pursuit of distinctively cool climate Chardonnay.  While the Cabernet Sauvignon is from Devon Valley,
-                                                           from a farm neighbouring the home of Redamancy wines.
+                                                           from a farm neighbouring the home of Redamancy Vineyards and Wines.
                                                            We are proud to present our first two wines in 2022, both wines fermented under their natural yeasts.
 
                                                        </p>
@@ -210,8 +208,9 @@
 
                                                     <figure class="wpb_wrapper vc_figure">
                                                         <div class="vc_single_image-wrapper vc_box_border_grey">
-                                                            <img width="1500" height="2299" src="{{asset('images/wine-bottles/current-release.png')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy"
-                                                            srcset="images/wine-bottles/current-release.png 1500w, images/wine-bottles/current-release.png 196w, images/wine-bottles/current-release.png 668w, images/wine-bottles/current-release.png 768w, images/wine-bottles/current-release.png 1002w, images/wine-bottles/current-release.png 1336w" sizes="(max-width: 1500px) 100vw, 1500px" />
+                                                            <img width="1500" height="2299" src="{{asset('images/landing/white-wine-landing.png')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy"
+                                                            srcset="images/landing/white-wine-landing.png 1500w, images/landing/white-wine-landing.png 196w, images/landing/white-wine-landing.png 668w, images/landing/white-wine-landing.png 768w,
+                                                             images/landing/white-wine-landing.png 1002w, images/landing/white-wine-landing.png 1336w" sizes="(max-width: 1500px) 100vw, 1500px" />
                                                         </div>
                                                     </figure>
                                                 </div>
@@ -226,11 +225,15 @@
                                                 </div>
                                                 <div class="title-subtitle-box  vc_custom_1639980038304" style=" margin-bottom:90px; text-align: left;">
                                                     <p  style="">Current release</p>
-                                                    <h1 style=" font-style: normal;">Cabernet Sauvignon</h1>
+                                                    <h1 style=" font-style: normal;">Chardonnay</h1>
                                                 </div>
                                                 <div class="wpb_text_column wpb_content_element  vc_custom_1457619221167" >
                                                     <div class="wpb_wrapper">
-                                                        <p>Served well-chilled our authentically made Redamancy Cabernet Sauvignon is a refreshingly delicate dry wine with hints of strawberry, citrus, and peach laced fruit.</p>
+                                                        <p>
+                                                            A creamy textured and subtly oaked Chardonnay showcasing nuances of lime and vanilla pod.
+                                                            The intriguing savoury character is a reflection of the special terroir where this wine
+                                                            finds its roots at the South Coast under a mist of sea air.
+                                                        </p>
 
                                                     </div>
                                                 </div>
@@ -238,7 +241,7 @@
                                                     <a style="background-color:#b0976d; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="Redamancy Cabernet Sauvignon">Discover</a>
                                                 </div>
                                                 <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350497245">
-                                                    <a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="Wines">View all</a>
+                                                    <a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="{{route('shop.index')}}" title="Wines">Shop Now</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -248,114 +251,197 @@
 
                                 </div>
 
-                                <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
-                                     class="vc_row wpb_row vc_row-fluid vc_custom_1617302641081 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
-                                    <div class="wpb_column vc_column_container vc_col-sm-7 vc_col-lg-8 vc_col-md-8">
-                                        <div class="vc_column-inner vc_custom_1460370683208">
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1458035087061 vc_row-has-fill">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1460628348165">
                                             <div class="wpb_wrapper">
-                                                <div  class="wpb_single_image wpb_content_element vc_align_left force-90-width-large-screen">
+                                                <div class="title-subtitle-box" style=" margin-bottom:5px; text-align: left;">
+                                                    <h2 style=" font-style: normal;">2021</h2>
+                                                </div>
+                                                <div class="title-subtitle-box  vc_custom_1639980038304" style=" margin-bottom:90px; text-align: left;">
+                                                    <p  style="">Current release</p>
+                                                    <h1 style=" font-style: normal;">Cabernet Sauvignon</h1>
+                                                </div>
+                                                <div class="wpb_text_column wpb_content_element vc_custom_1457619221167">
+                                                    <div class="wpb_wrapper">
+                                                        <p>
+                                                            Coming Soon
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350478559" >
+                                                    <a style="background-color:#b0976d; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="Redamancy Cabernet Sauvignon">Discover</a>
+                                                </div>
+                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350497245">
+                                                    <a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="{{route('shop.index')}}" title="Wines">Shop Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1460628359633">
+                                            <div class="wpb_wrapper">
+                                                <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617357504438">
+
                                                     <figure class="wpb_wrapper vc_figure">
                                                         <div class="vc_single_image-wrapper vc_box_border_grey">
-                                                            <img width="807" height="253" src="{{asset('images/wine-bottles/vertical-red-wine.png')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy"
-                                                                 srcset="images/wine-bottles/vertical-red-wine.png 807w, images/wine-bottles/vertical-red-wine-300x94.png 300w, mages/wine-bottles/vertical-red-wine-768x241.png 768w" sizes="(max-width: 807px) 100vw, 807px" />
+                                                            <img width="1500" height="2299" src="{{asset('images/landing/red-wine-landing.png')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy"
+                                                                 srcset="images/landing/red-wine-landing.png 1500w, images/landing/red-wine-landing.png 196w,
+                                                                  images/landing/red-wine-landing.png 668w, images/landing/red-wine-landing.png 768w,
+                                                                   images/landing/red-wine-landing.png 1002w,
+                                                                  images/landing/red-wine-landing.png 1336w" sizes="(max-width: 1500px) 100vw, 1500px" />
                                                         </div>
                                                     </figure>
                                                 </div>
-                                                <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
-                                                        <div class="vc_column-inner">
-                                                            <div class="wpb_wrapper">
-                                                                <div class="counter-holder media" style="text-align:center;   ">
-                                                                    <div class="counter-content media-body">
-                                                                        <span style=" font-size:60px;" class="counter" data-number="5" data-interval="100" data-speed="1500">2</span>
-                                                                        <p >Varietals</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="wpb_column vc_column_container vc_col-sm-4">
-                                                        <div class="vc_column-inner">
-                                                            <div class="wpb_wrapper">
-                                                                <div class="counter-holder media" style="text-align:center;   ">
-                                                                    <div class="counter-content media-body">
-                                                                        <span style=" font-size:60px;" class="counter" data-number="162" data-interval="100" data-speed="1500">162</span>
-                                                                        <p >Wine produced</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="wpb_column vc_column_container vc_col-sm-5 vc_col-lg-4 vc_col-md-4 vc_col-has-fill">
-                                        <div class="vc_column-inner vc_custom_1617358182464">
-                                            <div class="wpb_wrapper">
-                                                <div class="title-subtitle-box  " style=" text-align: left;">
-                                                    <p  style="">Varieties</p>
-                                                    <h2 style=" font-style: normal;">Our Wines</h2>
-                                                </div>
-                                                <div class="gg_list list_style_line  ">
-                                                    <ul>
-                                                        <li>Cabernet Sauvignon</li>
-                                                        <li>Chardonnay</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350580088" >
-                                                    <a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="">Shop now</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                                 <div class="vc_row-full-width vc_clearfix"></div>
 
-                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1457626757165 vc_row-has-fill">
-                                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                                        <div class="vc_column-inner">
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1458035087061 vc_row-has-fill">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1460628359633">
                                             <div class="wpb_wrapper">
-                                                <div class="vc_widget vc_widget_instagram">
-                                                    <div class="widget gg-instagram-feed">
-                                                        <br />
+                                                <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617357504438">
 
-                                                        <div class="media">
-                                                            <div class="media-left">
-                                                                <h2 class="widgettitle">Instagram</h2>
-                                                                <p class="followers">10K <span>Instagram Followers</span>
-                                                                </p>
-
-                                                            </div> <!-- .media-left -->
-
-                                                            <div class="media-body">
-
-                                                                <div id="sb_instagram" class="sbi sbi_col_3  sbi_width_resp" style="width: 100%;" data-feedid="sbi_#6"
-                                                                     data-res="auto" data-cols="3" data-num="6"
-                                                                     data-shortcode-atts="{&quot;num&quot;:&quot;6&quot;,&quot;imagepadding&quot;:&quot;0&quot;,&quot;cols&quot;:&quot;3&quot;,&quot;hoverdisplay&quot;:&quot;likes&quot;,&quot;showheader&quot;:&quot;false&quot;,&quot;showbutton&quot;:&quot;false&quot;,&quot;showfollow&quot;:&quot;false&quot;}"  data-postid="193" data-locatornonce="831af2ae97" data-sbi-flags="favorLocal">
-
-                                                                    <div id="sbi_images">
-                                                                    </div>
-
-                                                                    <div id="sbi_load">
-
-
-
-                                                                    </div>
-
-                                                                    <span class="sbi_resized_image_data" data-feed-id="sbi_#6" data-resized="[]">
-	</span>
-                                                                </div>
-
-                                                            </div><!-- .media-body -->
-                                                        </div><!-- .media -->
+                                                    <figure class="wpb_wrapper vc_figure">
+                                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+                                                            <img width="1500" height="2299" src="{{asset('images/shop/cabernet-sauvignon-reserver.png')}}" class="vc_single_image-img attachment-full" alt="" loading="lazy"
+                                                                 srcset="images/shop/cabernet-sauvignon-reserver.png 1500w, images/shop/cabernet-sauvignon-reserver.png 196w,
+                                                                  images/shop/cabernet-sauvignon-reserver.png 668w, images/shop/cabernet-sauvignon-reserver.png 768w,
+                                                                  images/shop/cabernet-sauvignon-reserver.png 1002w,
+                                                                   images/shop/cabernet-sauvignon-reserver.png 1336w"
+                                                                 sizes="(max-width: 1500px) 100vw, 1500px" />
+                                                        </div>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1460628348165">
+                                            <div class="wpb_wrapper">
+                                                <div class="title-subtitle-box" style=" margin-bottom:5px; text-align: left;">
+                                                    <h2 style=" font-style: normal;">2021</h2>
+                                                </div>
+                                                <div class="title-subtitle-box  vc_custom_1639980038304" style=" margin-bottom:90px; text-align: left;">
+                                                    <p  style="">Current release</p>
+                                                    <h1 style=" font-style: normal;">Cabernet Sauvignon Reserve</h1>
+                                                </div>
+                                                <div class="wpb_text_column wpb_content_element  vc_custom_1457619221167" >
+                                                    <div class="wpb_wrapper">
+                                                        <p>
+                                                            Coming Soon
+                                                        </p>
 
                                                     </div>
+                                                </div>
+                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350478559" >
+                                                    <a style="background-color:#b0976d; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="Redamancy Cabernet Sauvignon">Discover</a>
+                                                </div>
+                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350497245">
+                                                    <a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="{{route('shop.index')}}" title="Wines">Shop Now</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="vc_row-full-width vc_clearfix">
+
+                                </div>
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1458035087061 vc_row-has-fill">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1460628348165">
+                                            <div class="wpb_wrapper">
+                                                <div class="title-subtitle-box" style=" margin-bottom:5px; text-align: left;">
+                                                    <h2 style=" font-style: normal;">2022</h2>
+                                                </div>
+                                                <div class="title-subtitle-box  vc_custom_1639980038304" style=" margin-bottom:90px; text-align: left;">
+                                                    <p  style="">Current release</p>
+                                                    <h1 style=" font-style: normal;">Olive Oil</h1>
+                                                </div>
+                                                <div class="wpb_text_column wpb_content_element vc_custom_1457619221167">
+                                                    <div class="wpb_wrapper">
+                                                        <p>
+                                                            Coming Soon
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350478559" >
+                                                    <a style="background-color:#b0976d; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="" title="Redamancy Cabernet Sauvignon">Discover</a>
+                                                </div>
+                                                <div class="vc_btn3-container vc_btn3-inline vc_custom_1617350497245">
+                                                    <a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom" href="{{route('shop.index')}}" title="Wines">Shop Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-6">
+                                        <div class="vc_column-inner vc_custom_1460628359633">
+                                            <div class="wpb_wrapper">
+                                                <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617357504438">
+
+                                                    <figure class="wpb_wrapper vc_figure">
+                                                        <div class="vc_single_image-wrapper vc_box_border_grey">
+
+                                                        </div>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="vc_row-full-width vc_clearfix"></div>
+
+{{--                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1457626757165 vc_row-has-fill">--}}
+{{--                                    <div class="wpb_column vc_column_container vc_col-sm-12">--}}
+{{--                                        <div class="vc_column-inner">--}}
+{{--                                            <div class="wpb_wrapper">--}}
+{{--                                                <div class="vc_widget vc_widget_instagram">--}}
+{{--                                                    <div class="widget gg-instagram-feed">--}}
+{{--                                                        <br />--}}
+
+{{--                                                        <div class="media">--}}
+{{--                                                            <div class="media-left">--}}
+{{--                                                                <h2 class="widgettitle">Instagram</h2>--}}
+{{--                                                                <p class="followers">10K <span>Instagram Followers</span>--}}
+{{--                                                                </p>--}}
+
+{{--                                                            </div> <!-- .media-left -->--}}
+
+{{--                                                            <div class="media-body">--}}
+
+{{--                                                                <div id="sb_instagram" class="sbi sbi_col_3  sbi_width_resp" style="width: 100%;" data-feedid="sbi_#6"--}}
+{{--                                                                     data-res="auto" data-cols="3" data-num="6"--}}
+{{--                                                                     data-shortcode-atts="{&quot;num&quot;:&quot;6&quot;,&quot;imagepadding&quot;:&quot;0&quot;,&quot;cols&quot;:&quot;3&quot;,&quot;hoverdisplay&quot;:&quot;likes&quot;,&quot;showheader&quot;:&quot;false&quot;,&quot;showbutton&quot;:&quot;false&quot;,&quot;showfollow&quot;:&quot;false&quot;}"  data-postid="193" data-locatornonce="831af2ae97" data-sbi-flags="favorLocal">--}}
+
+{{--                                                                    <div id="sbi_images">--}}
+{{--                                                                    </div>--}}
+
+{{--                                                                    <div id="sbi_load">--}}
+
+
+
+{{--                                                                    </div>--}}
+
+{{--                                                                    <span class="sbi_resized_image_data" data-feed-id="sbi_#6" data-resized="[]">--}}
+{{--	</span>--}}
+{{--                                                                </div>--}}
+
+{{--                                                            </div><!-- .media-body -->--}}
+{{--                                                        </div><!-- .media -->--}}
+
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                             </div><!-- .entry-content -->
 
 

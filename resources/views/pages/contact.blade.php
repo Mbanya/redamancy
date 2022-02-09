@@ -107,9 +107,9 @@
                                         <div class="vc_column-inner">
                                             <div class="wpb_wrapper">
                                                 <div class="gg-infobox " style="text-align:left;">
-                                                    <p class="subtitle" >Redamancy Wines</p>
+                                                    <p class="subtitle" >Redamancy Vineyards</p>
                                                     <div class="description" style="color: #ffffff;">
-                                                        <p> Johannesburg,<br/> South Africa <br/>
+                                                        <p> Devon Valley,<br/>Stellenbosch,<br/>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -126,7 +126,7 @@
                                                         <p>
                                                             <a href="mailto:hello@redamancy.com">info@redamancy.co.za</a>
                                                             <br />
-                                                            +27 83 580 1461
+                                                            +27-83-580 1461
                                                         </p>
                                                     </div>
                                                 </div>

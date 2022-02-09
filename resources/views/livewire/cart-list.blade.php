@@ -241,7 +241,7 @@
                         </td>
 
                         <td class="product-price" data-title="Price">
-                            <span class="woocommerce-Price-amount amount"><bdi>{{$item['price']}}&nbsp;<span class="woocommerce-Price-currencySymbol">$</span></bdi></span>
+                            <span class="woocommerce-Price-amount amount"><bdi>{{$item['price']}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR </span></bdi></span>
                         </td>
 
                         <td class="product-quantity" data-title="Quantity">
@@ -254,7 +254,7 @@
                         </td>
 
                         <td class="product-subtotal" data-title="Subtotal">
-                            <span class="woocommerce-Price-amount amount"><bdi>{{number_format(Cart::get($item['id'])->getPriceSum())}}&nbsp;<span class="woocommerce-Price-currencySymbol">$</span></bdi></span>
+                            <span class="woocommerce-Price-amount amount"><bdi>{{number_format(Cart::get($item['id'])->getPriceSum())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR </span></bdi></span>
                         </td>
                     </tr>
                         @endforeach
@@ -287,12 +287,12 @@
 
                             <tbody><tr class="cart-subtotal">
                                 <th>Subtotal</th>
-                                <td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></td>
+                                <td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR </span></bdi></span></td>
                             </tr>
 
                             <tr class="order-total">
                                 <th>Total</th>
-                                <td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><bdi>{{number_format(Cart::getTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">$</span></bdi></span></strong> </td>
+                                <td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><bdi>{{number_format(Cart::getTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR </span></bdi></span></strong> </td>
                             </tr>
 
 

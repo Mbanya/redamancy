@@ -20,20 +20,20 @@
 
                             <a href="#" wire:click.prevent="removeCart('{{$item['id']}}')"
                                class="remove remove_from_cart_button" aria-label="Remove this item">×</a>
-                            <a href="{{$item['attributes']['image']}}">
+                            <a href="{{asset($item['attributes']['image'])}}">
                                 <img width="840" height="1335"
-                                     src="{{$item['attributes']['image']  }}"
+                                     src="{{asset($item['attributes']['image'])  }}"
                                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"
-                                     srcset="{{$item['attributes']['image']  }} 840w,
-                                         {{$item['attributes']['image'] }} 416w,
-                                         {{$item['attributes']['image'] }} 189w,
-                                         {{$item['attributes']['image'] }} 644w,
-                                         {{$item['attributes']['image'] }} 768w"
+                                     srcset="{{asset($item['attributes']['image'])  }} 840w,
+                                         {{asset($item['attributes']['image']) }} 416w,
+                                         {{asset($item['attributes']['image']) }} 189w,
+                                         {{asset($item['attributes']['image']) }} 644w,
+                                         {{asset($item['attributes']['image']) }} 768w"
                                      sizes="(max-width: 840px) 100vw, 840px">{{$item['name']}}
                             </a>
                             <span class="quantity">{{$item['quantity']}} ×
                                     <span class="woocommerce-Price-amount amount">
-                                        <bdi>{{$item['price']}}&nbsp;<span class="woocommerce-Price-currencySymbol">$</span></bdi>
+                                        <bdi>{{$item['price']}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
                                     </span>
                                 </span>
                         </li>
@@ -53,7 +53,7 @@
                     <p class="woocommerce-mini-cart__total total">
                         <strong>Subtotal:</strong>
                         <span class="woocommerce-Price-amount amount">
-                                <bdi>{{Cart::getSubTotal()}}&nbsp;<span class="woocommerce-Price-currencySymbol">$</span></bdi>
+                                <bdi>{{Cart::getSubTotal()}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
                             </span>
                     </p>
 
