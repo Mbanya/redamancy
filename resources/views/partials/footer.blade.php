@@ -11,7 +11,7 @@
                     <h2 class="h_title">Unaccustomed Pleasure</h2>
                     @elseif(Request::is('our-story'))
                         <h2>Resolute Commitment to Nature</h2>
-                    @elseif(Request::is('shop*'))
+                    @elseif(Request::is('shop*') || Request::is('checkout') || Request::is('cart'))
                         <h2>The Propensity to Share</h2>
                     @elseif(Request::is('contact'))
                         <h2>
