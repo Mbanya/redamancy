@@ -153,8 +153,8 @@
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617353560917">
                                                     <figure class="wpb_wrapper vc_figure">
                                                         <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                                            <img width="633" height="980" src="{{asset('images/landing/IMG_1098.jpg')}}" class="vc_single_image-img attachment-full" alt=""
-                                                                 loading="lazy" srcset="images/landing/IMG_1098.jpg 633w, images/landing/IMG_1098.jpg 200w" sizes="(max-width: 633px) 100vw, 633px" />
+                                                            <img width="633" height="980" src="{{asset('images/landing/landing.jpg')}}" class="vc_single_image-img attachment-full" alt=""
+                                                                 loading="lazy" srcset="images/landing/landing.jpg 633w, images/landing/landing.jpg 200w" sizes="(max-width: 633px) 100vw, 633px" />
                                                         </div>
                                                     </figure>
                                                 </div>
