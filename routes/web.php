@@ -28,7 +28,11 @@ Route::get('wine-club', function () {
 
 Route::resource('shop',\App\Http\Controllers\ShopController::class);
 
-Route::get('checkout',[\App\Http\Controllers\CheckoutController::class,'checkout'])->name('checkout');
+Route::get('checkout',[\App\Http\Controllers\CheckoutController::class,'checkout'])
+    ->name('checkout');
+Route::post('confirm_order', [\App\Http\Controllers\CheckoutController::class ,'placeOrder'])->name('place-order');
+
+Route::get('complete_payment', [\App\Http\Controllers\PaymentController::class,'completePayment'])->name('complete-payment');
 
 Route::get('cart',[\App\Http\Controllers\CartController::class,'cartList'])->name('cart.list');
 Route::post('cart', [\App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.store');

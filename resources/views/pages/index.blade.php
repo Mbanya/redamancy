@@ -141,8 +141,6 @@
 
 
                         <article id="post-193" class="post-193 page type-page status-publish hentry">
-
-
                             <div class="entry-content">
                                 <div data-vc-full-width="true" data-vc-full-width-init="false"
                                      data-vc-stretch-content="true"
@@ -153,8 +151,10 @@
                                                 <div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1617353560917">
                                                     <figure class="wpb_wrapper vc_figure">
                                                         <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                                            <img width="633" height="980" src="{{asset('images/landing/landing.jpg')}}" class="vc_single_image-img attachment-full" alt=""
-                                                                 loading="lazy" srcset="images/landing/landing.jpg 633w, images/landing/landing.jpg 200w" sizes="(max-width: 633px) 100vw, 633px" />
+                                                            <img width="633" height="800" src="{{asset('images/landing/landing.jpg')}}"
+                                                                 class="vc_single_image-img attachment-full" alt=""
+                                                                 loading="lazy" srcset="images/landing/landing.jpg 633w, images/landing/landing.jpg 200w"
+                                                                 sizes="(max-width: 500) 100vw, 633px" />
                                                         </div>
                                                     </figure>
                                                 </div>
@@ -166,7 +166,7 @@
                                             <div class="wpb_wrapper">
                                                 <div class="title-subtitle-box" style="margin-bottom:60px; text-align: left;">
                                                     <p style="">Message from proprietors and wine lovers</p>
-                                                    <h1 style=" font-style: normal;">A New Generation of Wine Producers</h1>
+                                                    <h1 style=" font-style: normal;">A NEW BREED OF WINE PRODUCERS</h1>
                                                 </div>
                                                 <div class="wpb_text_column wpb_content_element " >
                                                     <div class="wpb_wrapper">
@@ -180,7 +180,6 @@
                                                            particularly in pursuit of distinctively cool climate Chardonnay.  While the Cabernet Sauvignon is from Devon Valley,
                                                            from a farm neighbouring the home of Redamancy Vineyards and Wines.
                                                            We are proud to present our first two wines in 2022, both wines fermented under their natural yeasts.
-
                                                        </p>
 
                                                     </div>

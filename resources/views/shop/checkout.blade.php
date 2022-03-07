@@ -64,67 +64,22 @@
                                             Returning customer? <a href="#" class="showlogin">Click here to login</a>
                                         </div>
                                     </div>
-                                    <form class="woocommerce-form woocommerce-form-login login" method="post" style=" display: none;">
+                                    @if($errors->count() > 0)
+                                        @foreach ($errors->all() as $error)
+                                            <div>{{ $error }}</div>
+                                        @endforeach
+                                    @endif
 
-
-                                        <p>If you have shopped with us before, please enter your details below. If you are a new customer, please proceed to the Billing section.</p>
-
-                                        <p class="form-row form-row-first">
-                                            <label for="username">Username or email&nbsp;<span class="required">*</span></label>
-                                            <input type="text" class="input-text" name="username" id="username" autocomplete="username">
-                                        </p>
-                                        <p class="form-row form-row-last">
-                                            <label for="password">Password&nbsp;<span class="required">*</span></label>
-                                            <input class="input-text" type="password" name="password" id="password" autocomplete="current-password">
-                                        </p>
-                                        <div class="clear"></div>
-
-
-                                        <p class="form-row">
-                                            <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-                                                <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever"> <span>Remember me</span>
-                                            </label>
-                                            <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="683063fed5">
-                                            <input type="hidden" name="_wp_http_referer" value="/villenoir/checkout/">
-                                            <input type="hidden" name="redirect" value="">
-                                            <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Login">Login</button>
-                                        </p>
-                                        <p class="lost_password">
-                                            <a href="">Lost your password?</a>
-                                        </p>
-
-                                        <div class="clear"></div>
-
-
-                                    </form>
-                                    <div class="woocommerce-form-coupon-toggle">
-
-                                        <div class="woocommerce-info">
-                                            Have a coupon? <a href="#" class="showcoupon">Click here to enter your code</a>
-                                        </div>
-                                    </div>
-
-                                    <form class="checkout_coupon" method="post" style="display: none;">
-
-                                        <div class="input-group">
-                                            <input type="text" name="coupon_code" class="input-text" placeholder="Coupon code" id="coupon_code" value="">
-                                            <span class="input-group-btn">
-                                                <input type="submit" class="button" name="apply_coupon" value="Apply coupon">
-                                            </span>
-                                        </div>
-                                        <div class="clear"></div>
-
-                                    </form>
-                                    <div class="woocommerce-notices-wrapper"></div>
-                                    <form name="checkout" method="post" class="checkout woocommerce-checkout col-md-12" action="">
+                                    <form name="checkout" method="post"
+                                          class="checkout woocommerce-checkout col-md-12"
+                                          action="{{route('place-order')}}">
+                                        @csrf
+                                        <input type="hidden" name="m_payment_id" value="{{Str::random(4)}}">
+                                        <input type="hidden" name="amount" value="{{number_format(Cart::getTotal())}}">
                                         <div class="col2-set col-md-7" id="customer_details">
                                             <div class="col-1">
                                                 <div class="woocommerce-billing-fields">
-
                                                     <h3>Billing details</h3>
-
-
-
                                                     <div class="woocommerce-billing-fields__field-wrapper">
                                                         <p class="form-row form-row-first validate-required" id="billing_first_name_field" data-priority="10">
                                                             <label for="billing_first_name" class="">First name&nbsp;<abbr class="required" title="required">*</abbr></label>
@@ -145,12 +100,10 @@
                                                             </span>
                                                         </p>
                                                         <p class="form-row form-row-wide" id="billing_country_field" data-priority="40">
-                                                            <label for="billing_country" class="">Country / Region&nbsp;<abbr class="required" title="required">*</abbr></label>
+                                                            <label for="billing_country" class="">Country<abbr class="required" title="required">*</abbr></label>
                                                             <span class="woocommerce-input-wrapper">
                                                                     <select name="billing_country" id="billing_country" class="form-control">
-                                                                        <option value="">Kenya</option>
-                                                                        <option value="">South Africa</option>
-                                                                        <option value="">Nigeria</option>
+                                                                        <option value="SA">South Africa</option>
                                                                     </select>
                                                                 </span>
                                                         </p>
@@ -190,7 +143,7 @@
                                                             </span>
                                                         </p>
                                                         <p class="form-row form-row-wide validate-phone" id="billing_phone_field" data-priority="100">
-                                                            <label for="billing_phone" class="">Phone&nbsp;<span class="optional">(optional)</span></label>
+                                                            <label for="billing_phone" class="">Phone&nbsp;<abbr class="required" title="required">*</abbr></label>
                                                             <span class="woocommerce-input-wrapper"><input type="tel" class="input-text " name="billing_phone" id="billing_phone" placeholder="" value="" autocomplete="tel"></span>
                                                         </p>
                                                         <p class="form-row form-row-wide validate-required validate-email" id="billing_email_field" data-priority="110">
@@ -200,92 +153,11 @@
                                                             </span>
                                                         </p>
                                                 </div>
-
-                                                <div class="woocommerce-account-fields">
-
-                                                    <p class="form-row form-row-wide create-account woocommerce-validated">
-                                                        <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-                                                            <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="checkbox" name="createaccount" value="1"> <span>Create an account?</span>
-                                                        </label>
-                                                    </p>
-
-
-
-
-                                                    <div class="create-account" style="display: none;">
-                                                        <p class="form-row validate-required" id="account_username_field" data-priority="">
-                                                            <label for="account_username" class="">Account username&nbsp;<abbr class="required" title="required">*</abbr></label>
-                                                            <span class="woocommerce-input-wrapper">
-                                                                <input type="text" class="input-text " name="account_username" id="account_username" placeholder="Username" value="">
-                                                            </span>
-                                                        </p>
-                                                        <p class="form-row validate-required" id="account_password_field" data-priority="">
-                                                            <label for="account_password" class="">Create account password&nbsp;<abbr class="required" title="required">*</abbr></label>
-                                                            <span class="woocommerce-input-wrapper password-input">
-                                                                <input type="password" class="input-text " name="account_password" id="account_password" placeholder="Password" value="">
-                                                                <span class="show-password-input"></span>
-                                                            </span>
-                                                        </p>
-                                                        <div class="clear"></div>
-                                                    </div>
-
-
-                                                </div>
                                             </div>
                                             </div>
 
                                             <div class="col-2">
-                                                <div class="woocommerce-shipping-fields">
-
-                                                    <h3 id="ship-to-different-address">
-                                                        <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-                                                            <input id="ship-to-different-address-checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" type="checkbox" name="ship_to_different_address" value="1">
-                                                            <span>Ship to a different address?</span>
-                                                        </label>
-                                                    </h3>
-
-                                                    <div class="shipping_address" style="display: none;">
-
-
-                                                        <div class="woocommerce-shipping-fields__field-wrapper">
-                                                            <p class="form-row form-row-first validate-required" id="shipping_first_name_field" data-priority="10">
-                                                                <label for="shipping_first_name" class="">First name&nbsp;<abbr class="required" title="required">*</abbr></label>
-                                                                <span class="woocommerce-input-wrapper">
-                                                                    <input type="text" class="input-text " name="shipping_first_name" id="shipping_first_name" placeholder="" value="" autocomplete="given-name">
-                                                                </span>
-                                                            </p>
-                                                            <p class="form-row form-row-last validate-required" id="shipping_last_name_field" data-priority="20">
-                                                                <label for="shipping_last_name" class="">Last name&nbsp;<abbr class="required" title="required">*</abbr></label>
-                                                                <span class="woocommerce-input-wrapper">
-                                                                    <input type="text" class="input-text " name="shipping_last_name" id="shipping_last_name" placeholder="" value="" autocomplete="family-name">
-                                                                </span>
-                                                            </p>
-                                                            <p class="form-row form-row-wide" id="shipping_company_field" data-priority="30">
-                                                                <label for="shipping_company" class="">Company name&nbsp;<span class="optional">(optional)</span></label>
-                                                                <span class="woocommerce-input-wrapper">
-                                                                    <input type="text" class="input-text " name="shipping_company" id="shipping_company" placeholder="" value="" autocomplete="organization">
-                                                                </span>
-                                                            </p>
-                                                            <p class="form-row form-row-wide address-field update_totals_on_change validate-required" id="billing_country_field" data-priority="40">
-                                                                <label for="billing_country" class="">Country / Region&nbsp;<abbr class="required" title="required">*</abbr></label>
-                                                                <span class="woocommerce-input-wrapper">
-                                                                    <select name="billing_country" id="billing_country" class="country_to_state country_select select2-hidden-accessible">
-                                                                        <option value="">Kenya</option>
-                                                                        <option value="">South Africa</option>
-                                                                        <option value="">Nigeria</option>
-                                                                    </select>
-                                                                </span>
-                                                            </p>
-
-
-                                                    </div>
-
-                                                </div>
-                                            </div>
                                                 <div class="woocommerce-additional-fields">
-
-
-
                                                     <div class="woocommerce-additional-fields__field-wrapper">
                                                         <p class="form-row notes" id="order_comments_field" data-priority="">
                                                             <label for="order_comments" class="">Order notes&nbsp;<span class="optional">(optional)</span></label>
@@ -294,8 +166,6 @@
                                                             </span>
                                                         </p>
                                                     </div>
-
-
                                                 </div>
                                             </div>
                                         </div>
@@ -322,7 +192,7 @@
                                                             </td>
                                                             <td class="product-total">
                                                                 <span class="woocommerce-Price-amount amount">
-                                                                    <bdi>{{number_format($item['price'])}}&nbsp;<span class="woocommerce-Price-currencySymbol">$</span></bdi>
+                                                                    <bdi>{{number_format($item['price'])}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
                                                                 </span>
                                                             </td>
                                                         </tr>
@@ -335,7 +205,7 @@
                                                         </td>
                                                         <td class="product-total">
                                                                 <span class="woocommerce-Price-amount amount">
-                                                                    <bdi>0&nbsp;<span class="woocommerce-Price-currencySymbol">$</span></bdi>
+                                                                    <bdi>0&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
                                                                 </span>
                                                         </td>
                                                     </tr>
@@ -347,7 +217,7 @@
                                                     <th>Subtotal</th>
                                                     <td>
                                                         <span class="woocommerce-Price-amount amount">
-                                                            <bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">$</span></bdi>
+                                                            <bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
                                                         </span>
                                                     </td>
                                                 </tr>
@@ -357,7 +227,7 @@
                                                     <td>
                                                         <strong>
                                                             <span class="woocommerce-Price-amount amount">
-                                                                <bdi>{{number_format(Cart::getTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">$</span></bdi>
+                                                                <bdi>{{number_format(Cart::getTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
                                                             </span>
                                                         </strong>
                                                     </td>
@@ -369,91 +239,12 @@
 
                                             <input type="hidden" name="lang" value="en">
                                             <div id="payment" class="woocommerce-checkout-payment">
-                                                <ul class="wc_payment_methods payment_methods methods">
-                                                    <li class="wc_payment_method payment_method_bacs">
-                                                        <input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="bacs" checked="checked" data-order_button_text="">
-
-                                                        <label for="payment_method_bacs">
-                                                            Direct bank transfer 	</label>
-                                                        <div class="payment_box payment_method_bacs">
-                                                            <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="wc_payment_method payment_method_cheque">
-                                                        <input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="cheque" data-order_button_text="">
-
-                                                        <label for="payment_method_cheque">
-                                                            Check payments
-                                                        </label>
-                                                        <div class="payment_box payment_method_cheque" style="display:none;">
-                                                            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="wc_payment_method payment_method_cod">
-                                                        <input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" data-order_button_text="">
-
-                                                        <label for="payment_method_cod">
-                                                            Cash on delivery
-                                                        </label>
-                                                        <div class="payment_box payment_method_cod" style="display:none;">
-                                                            <p>Pay with cash upon delivery.</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="wc_payment_method payment_method_paypal">
-                                                        <input id="payment_method_paypal" type="radio" class="input-radio" name="payment_method" value="paypal" data-order_button_text="Proceed to PayPal">
-
-                                                        <label for="payment_method_paypal">
-                                                            PayPal
-                                                            <img src="{{asset('images/checkout/paypal.png')}}" alt="PayPal acceptance mark">
-                                                            <a href="https://www.paypal.com/ro/cgi-bin/webscr?cmd=xpt/Marketing/general/WIPaypal-outside" class="about_paypal"
-                                                               onclick="javascript:window.open('https://www.paypal.com/ro/cgi-bin/webscr?cmd=xpt/Marketing/general/WIPaypal-outside',
-                                                               'WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;">What is PayPal?
-                                                            </a>
-                                                        </label>
-                                                        <div class="payment_box payment_method_paypal" style="display:none;">
-                                                            <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
-                                                        </div>
-                                                    </li>
-                                                </ul>
                                                 <div class="form-row place-order">
-                                                    <noscript>
-                                                        Since your browser does not support JavaScript, or it is disabled, please ensure you click the
-                                                        <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.			<br/>
-                                                        <button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals">Update totals</button>
-                                                    </noscript>
 
                                                     <div class="woocommerce-terms-and-conditions-wrapper">
                                                         <div class="woocommerce-privacy-policy-text">
                                                             <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our
                                                                 <a href="" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.
-                                                            </p>
-                                                        </div>
-
-                                                        <div class="woocommerce-terms-and-conditions" style="display: none; max-height: 200px; overflow: auto;">
-                                                            <p>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet nunc vel nulla condimentum laoreet sed non urna.
-                                                                Curabitur eu vehicula lectus, ac ornare ante. Pellentesque sodales suscipit arcu vel iaculis. Mauris pretium rutrum convallis.
-                                                                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec egestas purus id venenatis venenatis.
-                                                                Praesent porttitor ornare neque, ac hendrerit ligula lobortis iaculis. Sed lectus purus, facilisis id nisi eget, ultricies varius elit.
-                                                                Mauris ultrices, ipsum sit amet tempus condimentum, eros tellus egestas tortor, at varius ante quam quis nibh. Proin tortor tellus,
-                                                                fringilla at fringilla consectetur, porta vel velit. Sed et elit eget urna efficitur tincidunt a ut mi.
-                                                                Ut tristique tincidunt nulla quis pretium. Curabitur et dui sed massa cursus efficitur a sed leo. In hac habitasse platea dictumst.
-                                                                Integer mollis ligula ac tempor fermentum. Proin id mauris ac mauris bibendum ultrices.
-                                                            </p>
-                                                            <p>
-                                                                Duis mauris metus, imperdiet non metus id, rhoncus rhoncus ex. Curabitur in scelerisque magna.
-                                                                Ut ipsum eros, cursus nec magna non, mollis interdum nisl. Maecenas congue dignissim lectus nec iaculis.
-                                                                Integer leo eros, accumsan in dolor id, blandit tincidunt nibh. Aliquam in nulla in velit vestibulum eleifend vitae et lacus.
-                                                                Donec urna odio, accumsan sed risus eget, molestie ullamcorper quam. Donec elit sem, pretium fermentum tempor et, ultrices ut ex.
-                                                                Donec molestie tellus turpis, hendrerit euismod leo suscipit non. Sed et orci eu velit molestie hendrerit. Praesent gravida pellentesque purus,
-                                                                id feugiat orci sollicitudin vel. Morbi varius dolor nisl, ac egestas sapien tincidunt eget. Donec ullamcorper elit et dolor maximus venenatis.
-                                                                Maecenas pretium orci id dui laoreet lobortis. Integer varius tincidunt felis in hendrerit. Aliquam id mauris velit.
-                                                            </p>
-                                                            <p>
-                                                                Morbi scelerisque sed eros id pulvinar. Nulla fringilla blandit lacus ac volutpat. Nullam ex leo, tristique id velit vel,
-                                                                venenatis tincidunt magna. Nulla facilisi. Aliquam erat volutpat. Cras eget dignissim arcu, non gravida metus. Donec gravida blandit viverra.
-                                                                Proin tempor metus vel ligula eleifend consectetur. Nulla nec felis nulla. Integer cursus ipsum ut turpis pretium laoreet. Duis id cursus leo,
-                                                                a elementum dolor. Duis nec arcu odio. Pellentesque diam odio, accumsan ut tristique viverra, euismod ac neque. Praesent venenatis mi id purus porttitor sodales.
                                                             </p>
                                                         </div>
 
@@ -475,14 +266,13 @@
                                                             </p>
                                                         </div>
                                                     </div>
-
-
                                                     <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">Place order</button>
 
-                                                    <input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="a79c89f08a">
-                                                    <input type="hidden" name="_wp_http_referer" value="/villenoir/?wc-ajax=update_order_review">
+
+
                                                 </div>
                                             </div>
+                                        </div>
                                     </form>
 
 

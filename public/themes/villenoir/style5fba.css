@@ -38,8 +38,9 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
   --primary-color-alt: #000;
   --borders-color: #e5e5e5;
 
-  --headings-font: "Playfair Display";
-  --body-font: "Lato";
+  /*--headings-font: "Playfair Display";*/
+  --headings-font: "Open Sans";
+  --body-font: "Open Sans";
 
   --text-body-color: #000;
   --text-headings-color: #000;
@@ -100,6 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: normal;
   font-family: var(--headings-font);
   letter-spacing: 0;
+  font-weight:normal;
   clear: both;
   color: var(--text-headings-color);
 }
