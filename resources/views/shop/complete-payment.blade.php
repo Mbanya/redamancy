@@ -11,7 +11,7 @@
             float: left;
             margin-right: 30px;
         }
-        .woocommerce form label {
+        .woocommerce form label div {
             display: inline-block;
             clear: left;
         }
@@ -63,7 +63,7 @@
                                 <div class="woocommerce">
                                     <div class="woocommerce-notices-wrapper"></div>
 
-                                    <form class="checkout woocommerce-checkout col-md-12">
+                                    <div class="checkout woocommerce-checkout col-md-12" >
                                         <div class="col-md-2">
 
                                         </div>
@@ -97,10 +97,9 @@
                                             <tr class="cart-subtotal">
                                                 <th>Subtotal</th>
                                                 <td>
-                                                        <span class="woocommerce-Price-amount amount">
-                                                            <bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
-                                                        </span>
-
+                                                    <span class="woocommerce-Price-amount amount">
+                                                        <bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
+                                                    </span>
                                                 </td>
 
                                             </tr>
@@ -126,7 +125,7 @@
                                         <div class="col-md-2">
 
                                         </div>
-                                    </form>
+                                    </div>
 
 
                                 </div><!-- .entry-content -->

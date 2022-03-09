@@ -95,11 +95,13 @@ class CheckoutController extends Controller
 
     public function success()
     {
+        \Cart::clear();
         return view('shop.success');
     }
 
     public function cancel()
     {
+        \Cart::clear();
         return view('shop.cancel');
     }
 }
