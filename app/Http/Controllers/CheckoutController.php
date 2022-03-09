@@ -69,7 +69,7 @@ class CheckoutController extends Controller
         $data['signature'] = $signature;
 
         // If in testing mode make use of either sandbox.payfast.co.za or www.payfast.co.za
-        $testingMode = false;
+        $testingMode = true;
         $pfHost = $testingMode ? 'sandbox.payfast.co.za' : 'www.payfast.co.za';
         $htmlForm = '<form action="https://'.$pfHost.'/eng/process" method="post" class="checkout woocommerce-checkout col-md-12">';
         foreach($data as $name=> $value)
