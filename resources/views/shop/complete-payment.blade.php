@@ -33,7 +33,7 @@
                         <div class="col-md-12">
                             <div class="page-meta-wrapper">
                                 <h1>
-                                    Complete Payment
+                                    Confirm Order
                                 </h1>
 
                             </div><!-- .page-meta-wrapper -->
@@ -62,14 +62,18 @@
                             <div class="entry-content">
                                 <div class="woocommerce">
                                     <div class="woocommerce-notices-wrapper"></div>
+
                                     <form class="checkout woocommerce-checkout col-md-12">
-                                        <table class="shop_table woocommerce-checkout-review-order-table">
+                                        <div class="col-md-2">
+
+                                        </div>
+                                        <div id="order_review" class="woocommerce-checkout-review-order col-md-8">
+
+                                            <table class="shop_table woocommerce-checkout-review-order-table">
                                             <thead>
                                             <tr>
                                                 <th class="product-name">Product</th>
                                                 <th class="product-total">Subtotal</th>
-
-
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -117,16 +121,17 @@
 
                                             </tfoot>
                                         </table>
+                                                 {!! $htmlForm !!}
+                                        </div>
+                                        <div class="col-md-2">
+
+                                        </div>
                                     </form>
-
-
-                                    {!! $htmlForm !!}
 
 
                                 </div><!-- .entry-content -->
                             </div>
                         </article><!-- #post -->
-                    </div><!-- end page container -->
 
                 </div><!-- .row -->
             </div><!-- .container -->

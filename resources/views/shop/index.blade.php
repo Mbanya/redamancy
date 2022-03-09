@@ -121,11 +121,11 @@
 
                                                 <label for="qty">Quantity (Case)</label>
                                                 <select name="quantity" id="qty" class="form-control">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
+                                                    <option value="6">1</option>
+                                                    <option value="12">2</option>
+                                                    <option value="18">3</option>
+                                                    <option value="24">4</option>
+                                                    <option value="30">5</option>
                                                 </select>
 
                                                 <p style="font-size: 13px; line-height: normal; padding: 30px 0;">

@@ -36,7 +36,17 @@ Route::get('complete_payment', [\App\Http\Controllers\PaymentController::class,'
 
 Route::get('cart',[\App\Http\Controllers\CartController::class,'cartList'])->name('cart.list');
 Route::post('cart', [\App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.store');
+
 Route::get('contact', function () {
     return view('pages.contact');
 })->name('contact');
+
+Route::get('cancel',[\App\Http\Controllers\CheckoutController::class,'cancel'])
+    ->name('checkout.cancel');
+Route::get('notify',[\App\Http\Controllers\CheckoutController::class,'notify'])
+    ->name('checkout.notify');
+Route::get('success',[\App\Http\Controllers\CheckoutController::class,'success'])
+    ->name('checkout.success');
+
+
 

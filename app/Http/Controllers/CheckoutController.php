@@ -77,7 +77,7 @@ class CheckoutController extends Controller
             $htmlForm .= '<input name="'.$name.'" type="hidden" value=\''.$value.'\'/>';
         }
 
-        $htmlForm .= '<div id="payment" class="woocommerce-checkout-payment">
+        $htmlForm .= '<div id="payment" class="woocommerce-checkout-payment" style="padding: 2rem 0">
                                                 <div class="form-row place-order">
                                                     <button type="submit" class="button alt"
                                                             name="woocommerce_checkout_place_order"
@@ -86,10 +86,20 @@ class CheckoutController extends Controller
                                                     </button>
                                                 </div>
                                             </div>
-                                        </div>
+
                                     </form>';
         return view('shop.complete-payment',compact('order','htmlForm'));
 
 
+    }
+
+    public function success()
+    {
+        return view('shop.success');
+    }
+
+    public function cancel()
+    {
+        return view('shop.cancel');
     }
 }

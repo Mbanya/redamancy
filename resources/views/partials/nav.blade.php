@@ -23,16 +23,16 @@
 
             <div class="logo-wrapper">
                 <a class="brand" href="" title="Redamancy" rel="home">
-{{--                    <img style=" max-width: 160px;" class="brand" src="{{asset('cropped-logo-180x180.png')}}" width="336" height="82" alt="Redamancy" />--}}
-                    Redamancy Wines
+                    <img style=" max-width: 100px;" class="brand" src="{{asset('cropped-logo-180x180.png')}}"  alt="Redamancy" />
+
                 </a>
                 <a class="sticky-brand" href="" title="Redamancy" rel="home">
-{{--                    <img style=" max-width: 50px;" src="{{asset('cropped-logo-180x180.png')}}" width="212" height="160" alt="Redamancy" />--}}
-                    Redamancy Wines
+                    <img style=" max-width: 100px;" src="{{asset('cropped-logo-180x180.png')}}" halt="Redamancy" />
+
                 </a>
                 <a class="mobile-brand" href="" title="Redamancy" rel="home">
-{{--                    <img style=" max-width: 50px;" src="{{asset('cropped-logo-180x180.png')}}" width="212" height="160" alt="Redamancy" />--}}
-                    Redamancy Wines
+                    <img style=" max-width: 60px;" src="{{asset('cropped-logo-180x180.png')}}" alt="Redamancy" />
+
                 </a>
             </div><!-- .logo-wrapper -->
 

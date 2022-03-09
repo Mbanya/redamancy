@@ -279,7 +279,8 @@
                                 </div><!-- .entry-content -->
                             </div>
                         </article><!-- #post -->
-                    </div><!-- end page container -->
+                    </div>
+                    <!-- end page container -->
 
                 </div><!-- .row -->
             </div><!-- .container -->
