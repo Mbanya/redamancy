@@ -48,7 +48,7 @@ class CheckoutController extends Controller
             $order->products()->attach($item['id']);
         }
 
-        $cartTotal = Cart::getTotal();// This amount needs to be sourced from your application
+        $cartTotal = \Cart::getTotal();// This amount needs to be sourced from your application
         $data = [
              'merchant_id' => '19424164',
              'merchant_key' => 'a7yqq0vrrjgte',
@@ -69,7 +69,7 @@ class CheckoutController extends Controller
         $data['signature'] = $signature;
 
         // If in testing mode make use of either sandbox.payfast.co.za or www.payfast.co.za
-        $testingMode = true;
+        $testingMode = false;
         $pfHost = $testingMode ? 'sandbox.payfast.co.za' : 'www.payfast.co.za';
         $htmlForm = '<form action="https://'.$pfHost.'/eng/process" method="post" class="checkout woocommerce-checkout col-md-12">';
         foreach($data as $name=> $value)
