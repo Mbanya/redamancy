@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('assets')
-    <style type="text/css" data-type="vc_shortcodes-custom-css">
+       <style type="text/css" data-type="vc_shortcodes-custom-css">
         .vc_custom_1460727920666{padding-top: 0px !important;padding-bottom: 0px !important;background-color: #f2f2f2 !important;}
         .vc_custom_1460727927848{padding-top: 0px !important;padding-bottom: 0px !important;background-color: #f2f2f2 !important;}
         .vc_custom_1460727935440{padding-top: 0px !important;padding-bottom: 0px !important;background-color: #f2f2f2 !important;}
@@ -13,8 +13,8 @@
         .vc_custom_1460636587092{padding: 20% !important;}
         .vc_custom_1460635878309{padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;padding-left: 0px !important;}
         .vc_custom_1459092115753{margin-bottom: 0px !important;}
+
     </style>
-    <noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
 
 @endsection
 
@@ -48,7 +48,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
                         <div class="woocommerce-notices-wrapper"></div>
-                        <div id="product-680" class="product type-product post-680 status-publish first instock product_cat-red-wines product_tag-red product_tag-wine has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+                        <div id="product-645" class="product type-product post-645 status-publish first instock product_cat-red-wines product_tag-red product_tag-wine has-post-thumbnail shipping-taxable purchasable product-type-simple">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="transition: opacity .25s ease-in-out;">
@@ -57,8 +57,8 @@
                                                  data-thumb-alt="" class="woocommerce-product-gallery__image">
                                                 <a href="{{$item->product_image}}">
                                                     <img width="840" height="1335" src="{{asset($item->product_image)}}" class="wp-post-image" alt="" loading="lazy"
-                                                         title="Dark-blue-Merlot-w-cup-v2" data-caption="" data-src="{{asset('$item->product_image')}}"
-                                                         data-large_image="{{asset('$item->product_image')}}" data-large_image_width="840"
+                                                         title="{{$item->product_name}}" data-caption="" data-src=""
+                                                         data-large_image="" data-large_image_width="840"
                                                          data-large_image_height="1335" srcset="{{asset($item->product_image)}} 840w,
                                                          {{asset($item->product_image)}} 189w,
                                                          {{asset($item->product_image)}} 644w,
@@ -119,12 +119,12 @@
 
                                         <div class="product_meta">
 
-
+                                            @if($item->product_name === 'Chardonnay')
+                                            <span class="posted_in">Category: <a href="" rel="tag">White wines</a></span>
+                                            @else
                                             <span class="posted_in">Category: <a href="" rel="tag">Red wines</a></span>
-
-
+                                            @endif
                                         </div>
-
 
                                         <table class="woocommerce-product-attributes shop_attributes">
                                             <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_varietal">
@@ -205,11 +205,11 @@
                                                                 {{asset('images/shop/chardonnay-tasting-notes.png')}} 768w"
                                                                  sizes="(max-width: 1170px) 100vw, 1170px" />
                                                         @else
-                                                            <img width="1170" height="1400" src="../../wp-content/uploads/2016/03/product-img-1.jpg" class="vc_single_image-img attachment-full" alt=""
-                                                                 loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1.jpg 1170w,
-                                                              http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1-251x300.jpg 251w,
-                                                               http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1-856x1024.jpg 856w,
-                                                                http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-1-768x919.jpg 768w"
+                                                            <img width="1170" height="1400" src="{{asset('wp-content/uploads/2016/03/product-img-1.jpg')}}" class="vc_single_image-img attachment-full" alt=""
+                                                                 loading="lazy" srcset="{{asset('wp-content/uploads/2016/03/product-img-1.jpg')}} 1170w,
+                                                                {{asset('wp-content/uploads/2016/03/product-img-1.jpg')}} 251w,
+                                                                {{asset('wp-content/uploads/2016/03/product-img-1.jpg')}} 856w,
+                                                                {{asset('wp-content/uploads/2016/03/product-img-1.jpg')}} 768w"
                                                                  sizes="(max-width: 1170px) 100vw, 1170px" />
                                                          @endif
                                                     </div>
@@ -235,11 +235,11 @@
                                                              {{asset('images/shop/maturation-potential.png')}} 768w" sizes="(max-width: 1170px) 100vw, 1170px" />
 
                                                         @else
-                                                            <img width="1170" height="1400" src="../../wp-content/uploads/2016/03/product-img-2.jpg" class="vc_single_image-img attachment-full" alt=""
-                                                                 loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-2.jpg 1170w,
-                                                             http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-2-251x300.jpg 251w,
-                                                             http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-2-856x1024.jpg 856w,
-                                                             http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-2-768x919.jpg 768w" sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                            <img width="1170" height="1400" src="{{asset('wp-content/uploads/2016/03/product-img-2.jpg')}}" class="vc_single_image-img attachment-full" alt=""
+                                                                 loading="lazy" srcset="{{asset('wp-content/uploads/2016/03/product-img-2.jpg')}} 1170w,
+                                                             {{asset('wp-content/uploads/2016/03/product-img-2.jpg')}}251w,
+                                                             {{asset('wp-content/uploads/2016/03/product-img-2.jpg')}} 856w,
+                                                             {{asset('wp-content/uploads/2016/03/product-img-2.jpg')}} 768w" sizes="(max-width: 1170px) 100vw, 1170px" />
                                                         @endif
                                                     </div>
                                                 </figure>
@@ -348,11 +348,12 @@
                                                                {{asset('images/shop/winemaker-notes.png')}} 768w"
                                                              sizes="(max-width: 1170px) 100vw, 1170px" />
                                                         @else
-                                                            <img width="1170" height="1400" src="../../wp-content/uploads/2016/03/product-img-3.jpg" class="vc_single_image-img attachment-full"
-                                                                 alt="" loading="lazy" srcset="http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-3.jpg 1170w,
-                                                              http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-3-251x300.jpg 251w,
-                                                               http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-3-856x1024.jpg 856w,
-                                                                http://127.0.0.1:81/wordpress/wp-content/uploads/2016/03/product-img-3-768x919.jpg 768w"
+                                                            <img width="1170" height="1400" src="{{asset('wp-content/uploads/2016/03/product-img-3.jpg')}}"
+                                                                 class="vc_single_image-img attachment-full"
+                                                                 alt="" loading="lazy" srcset="{{asset('wp-content/uploads/2016/03/product-img-3.jpg')}} 1170w,
+                                                                {{asset('wp-content/uploads/2016/03/product-img-3.jpg')}} 251w,
+                                                                {{asset('wp-content/uploads/2016/03/product-img-3.jpg')}} 856w,
+                                                                {{asset('wp-content/uploads/2016/03/product-img-3.jpg')}} 768w"
                                                                  sizes="(max-width: 1170px) 100vw, 1170px" />
                                                         @endif
                                                     </div>
@@ -381,7 +382,7 @@
             <button type="button" class="close">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve"><path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path></svg>
             </button>
-            <form method="get" id="searchform" class="" action="http://127.0.0.1:81/wordpress/">
+            <form method="get" id="searchform" class="" action="">
                 <input type="search" value="" placeholder="Search for products" name="s" id="s" />
                 <button type="submit" id="searchsubmit" class="btn btn-primary">Search</button>
             </form>

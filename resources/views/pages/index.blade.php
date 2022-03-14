@@ -49,7 +49,7 @@
                                         data-frame_0="x:-50px;"
                                         data-frame_1="e:power2.out;st:1000;sp:1000;sR:1000;"
                                         data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:7000;"
-                                        style="z-index:5;font-family:Playfair Display;font-style:italic;font-weight:300;"
+                                        style="z-index:5;font-style:italic;font-weight:300;"
                                     >Redamancy Wines
                                     </rs-layer><!--
 
@@ -65,7 +65,7 @@
                                         data-frame_0="x:-50px;"
                                         data-frame_1="e:power2.out;st:1250;sp:1000;sR:1250;"
                                         data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:6750;"
-                                        style="z-index:6;font-family:Lato;text-transform:uppercase;font-weight:500;"
+                                        style="z-index:6;text-transform:uppercase;font-weight:500;"
                                     >Introducing Redamancy Vineyards
                                     </rs-layer>
                                     <!--
@@ -81,7 +81,7 @@
                                         data-frame_0="x:-50px;"
                                         data-frame_1="e:power2.out;st:1500;sp:1000;sR:1500;"
                                         data-frame_999="o:0;e:power4.in;st:w;sp:1500;sR:6500;"
-                                        style="z-index:7;font-family:Playfair Display;"
+                                        style="z-index:7;"
                                     >are a Treat!
                                     </rs-layer><!--
 -->						</rs-slide>

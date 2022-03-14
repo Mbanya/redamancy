@@ -15,13 +15,13 @@
         #rs-demo-id {}
     </style>
 
-    <link rel='stylesheet' id='villenoir-woocommerce-css'  href='{{asset('themes/villenoir/styles/gg-woocommerce5fba.css')}}' type='text/css' media='all' />
-    <link rel='stylesheet' id='acfgfs-enqueue-fonts-css'  href='http://fonts.googleapis.com/css?family=Playfair+Display%3A400%2Citalic%2C700%2C700italic%2C900%2C900italic%7CLato%3A100%2C100italic%2C300%2C300italic%2C400%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;subset=cyrillic%2Clatin-ext%2Clatin&amp;ver=1.0.0' type='text/css' media='all' />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel='stylesheet' id='bootstrap-css'  href='{{asset('themes/villenoir/assets/bootstrap/css/bootstrap.min5fba.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='font-awesome-css'  href='{{asset('themes/villenoir/assets/font-awesome/css/font-awesome.min5fba.css')}}' type='text/css' media='all' />
+    <link rel='stylesheet' id='villenoir-woocommerce-css'  href='{{asset('themes/villenoir/styles/gg-woocommerce5fba.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='pace-css'  href='{{asset('themes/villenoir/styles/site-loader5fba.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='isotope-css'  href='{{asset('themes/villenoir/styles/isotope5fba.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' id='magnific-popup-css'  href='{{asset('themes/villenoir/styles/magnific-popup5fba.css')}}' type='text/css' media='all' />
@@ -330,7 +330,9 @@
     <noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
 @livewireStyles
 @yield('assets')
-<body class="home page-template-default page page-id-193 theme-villenoir woocommerce-no-js tribe-no-js gg-page-has-header-slider gg-slider-is-beneath_header gg-page-header-style1 gg-has-stiky-menu gg-has-sticky-logo gg-has-mobile-logo gg-has-style_1-menu single-author gg-shop-style1 wpb-js-composer js-comp-ver-6.6.0 vc_responsive wpb-is-on">
+<body class="home page-template-default page page-id-193 postid-680
+    theme-villenoir woocommerce-no-js tribe-no-js gg-page-has-header-slider gg-slider-is-beneath_header gg-page-header-style1 gg-has-stiky-menu
+  gg-has-sticky-logo gg-has-mobile-logo gg-has-style_1-menu single-author gg-shop-style1 wpb-js-composer js-comp-ver-6.6.0 vc_responsive wpb-is-on">
 
 @yield('content')
 
