@@ -196,7 +196,7 @@ class CheckoutController extends Controller
                 ->addItems($items)
                 ->logo(public_path(asset('cropped-logo-180x180.png')))
                 // You can additionally save generated invoice to configured disk
-                ->save('public/invoices');
+                ->save('public');
 
             $link = $invoice->url();
             // Then send email to party with link
