@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use LaravelDaily\Invoices\Classes\Buyer;
 use LaravelDaily\Invoices\Classes\InvoiceItem;
 use LaravelDaily\Invoices\Classes\Party;
+use LaravelDaily\Invoices\Facades\Invoice;
 
 class CheckoutController extends Controller
 {
@@ -199,13 +200,15 @@ class CheckoutController extends Controller
 
             $link = $invoice->url();
             // Then send email to party with link
+            \Notification::route('mail',$pfData['email_address'])
+                ->notify(new SendInvoiceNotification($link));
 
-//           \Notification::route('mail')->notify(new SendInvoiceNotification($link));
+           Order::query()
+               ->where('m_payment_id',$pfData['m_payment_id'])
+               ->update(['payment_status'=>'COMPLETED']);
 
-            // And return invoice itself to browser or have a different view
-            return $invoice->stream();
         } else {
-            // Some checks have failed, check payment manually and log for investigation
+            return 'Payment Failed';
         }
     }
 
