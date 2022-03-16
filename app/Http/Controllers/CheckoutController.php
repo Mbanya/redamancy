@@ -48,13 +48,13 @@ class CheckoutController extends Controller
         $order = Order::query()->create($request->validated());
         foreach (\Cart::getContent()->toArray() as $item)
         {
-            $order->products()->attach($item['id']);
+            $order->products()->attach($item['id'],['quantity'=>$item['quantity']]);
         }
 
         $cartTotal = \Cart::getTotal();// This amount needs to be sourced from your application
         $data = [
-             'merchant_id' => '19424164',
-             'merchant_key' => 'a7yqq0vrrjgte',
+             'merchant_id' => '10000100',
+             'merchant_key' => '46f0cd694581a',
              'return_url' => 'https://redamancy.herokuapp.com/success',
              'cancel_url' => 'https://redamancy.herokuapp.com/cancel',
              'notify_url' => 'https://redamancy.herokuapp.com/notify',
@@ -72,7 +72,7 @@ class CheckoutController extends Controller
         $data['signature'] = $signature;
 
         // If in testing mode make use of either sandbox.payfast.co.za or www.payfast.co.za
-        $testingMode = false;
+        $testingMode = true;
         $pfHost = $testingMode ? 'sandbox.payfast.co.za' : 'www.payfast.co.za';
         $htmlForm = '<form action="https://'.$pfHost.'/eng/process" method="post" class="checkout woocommerce-checkout col-md-12">';
         foreach($data as $name=> $value)
@@ -125,7 +125,10 @@ class CheckoutController extends Controller
             }
         }
         $cart = Order::query()->where('m_payment_id',$pfData['m_payment_id'])->first();
-        $product = Product::query()->where('id',$cart->products->product_id)->get();
+
+        $products = \DB::table('order_products')->whereIn('order_id',$cart->id)->get();
+
+
         $pfParamString = substr( $pfParamString, 0, -1 );
         $check1 = $this->pfValidSignature($pfData, $pfParamString);
         $check2 =  $this->pfValidIP();
@@ -153,6 +156,45 @@ class CheckoutController extends Controller
                     'EMAIL' => $cart->billing_email
                 ]
             ]);
+            $items = [];
+
+            foreach ($products as $product){
+                $product_id = $product->product_id;
+                $product_name = Product::query()->where('id',$product_id)->first()->product_name;
+                $product_description = Product::query()->where('id',$product_id)->first()->product_description;
+                $unit_price = Product::query()->where('id',$product_id)->first()->price;
+                $qty = $product->quantity;
+                $amount = $unit_price * $qty;
+
+                $items = array_push( (new InvoiceItem())
+                    ->title($product_name)
+                    ->description($product_description)
+                    ->pricePerUnit($unit_price)
+                    ->quantity($qty));
+            }
+
+            $invoice = Invoice::make('receipt')
+                ->series('BIG')
+                // ability to include translated invoice status
+                // in case it was paid
+                ->status(__('invoices::invoice.paid'))
+                ->sequence(667)
+                ->serialNumberFormat('{SEQUENCE}/{SERIES}')
+                ->seller($client)
+                ->buyer($customer)
+                ->date(now()->subWeeks(3))
+                ->dateFormat('m/d/Y')
+                ->payUntilDays(14)
+                ->currencySymbol('ZAR')
+                ->currencyCode('ZAR')
+                ->currencyFormat('{SYMBOL}{VALUE}')
+                ->currencyThousandsSeparator('.')
+                ->currencyDecimalPoint(',')
+                ->filename($client->name . ' ' . $customer->name)
+                ->addItems($items)
+                ->logo(public_path(asset('cropped-logo-180x180.png')))
+                // You can additionally save generated invoice to configured disk
+                ->save('public/invoices');
 
 
         } else {

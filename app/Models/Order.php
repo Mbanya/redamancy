@@ -25,11 +25,14 @@ class Order extends Model
         'billing_email',
         'order_comments',
         'amount',
-        'm_payment_id'
+        'm_payment_id',
+        'payment_status'
     ];
 
     public function products(): BelongsToMany
     {
-        return $this->belongsToMany(Product::class,'order_products');
+        return $this->belongsToMany(Product::class,'order_products')
+            ->withPivot('quantity')
+            ->withTimestamps();
     }
 }
