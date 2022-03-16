@@ -33,7 +33,7 @@ class CheckoutFormRequest extends FormRequest
             'billing_city'=> ['required','max:100'],
             'billing_state' => ['required','max:100'],
             'billing_postcode' => ['required','max:100'],
-            'billing_phone'=> ['required','numeric'],
+            'billing_phone'=> ['required','regex:/^([0-9\s\-\+\(\)]*)$/','min:10'],
             'billing_email'=> ['required','email','max:150'],
             'order_comments'=> ['nullable'],
             'amount'=> ['required'],

@@ -83,7 +83,7 @@
                                     <li class="col-xs-12 col-sm-6 col-md-6 product type-product post-645 status-publish instock
                                 product_cat-red-wines product_tag-red product_tag-wine has-post-thumbnail shipping-taxable purchasable product-type-simple">
 
-                                        <a href="{{route('product-name',$item->slug)}}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                        <a href="{{route('shop.show',$item->slug)}}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                                             <h2 class="woocommerce-loop-product__title">{{$item->product_name}}</h2>
                                             <div class="gg-product-image-wrapper">
                                                 <img width="840" height="1335" src="{{$item->product_image}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"

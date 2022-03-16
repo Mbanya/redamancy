@@ -17,6 +17,10 @@
                         <h2>
                             Uninterrupted Musing
                         </h2>
+                    @else
+                        <h2>
+                            Unaccustomed Pleasure
+                        </h2>
                     @endif
                 </div>
             </div>

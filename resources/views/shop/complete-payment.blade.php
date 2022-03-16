@@ -67,6 +67,50 @@
                                         <div class="col-md-2">
 
                                         </div>
+                                        <style>
+                                            #order_review {
+                                                border: 1px solid #e5e5e5;
+                                                padding: 30px;
+                                            }
+                                           #order_review table.woocommerce-checkout-review-order-table {
+                                                margin-bottom: 30px;
+                                                width: 100%;
+                                            }
+                                            #order_review .shop_table tbody {
+                                                border-bottom: 1px solid #e5e5e5;
+                                            }
+                                            .shop_table tr {
+                                                border-bottom: 1px solid #e5e5e5;
+                                            }
+                                            #order_review .shop_table th.product-name, .woocommerce  #order_review .shop_table th.product-total {
+                                                padding: 0 0 15px 0;
+                                                font-size: 12px;
+                                                letter-spacing: 2px;
+                                                text-transform: uppercase;
+                                                font-weight: bold;
+                                            }
+                                           #order_review .shop_table th, .woocommerce #order_review .shop_table td {
+                                                padding: 15px 0;
+                                                vertical-align: top;
+                                                color: #000;
+                                            }
+                                            #payment .woocommerce-checkout-payment {
+                                                padding: 30px 0 0 0;
+                                                margin: 0 !important;
+                                                border-top: 1px solid var(--borders-color);
+                                            }
+                                            #payment .place-order {
+                                                padding: 30px 30px 0 30px;
+                                                margin-top: 30px;
+                                                float: none;
+                                                width: 100%;
+                                                border-top: 1px solid var(--borders-color);
+                                            }
+                                            #payment .place-order .button {
+                                                width: 100%;
+                                                white-space: pre-wrap;
+                                            }
+                                        </style>
                                         <div id="order_review" class="woocommerce-checkout-review-order col-md-8">
 
                                             <table class="shop_table woocommerce-checkout-review-order-table">

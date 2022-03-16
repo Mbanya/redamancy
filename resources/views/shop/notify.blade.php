@@ -1,7 +1,6 @@
 @extends('layouts.main')
 @php
 
-
     @endphp
 @section('assets')
     <style>
@@ -33,7 +32,7 @@
                         <div class="col-md-12">
                             <div class="page-meta-wrapper">
                                 <h1>
-                                    Complete Payment
+                                    Payment Cancelled
                                 </h1>
 
                             </div><!-- .page-meta-wrapper -->
@@ -62,74 +61,42 @@
                             <div class="entry-content">
                                 <div class="woocommerce">
                                     <div class="woocommerce-notices-wrapper"></div>
-                                    <div class="checkout woocommerce-checkout col-md-12">
-                                        <table class="shop_table woocommerce-checkout-review-order-table">
-                                            <thead>
-                                            <tr>
-                                                <th class="product-name">Product</th>
-                                                <th class="product-total">Subtotal</th>
 
+                                    <form class="checkout woocommerce-checkout col-md-12" style="padding: 2rem 0">
+                                        <div class="col-md-3">
 
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            @foreach(Cart::getContent() as $item)
-                                                <tr class="cart_item">
-                                                    <td class="product-name">
-                                                        &nbsp;&nbsp;{{$item['name']}}
-                                                        <strong class="product-quantity">× {{$item['quantity']}}</strong>
-                                                    </td>
-                                                    <td class="product-total">
-                                                                <span class="woocommerce-Price-amount amount">
-                                                                    <bdi>{{number_format($item['price'])}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
-                                                                </span>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
+                                        </div>
+                                        <div id="order_review" class="woocommerce-checkout-review-order col-md-6">
+                                            <h3>
+                                                <i class="fa fa-times-circle" aria-hidden="true" style="color: red;"></i> Payment Cancelled
+                                            </h3>
+                                            <p>
+                                                The payment has been cancelled. Please, try it again later!
+                                            </p>
+                                            <a href="{{route('shop.index')}}" class="button"
+                                               value="Continue Shopping"
+                                               data-value="Continue Shopping">Continue Shopping
+                                            </a>
 
-                                            </tbody>
-                                            <tfoot>
+                                            <a href="{{route('index')}}" class="button" style="margin:0 2rem;"
+                                               value="Back Home"
+                                               data-value="Back Home">Back Home
+                                            </a>
 
-                                            <tr class="cart-subtotal">
-                                                <th>Subtotal</th>
-                                                <td>
-                                                        <span class="woocommerce-Price-amount amount">
-                                                            <bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
-                                                        </span>
+                                        </div>
+                                        <div class="col-md-3">
 
-                                                </td>
-
-                                            </tr>
-                                            <tr class="order-total">
-                                                <th>Total</th>
-                                                <td>
-                                                    <strong>
-                                                            <span class="woocommerce-Price-amount amount">
-                                                                <bdi>
-
-                                                                    {{number_format(Cart::getTotal())}}&nbsp;
-                                                                    <span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
-                                                            </span>
-                                                    </strong>
-                                                </td>
-                                            </tr>
-
-
-                                            </tfoot>
-                                        </table>
-                                    </div>
-
-
-                                    {!! $htmlForm !!}
+                                        </div>
+                                    </form>
 
 
                                 </div><!-- .entry-content -->
                             </div>
                         </article><!-- #post -->
-                    </div><!-- end page container -->
 
-                </div><!-- .row -->
-            </div><!-- .container -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div>
         </section>
         @include('partials.footer')
 

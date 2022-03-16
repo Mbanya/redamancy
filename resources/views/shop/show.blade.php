@@ -100,11 +100,11 @@
 
                                             <label for="qty">Quantity</label>
                                             <select name="quantity" id="qty" class="form-control">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
+                                                <option value="6">1</option>
+                                                <option value="12">2</option>
+                                                <option value="18">3</option>
+                                                <option value="24">4</option>
+                                                <option value="30">5</option>
                                             </select>
 
                                             <button class="button product_type_simple add_to_cart_button ajax_add_to_cart" aria-label="{{$item->product_name}}" type="submit" style="margin-top: 10px; margin-bottom: 10px;">
@@ -125,10 +125,35 @@
                                             <span class="posted_in">Category: <a href="" rel="tag">Red wines</a></span>
                                             @endif
                                         </div>
+                                        <style>
+                                            #table-details table{
+                                                font-size: 16px;width: auto;margin: 0;
+                                            }
+                                            #table-details th {
+                                                font-size: 12px;
+                                                font-weight: bold;
+                                                text-transform: uppercase;
+                                                letter-spacing: 2px;
+                                                position: relative;
+                                                min-width: 185px;
+                                                padding-right: 60px;
+                                            }
+                                            #table-details td th{
+                                                border: 0;
+                                                padding: 10px 0;
+                                                vertical-align: middle;
+                                            }
+                                            #table-details td{
+                                                font-style: italic;
+                                                padding-left: 60px;
+                                            }
+                                        </style>
 
-                                        <table class="woocommerce-product-attributes shop_attributes">
-                                            <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_varietal">
-                                                <th class="woocommerce-product-attributes-item__label">VARIETAL</th>
+                                        <table class="woocommerce-product-attributes shop_attributes"
+                                               id="table-details">
+                                            <tr class="woocommerce-product-attributes-item
+                                            woocommerce-product-attributes-item--attribute_varietal" >
+                                                <th class="woocommerce-product-attributes-item__label" style="">VARIETAL</th>
                                                 <td class="woocommerce-product-attributes-item__value"><p>{{$item->varietal}} </p>
                                                 </td>
                                             </tr>

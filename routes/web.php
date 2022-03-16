@@ -28,10 +28,6 @@ Route::get('wine-club', function () {
 
 
 Route::resource('shop',\App\Http\Controllers\ShopController::class);
-Route::get('{name}',function ($name){
-    $item = Product::query()->where('slug',$name)->first();
-    return view('shop.show',compact('item'));
-})->name('product-name');
 
 Route::get('checkout',[\App\Http\Controllers\CheckoutController::class,'checkout'])
     ->name('checkout');
