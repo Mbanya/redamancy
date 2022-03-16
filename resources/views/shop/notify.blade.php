@@ -98,8 +98,7 @@
            $check3 =  $this->pfValidPaymentData($cart->amount, $pfData);
            $check4 =  $this->pfValidServerConfirmation($pfParamString, $pfHost);
 
-           if($check1 && $check2 && $check3 && $check4) {
-               $fullname = $pfData['name_first'].' '.$pfData['name_last'];
+           $fullname = $pfData['name_first'].' '.$pfData['name_last'];
 
                $client = new Party([
                    'name'=> 'REDEMANCY VINEYARDS (PTY) LTD',
@@ -167,6 +166,8 @@
               Order::query()
                   ->where('m_payment_id',$pfData['m_payment_id'])
                   ->update(['payment_status'=>'COMPLETED']);
+
+           if($check1 && $check2 && $check3 && $check4) {
 
            } else {
                return 'Payment Failed';
