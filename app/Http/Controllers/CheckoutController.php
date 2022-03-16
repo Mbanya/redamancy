@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CheckoutFormRequest;
 use App\Models\Order;
 use App\Models\Product;
+use App\Notifications\SendInvoiceNotification;
 use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
 use LaravelDaily\Invoices\Classes\Buyer;
@@ -196,7 +197,13 @@ class CheckoutController extends Controller
                 // You can additionally save generated invoice to configured disk
                 ->save('public/invoices');
 
+            $link = $invoice->url();
+            // Then send email to party with link
 
+//           \Notification::route('mail')->notify(new SendInvoiceNotification($link));
+
+            // And return invoice itself to browser or have a different view
+            return $invoice->stream();
         } else {
             // Some checks have failed, check payment manually and log for investigation
         }
