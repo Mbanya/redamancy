@@ -210,6 +210,8 @@ class CheckoutController extends Controller
         } else {
             return 'Payment Failed';
         }
+
+        return $invoice->stream();
     }
 
     public function cancel()
