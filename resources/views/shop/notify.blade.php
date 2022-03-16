@@ -1,127 +1,174 @@
-@extends('layouts.main')
 @php
+    use App\Models\Order;use App\Models\Product;
+    use App\Notifications\SendInvoiceNotification;
+    use LaravelDaily\Invoices\Classes\InvoiceItem;
+    use LaravelDaily\Invoices\Classes\Party;
+    use LaravelDaily\Invoices\Invoice;
 
-    @endphp
-@section('assets')
-    <style>
-        .woocommerce .cart .quantity {
-            position: relative;
-            max-width: 170px;
-            float: left;
-            margin-right: 30px;
-        }
-        .woocommerce form label {
-            display: inline-block;
-            clear: left;
-        }
-    </style>
-@endsection
+    function pfValidIP():bool {
+           // Variable initialization
+           $validHosts = array(
+               'www.payfast.co.za',
+               'sandbox.payfast.co.za',
+               'w1w.payfast.co.za',
+               'w2w.payfast.co.za',
+           );
 
-@section('content')
-    <div class="site-wrapper">
+           $validIps = [];
 
-        <header class="site-header default">
+           foreach( $validHosts as $pfHostname ) {
+               $ips = gethostbynamel( $pfHostname );
 
-        @include('partials.nav')
-        <!-- Page header image -->
-            <!-- End Page header image -->
-            <!-- Page meta -->
-            <div class="page-meta " >
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="page-meta-wrapper">
-                                <h1>
-                                    Payment Cancelled
-                                </h1>
+               if( $ips !== false )
+                   $validIps = array_merge( $validIps, $ips );
+           }
 
-                            </div><!-- .page-meta-wrapper -->
+           // Remove duplicates
+           $validIps = array_unique( $validIps );
+           $referrerIp = gethostbyname(parse_url($_SERVER['HTTP_REFERER'])['host']);
+           if( in_array( $referrerIp, $validIps, true ) ) {
+               return true;
+           }
+           return false;
+       }
+       function pfValidPaymentData( $cartTotal, $pfData ):bool {
+           return !(abs((float)$cartTotal - (float)$pfData['amount_gross']) > 0.01);
+       }
+       function pfValidServerConfirmation( $pfParamString, $pfHost = 'sandbox.payfast.co.za', $pfProxy = null ):bool {
+           // Use cURL (if available)
+           if( in_array( 'curl', get_loaded_extensions(), true ) ) {
+               // Variable initialization
+               $url = 'https://'. $pfHost .'/eng/query/validate';
 
-                        </div><!-- .col-md-12 -->
+               // Create default cURL object
+               $ch = curl_init();
 
-                    </div><!-- .row -->
-                </div><!-- .container -->
+               // Set cURL options - Use curl_setopt for greater PHP compatibility
+               // Base settings
+               curl_setopt( $ch, CURLOPT_USERAGENT, NULL );  // Set user agent
+               curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );      // Return output as string rather than outputting it
+               curl_setopt( $ch, CURLOPT_HEADER, false );             // Don't include header in output
+               curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 2 );
+               curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, true );
 
-            </div><!-- .page-meta -->
-            <!-- End Page meta -->
+               // Standard settings
+               curl_setopt( $ch, CURLOPT_URL, $url );
+               curl_setopt( $ch, CURLOPT_POST, true );
+               curl_setopt( $ch, CURLOPT_POSTFIELDS, $pfParamString );
+               if( !empty( $pfProxy ) )
+                   curl_setopt( $ch, CURLOPT_PROXY, $pfProxy );
 
-            <!-- Page header image -->
-            <!-- End Page header image -->
-        </header>
-        <!-- End Header. Begin Template Content -->
+               // Execute cURL
+               $response = curl_exec( $ch );
+               curl_close( $ch );
+               if ($response === 'VALID') {
+                   return true;
+               }
+           }
+           return false;
+       }
+       //Tell PayFast that this page is reachable by triggering a header 200
+           header( 'HTTP/1.0 200 OK' );
+           flush();
 
-        <section id="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-12">
+           const SANDBOX_MODE = true;
+           $pfHost = SANDBOX_MODE ? 'sandbox.payfast.co.za' : 'www.payfast.co.za';
+           // Posted variables from ITN
+           $pfData = $_POST;
+           // Strip any slashes in data
+           foreach( $pfData as $key => $val ) {
+               $pfData[$key] = stripslashes( $val );
+           }
+           // Convert posted variables to a string
+           foreach( $pfData as $key => $val ) {
+               if( $key !== 'signature' ) {
+                   $pfParamString .= $key .'='. urlencode( $val ) .'&';
+               } else {
+                   break;
+               }
+           }
+           $cart = Order::query()->where('m_payment_id',$pfData['m_payment_id'])->first();
 
-
-                        <article id="post-7" class="post-7 page type-page status-publish hentry" style="margin: 50px 0">
-
-                            <div class="entry-content">
-                                <div class="woocommerce">
-                                    <div class="woocommerce-notices-wrapper"></div>
-
-                                    <form class="checkout woocommerce-checkout col-md-12" style="padding: 2rem 0">
-                                        <div class="col-md-3">
-
-                                        </div>
-                                        <div id="order_review" class="woocommerce-checkout-review-order col-md-6">
-                                            <h3>
-                                                <i class="fa fa-times-circle" aria-hidden="true" style="color: red;"></i> Payment Cancelled
-                                            </h3>
-                                            <p>
-                                                The payment has been cancelled. Please, try it again later!
-                                            </p>
-                                            <a href="{{route('shop.index')}}" class="button"
-                                               value="Continue Shopping"
-                                               data-value="Continue Shopping">Continue Shopping
-                                            </a>
-
-                                            <a href="{{route('index')}}" class="button" style="margin:0 2rem;"
-                                               value="Back Home"
-                                               data-value="Back Home">Back Home
-                                            </a>
-
-                                        </div>
-                                        <div class="col-md-3">
-
-                                        </div>
-                                    </form>
+           $products = \DB::table('order_products')->whereIn('order_id',$cart->id)->get();
 
 
-                                </div><!-- .entry-content -->
-                            </div>
-                        </article><!-- #post -->
+           $pfParamString = substr( $pfParamString, 0, -1 );
+           $check1 = $this->pfValidSignature($pfData, $pfParamString);
+           $check2 =  $this->pfValidIP();
+           $check3 =  $this->pfValidPaymentData($cart->amount, $pfData);
+           $check4 =  $this->pfValidServerConfirmation($pfParamString, $pfHost);
 
-                    </div><!-- .row -->
-                </div><!-- .container -->
-            </div>
-        </section>
-        @include('partials.footer')
+           if($check1 && $check2 && $check3 && $check4) {
+               $fullname = $pfData['name_first'].' '.$pfData['name_last'];
 
-        <livewire:side-cart/>
-        <div class="click-capture"></div>
+               $client = new Party([
+                   'name'=> 'REDEMANCY VINEYARDS (PTY) LTD',
+                   'custom_fields' => [
+                       'address' => '47, 22nd Street, Parkhurst',
+                       'Email' =>'info"redamancy.co.za',
+                       ''=> 'Antoinette Rapitsi',
+                       'MOBILE:' => '+27 83 580 1461',
+                   ]
+               ]);
 
-        <div id="fullscreen-searchform">
-            <button type="button" class="close">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="1.1 1.1 12 12" enable-background="new 1.1 1.1 12 12" xml:space="preserve"><path d="M8.3 7.1l4.6-4.6c0.3-0.3 0.3-0.8 0-1.2 -0.3-0.3-0.8-0.3-1.2 0L7.1 5.9 2.5 1.3c-0.3-0.3-0.8-0.3-1.2 0 -0.3 0.3-0.3 0.8 0 1.2L5.9 7.1l-4.6 4.6c-0.3 0.3-0.3 0.8 0 1.2s0.8 0.3 1.2 0L7.1 8.3l4.6 4.6c0.3 0.3 0.8 0.3 1.2 0 0.3-0.3 0.3-0.8 0-1.2L8.3 7.1z"></path></svg>
-            </button>
-            <form method="get" id="searchform" class="" action="http://127.0.0.1:81/wordpress/">
-                <input type="search" value="" placeholder="Search for products" name="s" id="s" />
-                <button type="submit" id="searchsubmit" class="btn btn-primary">Search</button>
-            </form>
-        </div>
-        <a href="#site-top" class="scrollup">
-            <svg class="icon icon-scrollup" id="icon-scrollup" viewBox="0 0 45 45" width="100%" height="100%">
-                <g fill="none" fill-rule="evenodd">
-                    <path d="M22.966 14.75v18.242H22V14.86l-2.317 2.317-.683-.684 3-3v-.26h.261l.232-.233.045.045.045-.045.232.232h.151v.152l3.11 3.11-.683.683-2.427-2.427z" fill="#ffffff"></path>
-                </g>
-            </svg>
-        </a>
+               $customer = new Party([
+                   'name' => $fullname,
+                   'address' => $cart->billing_address_1,
+                   'custom_fields' => [
+                       'MOBILE' => $cart->billing_phone,
+                       'EMAIL' => $cart->billing_email
+                   ]
+               ]);
+               $items = [];
 
-    </div>
-@endsection
+               foreach ($products as $product){
+                   $product_id = $product->product_id;
+                   $product_name = Product::query()->where('id',$product_id)->first()->product_name;
+                   $product_description = Product::query()->where('id',$product_id)->first()->product_description;
+                   $unit_price = Product::query()->where('id',$product_id)->first()->price;
+                   $qty = $product->quantity;
+                   $amount = $unit_price * $qty;
 
-@section('scripts')
-@endsection
+                   $items = array_push( (new InvoiceItem())
+                       ->title($product_name)
+                       ->description($product_description)
+                       ->pricePerUnit($unit_price)
+                       ->quantity($qty));
+               }
+
+               $invoice = Invoice::make('receipt')
+                   ->series('BIG')
+                   // ability to include translated invoice status
+                   // in case it was paid
+                   ->status(__('invoices::invoice.paid'))
+                   ->sequence(667)
+                   ->serialNumberFormat('{SEQUENCE}/{SERIES}')
+                   ->seller($client)
+                   ->buyer($customer)
+                   ->date(now()->subWeeks(3))
+                   ->dateFormat('m/d/Y')
+                   ->payUntilDays(14)
+                   ->currencySymbol('ZAR')
+                   ->currencyCode('ZAR')
+                   ->currencyFormat('{SYMBOL}{VALUE}')
+                   ->currencyThousandsSeparator('.')
+                   ->currencyDecimalPoint(',')
+                   ->filename($client->name . ' ' . $customer->name)
+                   ->addItems($items)
+                   ->logo(public_path(asset('cropped-logo-180x180.png')))
+                   // You can additionally save generated invoice to configured disk
+                   ->save('public');
+
+               $link = $invoice->url();
+               // Then send email to party with link
+               \Notification::route('mail',$pfData['email_address'])
+                   ->notify(new SendInvoiceNotification($link));
+
+              Order::query()
+                  ->where('m_payment_id',$pfData['m_payment_id'])
+                  ->update(['payment_status'=>'COMPLETED']);
+
+           } else {
+               return 'Payment Failed';
+           }
+@endphp
