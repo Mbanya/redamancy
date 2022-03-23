@@ -44,7 +44,7 @@ Route::get('contact', function () {
 
 Route::get('cancel',[\App\Http\Controllers\CheckoutController::class,'cancel'])
     ->name('checkout.cancel');
-Route::get('notify',[\App\Http\Controllers\CheckoutController::class,'notify'])
+Route::get('notify',[\App\Http\Controllers\CheckoutController::class,'itn'])
     ->name('checkout.notify');
 Route::get('success',[\App\Http\Controllers\CheckoutController::class,'success'])
     ->name('checkout.success');

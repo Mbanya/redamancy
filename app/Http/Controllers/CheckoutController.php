@@ -118,7 +118,7 @@ class CheckoutController extends Controller
 
         // Optionally send confirmation email to seller
         $payfast->setEmailConfirmation();
-        $payfast->setConfirmationAddress(env('PAYFAST_CONFIRMATION_EMAIL'));
+        $payfast->setConfirmationAddress('mbanyaw#gmail.com');
 
         // Return the payment form.
         $htmlForm = $payfast->paymentForm('Place Order');
