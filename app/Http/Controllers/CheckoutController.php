@@ -101,9 +101,9 @@ class CheckoutController extends Controller
 
     public function confirmPayment(PaymentProcessor $payfast, CheckoutFormRequest $request)
     {
-        // Eloqunet example.
+        // Eloquent example.
         $request->validated();
-        $cartTotal = 5;// This amount needs to be sourced from your application
+        $cartTotal = \Cart::getTotal();// This amount needs to be sourced from your application
         $order = Order::query()->create($request->validated());
         foreach (\Cart::getContent()->toArray() as $item)
         {
@@ -148,6 +148,9 @@ class CheckoutController extends Controller
         switch( $status )
         {
             case 'COMPLETE': // Things went as planned, update your order status and notify the customer/admins.
+                Order::query()
+                    ->where('m_payment_id',$request->m_payment_id)
+                    ->update(['payment_status'=>'COMPLETED']);
                 $products = \DB::table('order_products')->whereIn('order_id',$order->id)->get();
                 $fullname = $request->name_first.' '.$request->name_last;
                 $client = new Party([
@@ -212,9 +215,6 @@ class CheckoutController extends Controller
                 // Then send email to party with link
                 \Notification::route('mail',$request->email_address)
                     ->notify(new SendInvoiceNotification($link));
-                Order::query()
-                    ->where('m_payment_id',$request->m_payment_id)
-                    ->update(['payment_status'=>'COMPLETED']);
                 break;
             case 'FAILED': // We've got problems, notify admin and contact Payfast Support.
                 Order::query()
