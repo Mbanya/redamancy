@@ -12,10 +12,10 @@ return
 |
 */
 [
-    'testing'  => true, // Set to false when in production.
+    'testing'  => false, // Set to false when in production.
     'merchant' => [
-        'merchant_id'  => env('PF_MERCHANT_ID', '10000100'),                        // TEST Credentials. Replace with your merchant ID from Payfast.
-        'merchant_key' => env('PF_MERCHANT_KEY', '46f0cd694581a'),                  // TEST Credentials. Replace with your merchant key from Payfast.
+        'merchant_id'  => env('PF_MERCHANT_ID', '19424164'),                        // TEST Credentials. Replace with your merchant ID from Payfast.
+        'merchant_key' => env('PF_MERCHANT_KEY', 'a7yqq0vrrjgte'),                  // TEST Credentials. Replace with your merchant key from Payfast.
         'return_url'   => env('PF_RETURN_URL', 'https://redamancy.herokuapp.com/success'), // Redirect URL on Success.
         'cancel_url'   => env('PF_CANCEL_URL', 'https://redamancy.herokuapp.com/cancel'),  // Redirect URL on Cancellation.
         'notify_url'   => env('PF_ITN_URL', 'https://redamancy.herokuapp.com/notify'),        // ITN URL.

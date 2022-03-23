@@ -103,7 +103,7 @@ class CheckoutController extends Controller
     {
         // Eloqunet example.
         $request->validated();
-        $cartTotal = \Cart::getTotal();// This amount needs to be sourced from your application
+        $cartTotal = 1;// This amount needs to be sourced from your application
         $order = Order::query()->create($request->validated());
         foreach (\Cart::getContent()->toArray() as $item)
         {
@@ -213,7 +213,6 @@ class CheckoutController extends Controller
                 // Then send email to party with link
                 \Notification::route('mail',$request->email_address)
                     ->notify(new SendInvoiceNotification($link));
-
                 Order::query()
                     ->where('m_payment_id',$request->m_payment_id)
                     ->update(['payment_status'=>'COMPLETED']);

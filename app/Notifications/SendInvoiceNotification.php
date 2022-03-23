@@ -42,7 +42,7 @@ class SendInvoiceNotification extends Notification
     {
         return (new MailMessage)
                     ->line('The introduction to the notification.')
-                    ->action('Notification Action', url($this->link))
+                    ->action('Invoice Download', url($this->link))
                     ->line('Thank you for using our application!');
     }
 
