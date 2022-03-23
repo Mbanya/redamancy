@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'domain' => env('DASHBOARD_DOMAIN', null),
+    'domain' => env('DASHBOARD_DOMAIN', 'https://redamancy.herokuapp.com/'),
 
     /*
     |--------------------------------------------------------------------------
