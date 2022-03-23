@@ -118,7 +118,7 @@ class CheckoutController extends Controller
 
         // Optionally send confirmation email to seller
         $payfast->setEmailConfirmation();
-        $payfast->setConfirmationAddress('mbanyaw@gmail.com');
+        $payfast->setConfirmationAddress('info@redamancy.co.za');
 
         // Return the payment form.
         $htmlForm = $payfast->paymentForm('Place Order');
@@ -151,70 +151,6 @@ class CheckoutController extends Controller
                 Order::query()
                     ->where('m_payment_id',$request->m_payment_id)
                     ->update(['payment_status'=>'COMPLETED']);
-                $products = \DB::table('order_products')->whereIn('order_id',$order->id)->get();
-                $fullname = $request->name_first.' '.$request->name_last;
-                $client = new Party([
-                    'name'=> 'REDEMANCY VINEYARDS (PTY) LTD',
-                    'custom_fields' => [
-                        'address' => '47, 22nd Street, Parkhurst',
-                        'Email' =>'info"redamancy.co.za',
-                        ''=> 'Antoinette Rapitsi',
-                        'MOBILE:' => '+27 83 580 1461',
-                    ]
-                ]);
-
-                $customer = new Party([
-                    'name' => $fullname,
-                    'address' => $order->billing_address_1,
-                    'custom_fields' => [
-                        'MOBILE' => $order->billing_phone,
-                        'EMAIL' => $order->billing_email
-                    ]
-                ]);
-                $items = [];
-
-                foreach ($products as $product){
-                    $product_id = $product->product_id;
-                    $product_name = Product::query()->where('id',$product_id)->first()->product_name;
-                    $product_description = Product::query()->where('id',$product_id)->first()->product_description;
-                    $unit_price = Product::query()->where('id',$product_id)->first()->price;
-                    $qty = $product->quantity;
-                    $amount = $unit_price * $qty;
-
-                    $items = array_push( (new InvoiceItem())
-                        ->title($product_name)
-                        ->description($product_description)
-                        ->pricePerUnit($unit_price)
-                        ->quantity($qty));
-                }
-
-                $invoice = Invoice::make('receipt')
-                    ->series('BIG')
-                    // ability to include translated invoice status
-                    // in case it was paid
-                    ->status(__('invoices::invoice.paid'))
-                    ->sequence(667)
-                    ->serialNumberFormat('{SEQUENCE}/{SERIES}')
-                    ->seller($client)
-                    ->buyer($customer)
-                    ->date(now()->subWeeks(3))
-                    ->dateFormat('m/d/Y')
-                    ->payUntilDays(14)
-                    ->currencySymbol('ZAR')
-                    ->currencyCode('ZAR')
-                    ->currencyFormat('{SYMBOL}{VALUE}')
-                    ->currencyThousandsSeparator('.')
-                    ->currencyDecimalPoint(',')
-                    ->filename($client->name . ' ' . $customer->name)
-                    ->addItems($items)
-                    ->logo(public_path(asset('cropped-logo-180x180.png')))
-                    // You can additionally save generated invoice to configured disk
-                    ->save('public');
-
-                $link = $invoice->url();
-                // Then send email to party with link
-                \Notification::route('mail',$request->email_address)
-                    ->notify(new SendInvoiceNotification($link));
                 break;
             case 'FAILED': // We've got problems, notify admin and contact Payfast Support.
                 Order::query()
