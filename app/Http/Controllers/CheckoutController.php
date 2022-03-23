@@ -148,7 +148,6 @@ class CheckoutController extends Controller
         switch( $status )
         {
             case 'COMPLETE': // Things went as planned, update your order status and notify the customer/admins.
-
                 $products = \DB::table('order_products')->whereIn('order_id',$order->id)->get();
                 $fullname = $request->name_first.' '.$request->name_last;
                 $client = new Party([
@@ -218,8 +217,14 @@ class CheckoutController extends Controller
                     ->update(['payment_status'=>'COMPLETED']);
                 break;
             case 'FAILED': // We've got problems, notify admin and contact Payfast Support.
+                Order::query()
+                    ->where('m_payment_id',$request->m_payment_id)
+                    ->update(['payment_status'=>'FAILED']);
                 break;
             case 'PENDING': // We've got problems, notify admin and contact Payfast Support.
+                Order::query()
+                    ->where('m_payment_id',$request->m_payment_id)
+                    ->update(['payment_status'=>'PENDING']);
                 break;
             default: // We've got problems, notify admin to check logs.
                 break;
