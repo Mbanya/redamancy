@@ -103,7 +103,7 @@ class CheckoutController extends Controller
     {
         // Eloqunet example.
         $request->validated();
-        $cartTotal = 1;// This amount needs to be sourced from your application
+        $cartTotal = 5;// This amount needs to be sourced from your application
         $order = Order::query()->create($request->validated());
         foreach (\Cart::getContent()->toArray() as $item)
         {
