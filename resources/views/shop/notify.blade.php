@@ -31,7 +31,7 @@
            }
            return false;
        }
-       function pfValidPaymentData( $cartTotal, $pfData ):bool {
+    function pfValidPaymentData( $cartTotal, $pfData ):bool {
            return !(abs((float)$cartTotal - (float)$pfData['amount_gross']) > 0.01);
        }
        function pfValidServerConfirmation( $pfParamString, $pfHost = 'sandbox.payfast.co.za', $pfProxy = null ):bool {
@@ -100,72 +100,7 @@
 
            $fullname = $pfData['name_first'].' '.$pfData['name_last'];
 
-               $client = new Party([
-                   'name'=> 'REDEMANCY VINEYARDS (PTY) LTD',
-                   'custom_fields' => [
-                       'address' => '47, 22nd Street, Parkhurst',
-                       'Email' =>'info"redamancy.co.za',
-                       ''=> 'Antoinette Rapitsi',
-                       'MOBILE:' => '+27 83 580 1461',
-                   ]
-               ]);
 
-               $customer = new Party([
-                   'name' => $fullname,
-                   'address' => $cart->billing_address_1,
-                   'custom_fields' => [
-                       'MOBILE' => $cart->billing_phone,
-                       'EMAIL' => $cart->billing_email
-                   ]
-               ]);
-               $items = [];
-
-               foreach ($products as $product){
-                   $product_id = $product->product_id;
-                   $product_name = Product::query()->where('id',$product_id)->first()->product_name;
-                   $product_description = Product::query()->where('id',$product_id)->first()->product_description;
-                   $unit_price = Product::query()->where('id',$product_id)->first()->price;
-                   $qty = $product->quantity;
-                   $amount = $unit_price * $qty;
-
-                   $items = array_push( (new InvoiceItem())
-                       ->title($product_name)
-                       ->description($product_description)
-                       ->pricePerUnit($unit_price)
-                       ->quantity($qty));
-               }
-
-               $invoice = Invoice::make('receipt')
-                   ->series('BIG')
-                   // ability to include translated invoice status
-                   // in case it was paid
-                   ->status(__('invoices::invoice.paid'))
-                   ->sequence(667)
-                   ->serialNumberFormat('{SEQUENCE}/{SERIES}')
-                   ->seller($client)
-                   ->buyer($customer)
-                   ->date(now()->subWeeks(3))
-                   ->dateFormat('m/d/Y')
-                   ->payUntilDays(14)
-                   ->currencySymbol('ZAR')
-                   ->currencyCode('ZAR')
-                   ->currencyFormat('{SYMBOL}{VALUE}')
-                   ->currencyThousandsSeparator('.')
-                   ->currencyDecimalPoint(',')
-                   ->filename($client->name . ' ' . $customer->name)
-                   ->addItems($items)
-                   ->logo(public_path(asset('cropped-logo-180x180.png')))
-                   // You can additionally save generated invoice to configured disk
-                   ->save('public');
-
-               $link = $invoice->url();
-               // Then send email to party with link
-               \Notification::route('mail',$pfData['email_address'])
-                   ->notify(new SendInvoiceNotification($link));
-
-              Order::query()
-                  ->where('m_payment_id',$pfData['m_payment_id'])
-                  ->update(['payment_status'=>'COMPLETED']);
 
            if($check1 && $check2 && $check3 && $check4) {
 

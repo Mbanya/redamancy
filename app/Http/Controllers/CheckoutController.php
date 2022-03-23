@@ -6,6 +6,7 @@ use App\Http\Requests\CheckoutFormRequest;
 use App\Models\Order;
 use App\Models\Product;
 use App\Notifications\SendInvoiceNotification;
+use Billow\Contracts\PaymentProcessor;
 use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
 use LaravelDaily\Invoices\Classes\Buyer;
@@ -55,8 +56,8 @@ class CheckoutController extends Controller
 
         $cartTotal = \Cart::getTotal();// This amount needs to be sourced from your application
         $data = [
-             'merchant_id' => '10000100',
-             'merchant_key' => '46f0cd694581a',
+             'merchant_id' => '19424164',
+             'merchant_key' => 'a7yqq0vrrjgte',
              'return_url' => 'https://redamancy.herokuapp.com/success',
              'cancel_url' => 'https://redamancy.herokuapp.com/cancel',
              'notify_url' => 'https://redamancy.herokuapp.com/notify',
@@ -98,6 +99,32 @@ class CheckoutController extends Controller
 
     }
 
+    public function confirmPayment(PaymentProcessor $payfast, CheckoutFormRequest $request)
+    {
+        // Eloqunet example.
+        $request->validated();
+        $cartTotal = \Cart::getTotal();// This amount needs to be sourced from your application
+        $order = Order::query()->create($request->validated());
+        foreach (\Cart::getContent()->toArray() as $item)
+        {
+            $order->products()->attach($item['id'],['quantity'=>$item['quantity']]);
+        }
+       $amount =  number_format( sprintf( '%.2f', $cartTotal ), 2, '.', '' );
+        // Build up payment Paramaters.
+        $payfast->setBuyer($order->billing_first_name, $order->billing_last_name, $order->billing_email);
+        $payfast->setAmount($amount);
+        $payfast->setItem($order->id, 'Wine');
+        $payfast->setMerchantReference($order->m_payment_id);
+
+        // Optionally send confirmation email to seller
+        $payfast->setEmailConfirmation();
+        $payfast->setConfirmationAddress(env('PAYFAST_CONFIRMATION_EMAIL'));
+
+        // Return the payment form.
+        $htmlForm = $payfast->paymentForm('Place Order');
+        return view('shop.complete-payment',compact('order','htmlForm'));
+    }
+
     public function success()
     {
         \Cart::clear();
@@ -107,6 +134,97 @@ class CheckoutController extends Controller
     public function notify()
     {
       return view('shop.notify');
+    }
+
+    public function itn(Request $request, PaymentProcessor $payfast)
+    {
+        // Retrieve the Order from persistance. Eloquent Example.
+        $order = Order::where('m_payment_id', $request->get('m_payment_id'))->firstOrFail(); // Eloquent Example
+
+        // Verify the payment status.
+        $status = $payfast->verify($request, $order->amount, $order->m_payment_id)->status();
+
+        // Handle the result of the transaction.
+        switch( $status )
+        {
+            case 'COMPLETE': // Things went as planned, update your order status and notify the customer/admins.
+
+                $products = \DB::table('order_products')->whereIn('order_id',$order->id)->get();
+                $fullname = $request->name_first.' '.$request->name_last;
+                $client = new Party([
+                    'name'=> 'REDEMANCY VINEYARDS (PTY) LTD',
+                    'custom_fields' => [
+                        'address' => '47, 22nd Street, Parkhurst',
+                        'Email' =>'info"redamancy.co.za',
+                        ''=> 'Antoinette Rapitsi',
+                        'MOBILE:' => '+27 83 580 1461',
+                    ]
+                ]);
+
+                $customer = new Party([
+                    'name' => $fullname,
+                    'address' => $order->billing_address_1,
+                    'custom_fields' => [
+                        'MOBILE' => $order->billing_phone,
+                        'EMAIL' => $order->billing_email
+                    ]
+                ]);
+                $items = [];
+
+                foreach ($products as $product){
+                    $product_id = $product->product_id;
+                    $product_name = Product::query()->where('id',$product_id)->first()->product_name;
+                    $product_description = Product::query()->where('id',$product_id)->first()->product_description;
+                    $unit_price = Product::query()->where('id',$product_id)->first()->price;
+                    $qty = $product->quantity;
+                    $amount = $unit_price * $qty;
+
+                    $items = array_push( (new InvoiceItem())
+                        ->title($product_name)
+                        ->description($product_description)
+                        ->pricePerUnit($unit_price)
+                        ->quantity($qty));
+                }
+
+                $invoice = Invoice::make('receipt')
+                    ->series('BIG')
+                    // ability to include translated invoice status
+                    // in case it was paid
+                    ->status(__('invoices::invoice.paid'))
+                    ->sequence(667)
+                    ->serialNumberFormat('{SEQUENCE}/{SERIES}')
+                    ->seller($client)
+                    ->buyer($customer)
+                    ->date(now()->subWeeks(3))
+                    ->dateFormat('m/d/Y')
+                    ->payUntilDays(14)
+                    ->currencySymbol('ZAR')
+                    ->currencyCode('ZAR')
+                    ->currencyFormat('{SYMBOL}{VALUE}')
+                    ->currencyThousandsSeparator('.')
+                    ->currencyDecimalPoint(',')
+                    ->filename($client->name . ' ' . $customer->name)
+                    ->addItems($items)
+                    ->logo(public_path(asset('cropped-logo-180x180.png')))
+                    // You can additionally save generated invoice to configured disk
+                    ->save('public');
+
+                $link = $invoice->url();
+                // Then send email to party with link
+                \Notification::route('mail',$request->email_address)
+                    ->notify(new SendInvoiceNotification($link));
+
+                Order::query()
+                    ->where('m_payment_id',$request->m_payment_id)
+                    ->update(['payment_status'=>'COMPLETED']);
+                break;
+            case 'FAILED': // We've got problems, notify admin and contact Payfast Support.
+                break;
+            case 'PENDING': // We've got problems, notify admin and contact Payfast Support.
+                break;
+            default: // We've got problems, notify admin to check logs.
+                break;
+        }
     }
 
     public function cancel()

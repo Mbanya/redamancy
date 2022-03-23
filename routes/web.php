@@ -31,7 +31,7 @@ Route::resource('shop',\App\Http\Controllers\ShopController::class);
 
 Route::get('checkout',[\App\Http\Controllers\CheckoutController::class,'checkout'])
     ->name('checkout');
-Route::post('confirm_order', [\App\Http\Controllers\CheckoutController::class ,'placeOrder'])->name('place-order');
+Route::post('confirm_order', [\App\Http\Controllers\CheckoutController::class ,'confirmPayment'])->name('place-order');
 
 Route::get('complete_payment', [\App\Http\Controllers\PaymentController::class,'completePayment'])->name('complete-payment');
 
