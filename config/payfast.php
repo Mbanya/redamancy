@@ -28,6 +28,6 @@ return
         'w2w.payfast.co.za',
     ],
 
-    'passphrase' => "", // set this in your payfast merchant settings
+    'passphrase' => "Redamancy2022", // set this in your payfast merchant settings
 
 ];
