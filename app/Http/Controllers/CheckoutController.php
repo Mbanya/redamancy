@@ -104,10 +104,11 @@ class CheckoutController extends Controller
         // Eloquent example.
         $request->validated();
         $cartItems = \Cart::getContent();
-        $cartTotal = \Cart::getTotal();// This amount needs to be sourced from your application
-        if ($cartItems->count() === 1 &&  collect(\Cart::getContent()->toArray())->first()['quantity'] === 6 )
+        if (\Cart::getContent()->count() === 1 && collect(\Cart::getContent()->toArray())->first()['quantity'] === '6')
         {
             $cartTotal = \Cart::getTotal() + 120;
+        }else{
+          $cartTotal = \Cart::getTotal();// This amount needs to be sourced from your application
         }
 
         $order = Order::query()->create($request->validated());
