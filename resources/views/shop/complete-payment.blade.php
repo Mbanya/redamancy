@@ -134,6 +134,18 @@
                                                     </td>
                                                 </tr>
                                             @endforeach
+                                            @if(Cart::getContent()->count() === 1 && collect(Cart::getContent()->toArray())->first()['quantity'] === 6)
+                                                <tr class="cart_item">
+                                                    <td class="product-name">
+                                                        &nbsp;&nbsp;Shipping Cost
+                                                    </td>
+                                                    <td class="product-total">
+                                                                <span class="woocommerce-Price-amount amount">
+                                                                    <bdi>{{number_format(120)}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
+                                                                </span>
+                                                    </td>
+                                                </tr>
+                                            @endif
 
                                             </tbody>
                                             <tfoot>

@@ -103,7 +103,13 @@ class CheckoutController extends Controller
     {
         // Eloquent example.
         $request->validated();
+        $cartItems = \Cart::getContent();
         $cartTotal = \Cart::getTotal();// This amount needs to be sourced from your application
+        if ($cartItems->count() === 1 &&  collect(\Cart::getContent()->toArray())->first()['quantity'] === 6 )
+        {
+            $cartTotal = \Cart::getTotal() + 120;
+        }
+
         $order = Order::query()->create($request->validated());
         foreach (\Cart::getContent()->toArray() as $item)
         {
@@ -113,7 +119,7 @@ class CheckoutController extends Controller
         // Build up payment Paramaters.
         $payfast->setBuyer($order->billing_first_name, $order->billing_last_name, $order->billing_email);
         $payfast->setAmount($amount);
-        $payfast->setItem($order->id, 'Wine');
+        $payfast->setItem($order->id, 'Redamanacy Wines');
         $payfast->setMerchantReference($order->m_payment_id);
 
         // Optionally send confirmation email to seller

@@ -197,6 +197,18 @@
                                                             </td>
                                                         </tr>
                                                     @endforeach
+                                                    @if(Cart::getContent()->count() === 1 && collect(Cart::getContent()->toArray())->first()['quantity'] === 6)
+                                                        <tr class="cart_item">
+                                                            <td class="product-name">
+                                                                &nbsp;&nbsp;Shipping Cost
+                                                            </td>
+                                                            <td class="product-total">
+                                                                <span class="woocommerce-Price-amount amount">
+                                                                    <bdi>{{number_format(120)}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    @endif
                                                 @else
                                                     <tr class="cart_item">
                                                         <td class="product-name">
@@ -215,9 +227,14 @@
 
                                                 <tr class="cart-subtotal">
                                                     <th>Subtotal</th>
+
                                                     <td>
                                                         <span class="woocommerce-Price-amount amount">
-                                                            <bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
+                                                             @if(Cart::getContent()->count() === '1' || collect(Cart::getContent()->toArray())->first()['quantity'] === '6')
+                                                                <bdi>{{number_format(Cart::getSubTotal() + 120)}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
+                                                            @else
+                                                                <bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
+                                                            @endif
                                                         </span>
                                                     </td>
                                                 </tr>
@@ -227,7 +244,11 @@
                                                     <td>
                                                         <strong>
                                                             <span class="woocommerce-Price-amount amount">
+                                                                @if(Cart::getContent()->count() === '1' || collect(Cart::getContent()->toArray())->first()['quantity'] === '6')
+                                                                <bdi>{{number_format(Cart::getTotal() +120)}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
+                                                                @else
                                                                 <bdi>{{number_format(Cart::getTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
+                                                                @endif
                                                             </span>
                                                         </strong>
                                                     </td>
