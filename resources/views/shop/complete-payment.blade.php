@@ -154,7 +154,7 @@
                                                 <th>Subtotal</th>
                                                 <td>
                                                     <span class="woocommerce-Price-amount amount">
-                                                         @if(Cart::getContent()->count() === 1 || collect(Cart::getContent()->toArray())->first()['quantity'] === '6')
+                                                         @if(Cart::getContent()->count() === 1 && collect(Cart::getContent()->toArray())->first()['quantity'] === '6')
                                                             <bdi>{{number_format(Cart::getSubTotal() + 120)}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
                                                         @else
                                                             <bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
@@ -168,7 +168,7 @@
                                                 <td>
                                                     <strong>
                                                             <span class="woocommerce-Price-amount amount">
-                                                                @if(Cart::getContent()->count() === 1 || collect(Cart::getContent()->toArray())->first()['quantity'] === '6')
+                                                                @if(Cart::getContent()->count() === 1 && collect(Cart::getContent()->toArray())->first()['quantity'] === '6')
                                                                     <bdi>{{number_format(Cart::getSubTotal() + 120)}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
                                                                 @else
                                                                     <bdi>{{number_format(Cart::getSubTotal())}}&nbsp;<span class="woocommerce-Price-currencySymbol">ZAR</span></bdi>
